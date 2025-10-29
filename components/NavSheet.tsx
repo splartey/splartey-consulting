@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
     Sheet,
     SheetClose,
@@ -9,13 +9,12 @@ import {
     SheetHeader,
     SheetTitle,
     SheetTrigger,
-} from "@/components/ui/sheet"
-import { Menu } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-
-import { navLinks } from "@/constants"
+} from "@/components/ui/sheet";
+import { IconMenu } from "@tabler/icons-react";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { navLinks } from "@/constants";
 
 export function NavSheet() {
     const pathname = usePathname();
@@ -23,52 +22,59 @@ export function NavSheet() {
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <Button variant="outline" size="icon">
-                    <Menu className="w-8 h-8" />
-                </Button>
+                <div className="flex items-center justify-center gap-2 cursor-pointer">
+                    <IconMenu stroke={2} />
+                    <span>Menu</span>
+                </div>
             </SheetTrigger>
-            <SheetContent side="right" className="px-2" >
-                <SheetHeader>
+            <SheetContent
+                side="right"
+                className="px-4 sm:px-6 py-6 flex flex-col justify-between"
+            >
+                <SheetHeader className="flex items-center space-x-3">
                     <SheetTitle className="flex items-center space-x-3">
                         <Image
                             src="/logo.svg"
                             alt="SPLartey Logo"
-                            width={30}
-                            height={30}
+                            width={34}
+                            height={34}
+                            priority
                         />
-                        <span className="text-lg font-semibold text-primary">SPLartey Consulting.</span>
+                        <span className="text-lg sm:text-xl font-semibold text-primary">
+                            SPLartey Consulting.
+                        </span>
                     </SheetTitle>
                 </SheetHeader>
-                <div>
-                    <nav className="flex flex-col mt-8 space-y-6 mx-8">
-                        {navLinks.map((link) => {
-                            const isActive = pathname === link.href
-                            return (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    className={`text-base transition-colors
-                                            ${isActive
-                                            ? "text-primary font-semibold"
-                                            : "text-gray-700"
-                                        }`}>
-                                    {link.name}
-                                </Link>
-                            )
-                        })}
-                    </nav>
-                </div>
-                <SheetFooter>
-                    <Button asChild>
-                        <Link href="/contact">
-                            Get in Touch
-                        </Link>
+
+                <nav className="flex flex-col mt-10 space-y-6 text-base sm:text-lg">
+                    {navLinks.map((link) => {
+                        const isActive = pathname === link.href;
+                        return (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                className={`transition-colors ${isActive
+                                    ? "text-primary font-semibold"
+                                    : "text-muted-foreground hover:text-primary"
+                                    }`}
+                            >
+                                {link.name}
+                            </Link>
+                        );
+                    })}
+                </nav>
+
+                <SheetFooter className="flex flex-col gap-3 mt-10">
+                    <Button asChild size="lg" className="w-full">
+                        <Link href="/contact">Get in Touch</Link>
                     </Button>
                     <SheetClose asChild>
-                        <Button variant="outline">Close</Button>
+                        <Button variant="outline" className="w-full">
+                            Close
+                        </Button>
                     </SheetClose>
                 </SheetFooter>
             </SheetContent>
         </Sheet>
-    )
+    );
 }
