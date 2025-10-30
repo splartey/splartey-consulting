@@ -1,0 +1,52 @@
+import { Badge } from "@/components/ui/badge";
+import { IconAward } from '@tabler/icons-react';
+import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import Image from "next/image";
+
+export default function Hero() {
+    return (
+        <section id="hero" className="w-full min-h-screen pt-20 flex flex-col lg:flex-row">
+            <div className="flex flex-col justify-center w-full lg:w-1/2 px-6 md:px-12 lg:px-20 py-16">
+                <Badge
+                    variant="secondary"
+                    className="mb-4 w-fit bg-[#F8FEE7] text-sm text-primary font-medium px-4 py-1 rounded-full flex gap-2 items-center"
+                >
+                    <IconAward stroke={1} className="w-4 h-4" />
+                    Award Winning
+                </Badge>
+
+                <h1 className="text-3xl md:text-5xl font-semibold text-primary leading-tight mb-4">
+                    Empowering Global Impact <br />
+                    Through Strategic <br className="hidden sm:block" />
+                    Leadership Solutions.
+                </h1>
+
+                <p className="text-gray-600 mb-8 text-sm md:text-base max-w-md">
+                    SPLartey Consulting helps organizations and individuals achieve peak
+                    performance through tailored strategy, leadership development, and
+                    innovative solutions. Let&apos;s build your success story.
+                </p>
+
+                <div className="flex flex-wrap gap-4">
+                    <Button asChild className="px-6 btn-primary">
+                        <Link href="/works">Explore projects</Link>
+                    </Button>
+
+                    <Button asChild variant="outline" className="px-6 btn-outline">
+                        <Link href="/about">About us</Link>
+                    </Button>
+                </div>
+            </div>
+            <div className="relative w-full h-[50vh] lg:w-1/2 lg:h-auto">
+                <Image
+                    src="/hero-image.JPG"
+                    alt="SPLartey Workshop"
+                    fill
+                    className="object-cover object-center"
+                    priority
+                />
+            </div>
+        </section>
+    );
+}

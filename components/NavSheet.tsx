@@ -65,11 +65,11 @@ export function NavSheet() {
                 </nav>
 
                 <SheetFooter className="flex flex-col gap-3 mt-10">
-                    <Button asChild size="lg" className="w-full">
+                    <Button asChild size="lg" className="w-full btn-primary">
                         <Link href="/contact">Get in Touch</Link>
                     </Button>
                     <SheetClose asChild>
-                        <Button variant="outline" className="w-full">
+                        <Button variant="outline" className="w-full btn-outline">
                             Close
                         </Button>
                     </SheetClose>

@@ -13,7 +13,7 @@ export default function Header() {
 
     return (
         <header className="py-4 lg:py-6 bg-background/80 backdrop-blur-lg fixed w-full border-b border-gray-200 px-4 md:px-8 z-50">
-            <div className="max-w-8xl mx-auto flex items-center justify-between">
+            <div className="w-full mx-auto flex items-center justify-between">
                 <div className="flex items-center space-x-2 lg:space-x-3">
                     <Image
                         src="/logo.svg"
@@ -32,7 +32,6 @@ export default function Header() {
                         <span className="md:hidden">SPLartey.</span>
                     </Link>
                 </div>
-
                 <nav className="hidden lg:flex flex-1 justify-center items-center">
                     {navLinks.map((link) => {
                         const isActive = pathname === link.href;
@@ -52,7 +51,7 @@ export default function Header() {
                 </nav>
 
                 <div className="hidden lg:flex justify-end">
-                    <Button asChild>
+                    <Button asChild className="btn-primary">
                         <Link href="/contact">Get in touch</Link>
                     </Button>
                 </div>
