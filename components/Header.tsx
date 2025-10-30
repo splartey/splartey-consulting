@@ -12,7 +12,7 @@ export default function Header() {
     const pathname = usePathname();
 
     return (
-        <header className="py-4 lg:py-6 bg-background/80 backdrop-blur-lg fixed w-full border-b border-gray-200 px-4 md:px-8 z-50">
+        <header className="py-4 lg:py-6 bg-background/60 backdrop-blur-xl fixed w-full border-b border-gray-200 px-4 md:px-20 z-50">
             <div className="w-full mx-auto flex items-center justify-between">
                 <div className="flex items-center space-x-2 lg:space-x-3">
                     <Image
@@ -49,13 +49,15 @@ export default function Header() {
                         );
                     })}
                 </nav>
-
                 <div className="hidden lg:flex justify-end">
-                    <Button asChild className="btn-primary">
+                    <Button
+                        asChild
+                        className="btn-primary"
+                        size="lg"
+                    >
                         <Link href="/contact">Get in touch</Link>
                     </Button>
                 </div>
-
                 <div className="lg:hidden">
                     <NavSheet />
                 </div>
