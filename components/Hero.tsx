@@ -6,7 +6,7 @@ import { IconChevronRight } from "@tabler/icons-react";
 
 export default function Hero() {
     return (
-        <section id="hero" className="w-full min-h-screen pt-20 flex flex-col lg:flex-row">
+        <section id="hero" className="w-full min-h-screen flex flex-col lg:flex-row">
             <div className="flex flex-col justify-center w-full lg:w-1/2 px-6 md:px-12 lg:px-30 py-16">
                 <Badge
                     variant="secondary"
