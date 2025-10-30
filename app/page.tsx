@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import HeroMarquee from "@/components/HeroMarquee";
+import ImpactSection from "@/components/Impact";
 import { skills } from "@/constants";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
         iconUrl="/decor.svg"
         items={skills}
       />
+      <ImpactSection />
     </div>
   );
 }
