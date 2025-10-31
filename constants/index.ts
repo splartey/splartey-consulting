@@ -85,3 +85,30 @@ export const valueProposition = [
         description: "Our deep sector expertise, agile approach, and commitment to collaborative partnerships differentiate us. We don't just advise; we co-create and implement solutions for tangible results.",
     },
 ];
+
+export const propositionContent = {
+    tagline: "Why we're different",
+    heading: "Bringing clarity and integrity to strategy, performance, and leadership.",
+    intro: "At SPLartey Consulting, our difference lies in how we think and work. We combine strategic foresight with a people-centered approach, ensuring every solution is practical, inclusive, and grounded in real-world experience. Guided by equity, accountability, and innovation, we help organizations turn ideas into lasting impact.",
+    subheading: "Why we're better",
+    details: [
+        "SPLartey Consulting brings over two decades of hands-on leadership in international development, experience that transforms strategy into measurable results. We understand the realities of working across diverse regions and systems, and we know how to design solutions that stand up to those complexities.",
+        "Our clients value our honesty, reliability, and ability to deliver results that endure. Every project reflects our commitment to excellence and to building organizations that are stronger, more adaptive, and better equipped to lead change.",
+    ],
+    image: {
+        src: "/Team-collaboration.jpg",
+        alt: "Team collaboration - two people working on a project board",
+    }
+};
+
+export const founderData = {
+    name: "Seth Lartey",
+    title: "Meet the Founder",
+    image: "/founder.jpeg",
+    alt: "Seth Lartey - Founder",
+    paragraphs: [
+        `Seth Lartey is the founder and principal consultant at SPLartey Consulting, bringing over 25 years of experience in international development, strategy, and institutional transformation. His career spans leadership roles across Africa, Asia, and the Caribbean, where he has successfully guided organizations, programmes, and teams to deliver measurable, lasting results.`,
+        `Seth's work has focused on helping NGOs, governments, and development partners strengthen governance, inclusion, and performance. Notably, he played a key role in supporting the transition of STAR-Ghana into an independent national entity, a milestone that reflects his ability to blend strategic foresight with operational excellence.`,
+        `Guided by values of equity, accountability, and innovation, Seth founded SPLartey Consulting to bridge the gap between strategy and implementation. His approach is grounded in collaboration, integrity, and a genuine commitment to helping organizations thrive. For Seth, leadership is not just about direction — it's about empowering others to create meaningful, sustainable change.`,
+    ],
+};
