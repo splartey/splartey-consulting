@@ -22,9 +22,9 @@ export default function Hero() {
                     <IconChevronRight stroke={3} />
                 </Badge>
 
-                <h1 className="text-3xl md:text-5xl font-semibold text-primary leading-tight mb-4">
-                    Empowering Global Impact <br />
-                    Through Strategic <br className="hidden sm:block" />
+                <h1 className="text-4xl md:text-6xl font-semibold text-primary leading-tight mb-4">
+                    Empowering Global Impact
+                    Through Strategic
                     Leadership Solutions.
                 </h1>
 
