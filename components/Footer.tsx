@@ -42,7 +42,7 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="border-t bg-white text-gray-700">
+        <footer className="border-t bg-white text-gray-700 overflow-hidden">
             <div className="w-full px-6 sm:px-10 md:px-32 pt-10">
                 <div className="py-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-x-8 gap-y-10">
 
@@ -74,7 +74,7 @@ const Footer = () => {
                                     <li key={title}>
                                         <Link
                                             href={href}
-                                            className="text-sm text-gray-600 hover:text-primary underline-offset-5 hover:underline transition"
+                                            className="text-sm text-gray-600 hover:text-primary underline-offset-5 hover:underline transition wrap-break-word"
                                         >
                                             {title}
                                         </Link>
