@@ -1,3 +1,5 @@
+import { Blocks, Bot, ChartPie } from "lucide-react";
+
 export const navLinks = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
@@ -71,21 +73,6 @@ export const servicesData = [
     },
 ];
 
-export const valueProposition = [
-    {
-        title: "Our Mission",
-        description: "To deliver innovative and context-specific solutions that enhance program performance, build local capacity, and foster lasting development outcomes.",
-    },
-    {
-        title: "Our Vision",
-        description: "To be a leading catalyst for positive change, enabling organizations to achieve their development goals effectively and equitably.",
-    },
-    {
-        title: "Unique Value",
-        description: "Our deep sector expertise, agile approach, and commitment to collaborative partnerships differentiate us. We don't just advise; we co-create and implement solutions for tangible results.",
-    },
-];
-
 export const propositionContent = {
     tagline: "Why we're different",
     heading: "Bringing clarity and integrity to strategy, performance, and leadership.",
@@ -112,3 +99,24 @@ export const founderData = {
         `Guided by values of equity, accountability, and innovation, Seth founded SPLartey Consulting to bridge the gap between strategy and implementation. His approach is grounded in collaboration, integrity, and a genuine commitment to helping organizations thrive. For Seth, leadership is not just about direction — it's about empowering others to create meaningful, sustainable change.`,
     ],
 };
+
+export const valueProposition = [
+    {
+        icon: Blocks,
+        title: "Our Vision",
+        description:
+            "To be a leading organization empowering communities through innovation, integrity, and inclusivity.",
+    },
+    {
+        icon: Bot,
+        title: "Our Mission",
+        description:
+            "To provide impactful, data-driven solutions that enhance community development and foster sustainable growth.",
+    },
+    {
+        icon: ChartPie,
+        title: "Unique Value Proposition",
+        description:
+            "We combine local expertise, modern technology, and strategic partnerships to deliver measurable impact and long-term value.",
+    },
+];
