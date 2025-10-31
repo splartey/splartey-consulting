@@ -1,60 +1,65 @@
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button"
-import Link from "next/link";
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import { IconChevronRight } from "@tabler/icons-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
     return (
-        <section id="hero" className="w-full min-h-screen flex flex-col lg:flex-row">
-            <div className="flex flex-col justify-center w-full lg:w-1/2 px-6 md:px-12 lg:px-30 py-16">
-                <Badge
-                    variant="secondary"
-                    className="mb-4 w-fit bg-[#F8FEE7] text-xs rounded-full text-primary font-medium space-x-1 py-1 flex gap-2 items-center border-gray-200"
-                >
-                    <Image
-                        src="/medal.png"
-                        alt="Award icon"
-                        width={20}
-                        height={20}
-                    />
-                    Award Winning
-                    <IconChevronRight stroke={3} />
-                </Badge>
+        <section className="min-h-screen flex items-center justify-center overflow-hidden bg-white">
+            <div className="max-w-7xl w-full mx-auto grid lg:grid-cols-2 gap-12 px-6 py-12 lg:py-0">
 
-                <h1 className="text-4xl md:text-6xl font-semibold text-primary leading-tight mb-4">
-                    Empowering Global Impact
-                    Through Strategic
-                    Leadership Solutions.
-                </h1>
+                <div className="my-auto">
+                    <Badge
+                        variant="secondary"
+                        className="rounded-full py-1 border border-gray-200 bg-[#F8FEE7] text-primary font-medium flex items-center gap-2 w-fit shadow-sm"
+                    >
+                        <Image
+                            src="/medal.png"
+                            alt="Award icon"
+                            width={20}
+                            height={20}
+                            className="rounded-full"
+                        />
+                        Award Winning
+                        <IconChevronRight stroke={3} className="w-4 h-4" />
+                    </Badge>
 
-                <p className="text-gray-600 mb-8 text-sm md:text-base max-w-md">
-                    SPLartey Consulting helps organizations and individuals achieve peak
-                    performance through tailored strategy, leadership development, and
-                    innovative solutions. Let&apos;s build your success story.
-                </p>
+                    <h1 className="mt-6 max-w-[17ch] text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] font-semibold text-primary leading-[1.2] tracking-tight">
+                        Empowering Global Impact Through Strategic Leadership Solutions.
+                    </h1>
 
-                <div className="flex flex-wrap gap-4">
-                    <Button asChild
-                        size="lg"
-                        className="px-6 btn-primary">
-                        <Link href="/works">Explore projects</Link>
-                    </Button>
-                    <Button asChild
-                        size="lg"
-                        variant="outline" className="px-6 btn-outline">
-                        <Link href="/about">About us</Link>
-                    </Button>
+                    <p className="mt-6 max-w-[60ch] text-base md:text-lg text-foreground/80 leading-relaxed">
+                        SPLartey Consulting helps organizations and individuals achieve peak
+                        performance through tailored strategy, leadership development, and
+                        innovative solutions. Let&apos;s build your success story.
+                    </p>
+
+                    <div className="mt-12 flex flex-wrap items-center gap-4">
+                        <Button asChild size="lg" className="px-6 btn-primary">
+                            <Link href="/works">Explore projects</Link>
+                        </Button>
+                        <Button
+                            asChild
+                            size="lg"
+                            variant="outline"
+                            className="px-6 btn-outline shadow-none"
+                        >
+                            <Link href="/about">About us</Link>
+                        </Button>
+                    </div>
                 </div>
-            </div>
-            <div className="relative w-full h-[50vh] lg:w-1/2 lg:h-auto">
-                <Image
-                    src="/hero-image.JPG"
-                    alt="SPLartey Workshop"
-                    fill
-                    className="object-cover object-center"
-                    priority
-                />
+
+                <div className="relative w-full aspect-video lg:aspect-auto lg:w-[1000px] lg:h-screen rounded-xl lg:rounded-none overflow-hidden">
+                    <Image
+                        src="/hero-image.JPG"
+                        alt="SPLartey Workshop"
+                        fill
+                        className="object-cover object-center brightness-[0.95]"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-white/20 via-transparent to-transparent pointer-events-none" />
+                </div>
             </div>
         </section>
     );
