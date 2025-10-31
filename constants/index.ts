@@ -70,3 +70,18 @@ export const servicesData = [
         borderColor: "border-[#FFB3B3]",
     },
 ];
+
+export const valueProposition = [
+    {
+        title: "Our Mission",
+        description: "To deliver innovative and context-specific solutions that enhance program performance, build local capacity, and foster lasting development outcomes.",
+    },
+    {
+        title: "Our Vision",
+        description: "To be a leading catalyst for positive change, enabling organizations to achieve their development goals effectively and equitably.",
+    },
+    {
+        title: "Unique Value",
+        description: "Our deep sector expertise, agile approach, and commitment to collaborative partnerships differentiate us. We don't just advise; we co-create and implement solutions for tangible results.",
+    },
+];
