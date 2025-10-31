@@ -1,53 +1,42 @@
 import Image from "next/image";
 
+import { founderData } from "@/constants";
+
 export default function Founder() {
+    const {
+        title,
+        image,
+        alt,
+        paragraphs
+    } = founderData;
+
     return (
-        <section className="w-full py-20 bg-white">
-            <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
-                <div className="relative w-full h-[420px] md:h-[600px] rounded-3xl overflow-hidden border-2 border-gray-400/70 shadow-md">
+        <section className="py-20 lg:py-24 bg-white">
+            <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                <div className="relative w-full h-[420px] md:h-full min-h-[500px] rounded-3xl overflow-hidden border border-gray-200 shadow-md">
                     <Image
-                        src="/founder.jpeg"
-                        alt="Seth Lartey - Founder"
+                        src={image}
+                        alt={alt}
                         fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover"
                         priority
                     />
                 </div>
-                <div>
-                    <h2 className="text-3xl md:text-3xl font-bold text-primary mb-6">
-                        Meet the founder
+
+                <div className="flex flex-col justify-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+                        {title}
                     </h2>
 
                     <div className="space-y-4 text-gray-700 leading-relaxed text-justify">
-                        <p>
-                            Seth Lartey is the founder and principal consultant at SPLartey
-                            Consulting, bringing over 25 years of experience in international
-                            development, strategy, and institutional transformation. His career
-                            spans leadership roles across Africa, Asia, and the Caribbean,
-                            where he has successfully guided organizations, programmes, and
-                            teams to deliver measurable, lasting results.
-                        </p>
-
-                        <p>
-                            Seth&apos;s work has focused on helping NGOs, governments, and
-                            development partners strengthen governance, inclusion, and
-                            performance. Notably, he played a key role in supporting the
-                            transition of STAR-Ghana into an independent national entity, a
-                            milestone that reflects his ability to blend strategic foresight
-                            with operational excellence.
-                        </p>
-
-                        <p>
-                            Guided by values of equity, accountability, and innovation, Seth
-                            founded SPLartey Consulting to bridge the gap between strategy and
-                            implementation. His approach is grounded in collaboration,
-                            integrity, and a genuine commitment to helping organizations thrive.
-                            For Seth, leadership is not just about direction&mdash;it&apos;s about
-                            empowering others to create meaningful, sustainable change.
-                        </p>
+                        {paragraphs.map((paragraph, index) => (
+                            <p key={index}>{paragraph}</p>
+                        ))}
                     </div>
                 </div>
             </div>
         </section>
-    )
+    );
 }
