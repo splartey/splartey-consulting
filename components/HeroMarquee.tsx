@@ -18,14 +18,14 @@ export default function SkillsMarquee({ iconUrl, items, }: SkillsMarqueeProps) {
                 alt="skill separator"
                 className="object-contain"
             />
-            <span className="whitespace-nowrap text-white text-sm md:text-base font-medium">
+            <span className="whitespace-nowrap text-white text-sm md:text-base">
                 {text}
             </span>
         </div>
     );
 
     return (
-        <div className="w-full bg-primary py-3 overflow-hidden">
+        <div className="w-full bg-primary md:py-2.5 overflow-hidden">
             <Marquee
                 pauseOnHover
                 className="[--duration:20s]">
