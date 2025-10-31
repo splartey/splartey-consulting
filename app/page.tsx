@@ -11,7 +11,11 @@ export default function HomePage() {
         iconUrl="/decor.svg"
         items={skills}
       />
-      <ImpactSection />
+      <ImpactSection
+        title={`Strategic Solutions for Transformative Impact`}
+        description1={`We provide bespoke consulting solutions that empower organizations to lead with clarity, strengthen performance, and achieve lasting impact. Our services span strategy development, institutional strengthening, governance, leadership, and program delivery, ensuring that every intervention is both practical and sustainable.`}
+        description2={`With a deep understanding of complex development environments across Africa, Asia, and the Caribbean, we bridge global insight with local realities to help partners navigate change effectively. Guided by our core values of equity, accountability, and innovation, we design solutions that translate ambition into measurable results.`}
+      />
     </div>
   );
 }
