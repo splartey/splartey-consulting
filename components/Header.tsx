@@ -13,7 +13,7 @@ export default function Header() {
 
     return (
         <header className="py-4 lg:py-6 bg-background/60 backdrop-blur-xl fixed w-full border-b border-gray-200 px-6 lg:px-20 z-50">
-            <div className="w-full  mx-auto flex items-center justify-between">
+            <div className="w-full mx-auto flex items-center justify-between">
                 <div className="flex items-center space-x-2 lg:space-x-3">
                     <Image
                         src="/logo.svg"

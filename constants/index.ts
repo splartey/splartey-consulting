@@ -93,7 +93,7 @@ export const servicesData = [
 // About page
 export const aboutcontent = {
     title: "About us",
-    description1: " SPLartey Consulting is a specialist management consultancy dedicated  to strengthening strategy, performance, and leadership across the       international development sector. We partner with NGOs, INGOs,governments, and development organizations to design and implement solutions that drive meaningful, measurable change.",
+    description1: "SPLartey Consulting is a specialist management consultancy dedicated to strengthening strategy, performance, and leadership across the international development sector. We partner with NGOs, INGOs, governments, and development organizations to design and implement solutions that drive meaningful, measurable change.",
     description2: "Built on years of field-tested experience, SPLartey Consulting blends strategic insight with practical execution. Our approach is rooted in collaboration, accountability, and innovation, ensuring that every engagement leads to sustainable progress. Guided by deep contextual understanding, we help organizations align vision with action and deliver results that last.",
     illustrationLeft: "/Looper-3.svg",
     illustrationRight: "/Looper-2.svg",
@@ -171,12 +171,6 @@ export const projects = [
         title: "Engage with Your Audience",
         description:
             "Boost audience engagement with interactive features like polls, quizzes, and forms.",
-        imageUrl: "/Team-collaboration.JPG"
-    },
-    {
-        title: "Automate Your Workflow",
-        description:
-            "Streamline your processes by automating repetitive tasks, saving time and reducing effort.",
         imageUrl: "/Team-collaboration.JPG"
     },
     {
