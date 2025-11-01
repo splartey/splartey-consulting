@@ -145,7 +145,7 @@
     @apply bg-primary hover:bg-emerald-900 text-white border-2 border-neutral-950/20 shadow-md;
   }
   .btn-outline{
-    @apply border-primary text-primary hover:text-emerald-900;
+    @apply border-gray-500/20 border-2 text-primary hover:text-emerald-900;
   }
 }
 

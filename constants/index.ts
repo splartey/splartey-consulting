@@ -8,6 +8,14 @@ export const navLinks = [
     { name: "Our Work", href: "/works" },
 ];
 
+// Home page
+export const heroData = {
+    badgeImageUrl: "/medal.png",
+    badgeText: "Award Winning",
+    heroTitle: "Empowering Global Impact Through Strategic Leadership Solutions.",
+    heroDescription: "SPLartey Consulting helps organizations and individuals achieve peak performance through tailored strategy, leadership development, and innovative solutions. Let's build your success story.",
+    heroImageUrl: "/hero-image.JPG"
+}
 
 export const skills = [
     "Programme Design & Delivery",
@@ -15,6 +23,12 @@ export const skills = [
     "Partnership & Stakeholder Management",
     "Governance & Compliance",
 ];
+
+export const impactContent = {
+    title: "Strategic Solutions for Transformative Impact",
+    description1: "We provide bespoke consulting solutions that empower organizations to lead with clarity, strengthen performance, and achieve lasting impact. Our services span strategy development, institutional strengthening, governance, leadership, and program delivery, ensuring that every intervention is both practical and sustainable.",
+    description2: "With a deep understanding of complex development environments across Africa, Asia, and the Caribbean, we bridge global insight with local realities to help partners navigate change effectively. Guided by our core values of equity, accountability, and innovation, we design solutions that translate ambition into measurable results."
+}
 
 // Services page
 export const servicesData = [

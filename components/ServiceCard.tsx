@@ -1,13 +1,5 @@
 import { CheckCircle } from "lucide-react";
 
-interface ServiceCardProps {
-    title: string;
-    description: string;
-    items: string[];
-    bgColor: string;
-    borderColor: string;
-}
-
 export default function ServiceCard({
     title,
     description,

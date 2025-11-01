@@ -3,11 +3,6 @@
 import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
 
-interface SkillsMarqueeProps {
-    iconUrl: string;
-    items: string[];
-}
-
 export default function SkillsMarquee({ iconUrl, items, }: SkillsMarqueeProps) {
     const MarqueeItem = ({ text }: { text: string }) => (
         <div className="flex items-center gap-4 space-x-4">

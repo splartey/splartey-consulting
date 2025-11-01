@@ -1,14 +1,4 @@
-interface ImpactSectionProps {
-    title: string;
-    description1: string;
-    description2?: string;
-}
-
-export default function ImpactSection({
-    title,
-    description1,
-    description2,
-}: ImpactSectionProps) {
+export default function ImpactSection({ title, description1, description2, }: ImpactSectionProps) {
     return (
         <section className="w-full bg-white py-24">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-6 md:px-10 lg:px-8">
