@@ -11,7 +11,7 @@ export default function ContactSection() {
     return (
         <section className="w-full bg-white py-24">
             <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-                <div className="md:pr-8" >
+                <div className="md:pr-8">
                     <h2 className="text-4xl md:text-5xl font-semibold text-primary tracking-tight">
                         Get in touch
                     </h2>
