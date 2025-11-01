@@ -1,11 +1,13 @@
 import { Blocks, Bot, ChartPie } from "lucide-react";
 
+// Navigation links
 export const navLinks = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     { name: "About", href: "/about" },
     { name: "Our Work", href: "/works" },
 ];
+
 
 export const skills = [
     "Programme Design & Delivery",
@@ -14,6 +16,7 @@ export const skills = [
     "Governance & Compliance",
 ];
 
+// Services page
 export const servicesData = [
     {
         title: "Strategy Advisory",
@@ -73,19 +76,13 @@ export const servicesData = [
     },
 ];
 
-export const propositionContent = {
-    tagline: "Why we're different",
-    heading: "Bringing clarity and integrity to strategy, performance, and leadership.",
-    intro: "At SPLartey Consulting, our difference lies in how we think and work. We combine strategic foresight with a people-centered approach, ensuring every solution is practical, inclusive, and grounded in real-world experience. Guided by equity, accountability, and innovation, we help organizations turn ideas into lasting impact.",
-    subheading: "Why we're better",
-    details: [
-        "SPLartey Consulting brings over two decades of hands-on leadership in international development, experience that transforms strategy into measurable results. We understand the realities of working across diverse regions and systems, and we know how to design solutions that stand up to those complexities.",
-        "Our clients value our honesty, reliability, and ability to deliver results that endure. Every project reflects our commitment to excellence and to building organizations that are stronger, more adaptive, and better equipped to lead change.",
-    ],
-    image: {
-        src: "/Team-collaboration.jpg",
-        alt: "Team collaboration - two people working on a project board",
-    }
+// About page
+export const aboutcontent = {
+    title: "About us",
+    description1: " SPLartey Consulting is a specialist management consultancy dedicated  to strengthening strategy, performance, and leadership across the       international development sector. We partner with NGOs, INGOs,governments, and development organizations to design and implement solutions that drive meaningful, measurable change.",
+    description2: "Built on years of field-tested experience, SPLartey Consulting blends strategic insight with practical execution. Our approach is rooted in collaboration, accountability, and innovation, ensuring that every engagement leads to sustainable progress. Guided by deep contextual understanding, we help organizations align vision with action and deliver results that last.",
+    illustrationLeft: "/Looper-3.svg",
+    illustrationRight: "/Looper-2.svg",
 };
 
 export const founderData = {
@@ -118,5 +115,60 @@ export const valueProposition = [
         title: "Unique Value Proposition",
         description:
             "We combine local expertise, modern technology, and strategic partnerships to deliver measurable impact and long-term value.",
+    },
+];
+
+export const propositionContent = {
+    tagline: "Why we're different",
+    heading: "Bringing clarity and integrity to strategy, performance, and leadership.",
+    intro: "At SPLartey Consulting, our difference lies in how we think and work. We combine strategic foresight with a people-centered approach, ensuring every solution is practical, inclusive, and grounded in real-world experience. Guided by equity, accountability, and innovation, we help organizations turn ideas into lasting impact.",
+    subheading: "Why we're better",
+    details: [
+        "SPLartey Consulting brings over two decades of hands-on leadership in international development, experience that transforms strategy into measurable results. We understand the realities of working across diverse regions and systems, and we know how to design solutions that stand up to those complexities.",
+        "Our clients value our honesty, reliability, and ability to deliver results that endure. Every project reflects our commitment to excellence and to building organizations that are stronger, more adaptive, and better equipped to lead change.",
+    ],
+    image: {
+        src: "/Team-collaboration.jpg",
+        alt: "Team collaboration - two people working on a project board",
+    }
+};
+
+// Works page
+export const projects = [
+    {
+        title: "Identify Opportunities",
+        description:
+            "Easily uncover untapped areas to explore and expand your reach effortlessly.",
+        imageUrl: "/Team-collaboration.JPG"
+    },
+    {
+        title: "Build Authority",
+        description:
+            "Create valuable content that resonates, inspires trust, and positions you as an expert.",
+        imageUrl: "/Team-collaboration.JPG"
+    },
+    {
+        title: "Instant Insights",
+        description:
+            "Gain immediate, actionable insights with a quick glance, enabling fast decision-making.",
+        imageUrl: "/Team-collaboration.JPG"
+    },
+    {
+        title: "Engage with Your Audience",
+        description:
+            "Boost audience engagement with interactive features like polls, quizzes, and forms.",
+        imageUrl: "/Team-collaboration.JPG"
+    },
+    {
+        title: "Automate Your Workflow",
+        description:
+            "Streamline your processes by automating repetitive tasks, saving time and reducing effort.",
+        imageUrl: "/Team-collaboration.JPG"
+    },
+    {
+        title: "Automate Your Workflow",
+        description:
+            "Streamline your processes by automating repetitive tasks, saving time and reducing effort.",
+        imageUrl: "/Team-collaboration.JPG"
     },
 ];
