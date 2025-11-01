@@ -30,9 +30,11 @@ export default function Founder() {
                         {title}
                     </h2>
 
-                    <div className="space-y-4 text-gray-700 leading-relaxed text-justify">
+                    <div className="space-y-4 text-gray-700 leading-relaxed">
                         {paragraphs.map((paragraph, index) => (
-                            <p key={index}>{paragraph}</p>
+                            <p key={index}>
+                                {paragraph}
+                                </p>
                         ))}
                     </div>
                 </div>
