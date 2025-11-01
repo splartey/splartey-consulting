@@ -74,7 +74,7 @@ const Footer = () => {
                                     <li key={title}>
                                         <Link
                                             href={href}
-                                            className="text-sm text-gray-600 hover:text-primary underline-offset-5 hover:underline transition wrap-break-word"
+                                            className="text-sm text-gray-600 hover:text-primary underline-offset-5 hover:underline transition break-words"
                                         >
                                             {title}
                                         </Link>
