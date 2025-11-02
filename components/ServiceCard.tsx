@@ -1,11 +1,6 @@
 import { CheckCircle } from "lucide-react";
 
-export default function ServiceCard({
-    title,
-    description,
-    items,
-    bgColor,
-    borderColor }: ServiceCardProps) {
+export default function ServiceCard({ title, description, items, bgColor, borderColor }: ServiceCardProps) {
     return (
         <div className={`rounded-3xl p-6 md:p-8 shadow-sm border ${bgColor} ${borderColor}`} >
             <h3 className="font-semibold text-xl mb-2">{title}</h3>

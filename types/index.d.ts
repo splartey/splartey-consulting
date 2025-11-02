@@ -38,3 +38,9 @@ interface SkillsMarqueeProps {
     iconUrl: string;
     items: string[];
 }
+
+interface ValueCardProps {
+    icon: LucideIcon;
+    title: string;
+    description: string;
+}

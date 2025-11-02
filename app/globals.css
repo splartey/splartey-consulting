@@ -44,19 +44,19 @@
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   @keyframes marquee {
-  from {
-    transform: translateX(0);
+    from {
+      transform: translateX(0);
     }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
   @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+    from {
+      transform: translateY(0);
     }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
     }
   }
 }
@@ -70,7 +70,7 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: #1c6758;
-  --color-2: #BAF713;
+  --color-2: #baf713;
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -140,12 +140,47 @@
   }
 }
 
-@layer utilities{
+@layer utilities {
   .btn-primary {
     @apply bg-primary hover:bg-emerald-900 text-white border-2 border-neutral-950/20 shadow-md;
   }
-  .btn-outline{
+  .btn-outline {
     @apply border-gray-500/20 border-2 text-primary hover:text-emerald-900;
+  }
+
+  /* Navigation */
+  .header {
+    @apply py-4 lg:py-6 bg-background/60 backdrop-blur-xl fixed w-full border-b border-gray-200 px-6 lg:px-20 z-50;
+  }
+
+  .nav-logo {
+    @apply flex items-center space-x-2 lg:space-x-3;
+  }
+
+  /* About */
+  .value-card {
+    @apply flex flex-col border rounded-3xl py-8 px-6 bg-gray-50 hover:bg-white text-left shadow-sm hover:shadow-md transition-all duration-300;
+  }
+
+  /* Footer */
+  .footer {
+    @apply border-t bg-white text-gray-700 overflow-hidden;
+  }
+
+  .footer-top {
+    @apply w-full px-6 sm:px-10 md:px-32 pt-10;
+  }
+
+  .footer-top-container {
+    @apply py-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-x-8 gap-y-10;
+  }
+
+  .footer-bottom {
+    @apply py-6 px-6 md:px-20 bg-primary text-white flex flex-col sm:flex-row items-center justify-center gap-y-3 text-sm;
+  }
+
+  .footer-link {
+    @apply text-sm text-gray-600 hover:text-primary underline-offset-5 hover:underline transition break-words;
   }
 }
 

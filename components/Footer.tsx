@@ -42,10 +42,9 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="border-t bg-white text-gray-700 overflow-hidden">
-            <div className="w-full px-6 sm:px-10 md:px-32 pt-10">
-                <div className="py-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-x-8 gap-y-10">
-
+        <footer className="footer">
+            <div className="footer-top">
+                <div className="footer-top-container">
                     <div className="col-span-full xl:col-span-2">
                         <Link href="/" className="flex items-center gap-2">
                             <Image
@@ -63,7 +62,6 @@ const Footer = () => {
                             Strategy, Performance, Leadership
                         </article>
                     </div>
-
                     {footerSections.map(({ title, links }) => (
                         <div key={title}>
                             <h6 className="font-semibold text-gray-900 uppercase tracking-wide text-sm">
@@ -74,7 +72,7 @@ const Footer = () => {
                                     <li key={title}>
                                         <Link
                                             href={href}
-                                            className="text-sm text-gray-600 hover:text-primary underline-offset-5 hover:underline transition wrap-break-word"
+                                            className="footer-link"
                                         >
                                             {title}
                                         </Link>
@@ -86,7 +84,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="py-6 px-6 md:px-20 bg-primary text-white flex flex-col sm:flex-row items-center justify-center gap-y-3 text-sm">
+            <div className="footer-bottom">
                 <span className="text-center sm:text-left">
                     &copy; {currentYear}{" "}
                     <Link href="/" className="hover:underline underline-offset-5  font-medium">

@@ -1,4 +1,4 @@
-import { Blocks, Bot, ChartPie } from "lucide-react";
+import { Eye, Goal, Gem } from "lucide-react";
 
 // Navigation links
 export const navLinks = [
@@ -10,12 +10,14 @@ export const navLinks = [
 
 // Home page
 export const heroData = {
-    badgeImageUrl: "/medal.png",
-    badgeText: "Award Winning",
-    heroTitle: "Empowering Global Impact Through Strategic Leadership Solutions.",
-    heroDescription: "SPLartey Consulting helps organizations and individuals achieve peak performance through tailored strategy, leadership development, and innovative solutions. Let's build your success story.",
-    heroImageUrl: "/hero-image.JPG"
+  badgeImageUrl: "/badge.svg",
+  badgeText: "Trusted Development Partner",
+  heroTitle: "Strengthening Organizations for Sustainable Development & Social Impact",
+  heroDescription:
+    "SPLartey Consulting supports NGOs, foundations, and public sector partners to unlock strategic clarity, strengthen leadership, and drive measurable change. We turn vision into action through practical strategy, capacity building, and performance-focused support.",
+  heroImageUrl: "/hero-image.JPG"
 }
+
 
 export const skills = [
     "Programme Design & Delivery",
@@ -105,28 +107,28 @@ export const founderData = {
     image: "/founder.jpeg",
     alt: "Seth Lartey - Founder",
     paragraphs: [
-        `Seth Lartey is the founder and principal consultant at SPLartey Consulting, bringing over 25 years of experience in international development, strategy, and institutional transformation. His career spans leadership roles across Africa, Asia, and the Caribbean, where he has successfully guided organizations, programmes, and teams to deliver measurable, lasting results.`,
-        `Seth's work has focused on helping NGOs, governments, and development partners strengthen governance, inclusion, and performance. Notably, he played a key role in supporting the transition of STAR-Ghana into an independent national entity, a milestone that reflects his ability to blend strategic foresight with operational excellence.`,
-        `Guided by values of equity, accountability, and innovation, Seth founded SPLartey Consulting to bridge the gap between strategy and implementation. His approach is grounded in collaboration, integrity, and a genuine commitment to helping organizations thrive. For Seth, leadership is not just about direction — it's about empowering others to create meaningful, sustainable change.`,
+        `“Strategy means little without purpose. My work is about helping organisations turn intention into lasting impact.”`,
+        `As an international development and strategy expert I have helped organisations strengthen leadership, governance, and performance. I led transformational initiatives including the transition of STAR-Ghana into an independent national entity. Guided by values of equity, accountability, and innovation, I support mission-driven organisations to move from vision to action — and action to impact.`,
+        `My work reflects a deep belief that strong institutions and empowered leadership are the foundation of social progress. Whether advising executive teams, supporting grassroots organisations, or guiding multi-country programmes, I bring a thoughtful, values-driven approach rooted in real-world experience and a commitment to meaningful impact.`
     ],
 };
 
 export const valueProposition = [
     {
-        icon: Blocks,
+        icon: Eye,
         title: "Our Vision",
         description:
             "To be a leading organization empowering communities through innovation, integrity, and inclusivity.",
     },
     {
-        icon: Bot,
+        icon: Goal,
         title: "Our Mission",
         description:
             "To provide impactful, data-driven solutions that enhance community development and foster sustainable growth.",
     },
     {
-        icon: ChartPie,
-        title: "Unique Value Proposition",
+        icon: Gem,
+        title: "Unique Value",
         description:
             "We combine local expertise, modern technology, and strategic partnerships to deliver measurable impact and long-term value.",
     },
@@ -135,10 +137,10 @@ export const valueProposition = [
 export const propositionContent = {
     tagline: "Why we're different",
     heading: "Bringing clarity and integrity to strategy, performance, and leadership.",
-    intro: "At SPLartey Consulting, our difference lies in how we think and work. We combine strategic foresight with a people-centered approach, ensuring every solution is practical, inclusive, and grounded in real-world experience. Guided by equity, accountability, and innovation, we help organizations turn ideas into lasting impact.",
+    intro: "Our difference lies in how we think and work. We combine strategic foresight with a people-centered approach, ensuring every solution is practical, inclusive, and grounded in real-world experience. Guided by equity, accountability, and innovation, we help organizations turn ideas into lasting impact.",
     subheading: "Why we're better",
     details: [
-        "SPLartey Consulting brings over two decades of hands-on leadership in international development, experience that transforms strategy into measurable results. We understand the realities of working across diverse regions and systems, and we know how to design solutions that stand up to those complexities.",
+        "We bring over two decades of hands-on leadership in international development, experience that transforms strategy into measurable results. We understand the realities of working across diverse regions and systems, and we know how to design solutions that stand up to those complexities.",
         "Our clients value our honesty, reliability, and ability to deliver results that endure. Every project reflects our commitment to excellence and to building organizations that are stronger, more adaptive, and better equipped to lead change.",
     ],
     image: {
