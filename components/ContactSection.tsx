@@ -1,12 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Label } from "@/components/ui/label";
-import Link from "next/link";
+import { ContactForm } from "@/components/ContactForm";
 
 export default function ContactSection() {
     return (
@@ -19,60 +14,7 @@ export default function ContactSection() {
                     <p className="mt-2 text-lg text-muted-foreground">
                         We would like to hear from you
                     </p>
-
-                    <form className="mt-10 space-y-6">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div className="space-y-1">
-                                <Label htmlFor="firstName" className="mb-2">First name</Label>
-                                <Input id="firstName" type="text" placeholder="John" required />
-                            </div>
-
-                            <div className="space-y-1">
-                                <Label htmlFor="lastName" className="mb-2">Last name</Label>
-                                <Input id="lastName" type="text" placeholder="Doe" required />
-                            </div>
-                        </div>
-
-                        <div className="space-y-1">
-                            <Label htmlFor="email" className="mb-2">Email</Label>
-                            <Input id="email" type="email" placeholder="you@example.com" required />
-                        </div>
-
-                        <div className="space-y-1">
-                            <Label htmlFor="phone" className="mb-2">Phone</Label>
-                            <Input id="phone" type="tel" placeholder="+254 700 000 000" required />
-                        </div>
-
-                        <div className="space-y-1">
-                            <Label htmlFor="message" className="mb-2">Message</Label>
-                            <Textarea
-                                id="message"
-                                placeholder="Write your message..."
-                                className="min-h-[120px]"
-                                required
-                            />
-                        </div>
-
-                        <div className="flex items-center space-x-2">
-                            <Checkbox id="privacy" required />
-                            <Label
-                                htmlFor="privacy"
-                                className="text-sm text-gray-600 leading-snug"
-                            >
-                                You agree to our friendly{" "}
-                                <Link
-                                    href="/privacy"
-                                    className="underline text-primary hover:text-primary/80"
-                                >
-                                    privacy policy
-                                </Link>.
-                            </Label>
-                        </div>
-
-                        <Button type="submit" className="w-full btn-primary">
-                            Send message
-                        </Button>
-                    </form>
+                    <ContactForm />
                 </div>
 
                 <div className="hidden lg:block">

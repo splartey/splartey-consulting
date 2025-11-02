@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -95,6 +96,7 @@ export default function RootLayout({
         <main className="min-h-screen pt-15 lg:pt-20">
           {children}
         </main>
+         <Toaster />
         <Footer />
       </body>
     </html>
