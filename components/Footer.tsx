@@ -2,43 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { footerContent } from "@/constants"
 
-const footerSections = [
-    {
-        title: "Quick Links",
-        links: [
-            { title: "Home", href: "/" },
-            { title: "About Us", href: "/about" },
-            { title: "Our Services", href: "/services" },
-            { title: "Our Works", href: "/works" },
-            { title: "Contact Us", href: "/contact" },
-        ],
-    },
-    {
-        title: "Socials",
-        links: [
-            { title: "LinkedIn", href: "#" },
-            { title: "Devex", href: "#" },
-        ],
-    },
-    {
-        title: "Legal",
-        links: [
-            { title: "Privacy Policy", href: "#" },
-            { title: "Terms and Conditions", href: "#" },
-        ],
-    },
-    {
-        title: "Contacts",
-        links: [
-            { title: "+(000) 000 000 0000", href: "tel:+000000000000" },
-            { title: "admin@splarteyconsulting.com", href: "mailto:admin@splarteyconsulting.com" },
-            { title: "London UK", href: "#" },
-        ],
-    },
-];
-
-const Footer = () => {
+export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
@@ -62,7 +28,7 @@ const Footer = () => {
                             Strategy, Performance, Leadership
                         </article>
                     </div>
-                    {footerSections.map(({ title, links }) => (
+                    {footerContent.map(({ title, links }) => (
                         <div key={title}>
                             <h6 className="font-semibold text-gray-900 uppercase tracking-wide text-sm">
                                 {title}
@@ -96,5 +62,3 @@ const Footer = () => {
         </footer>
     );
 };
-
-export default Footer;

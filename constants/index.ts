@@ -188,3 +188,39 @@ export const projects = [
         imageUrl: "/Team-collaboration.JPG"
     },
 ];
+
+// Footer 
+export const footerContent = [
+    {
+        title: "Quick Links",
+        links: [
+            { title: "Home", href: "/" },
+            { title: "About Us", href: "/about" },
+            { title: "Our Services", href: "/services" },
+            { title: "Our Works", href: "/works" },
+            { title: "Contact Us", href: "/contact" },
+        ],
+    },
+    {
+        title: "Socials",
+        links: [
+            { title: "LinkedIn", href: "#" },
+            { title: "Devex", href: "#" },
+        ],
+    },
+    {
+        title: "Legal",
+        links: [
+            { title: "Privacy Policy", href: "#" },
+            { title: "Terms and Conditions", href: "#" },
+        ],
+    },
+    {
+        title: "Contacts",
+        links: [
+            { title: "+(000) 000 000 0000", href: "tel:+000000000000" },
+            { title: "admin@splarteyconsulting.com", href: "mailto:admin@splarteyconsulting.com" },
+            { title: "London UK", href: "#" },
+        ],
+    },
+];
