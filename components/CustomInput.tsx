@@ -19,6 +19,7 @@ interface CustomInputProps {
     label: string;
     placeholder: string;
     type?: string;
+    autoComplete?: boolean;
 }
 
 export function CustomInput({
@@ -34,10 +35,11 @@ export function CustomInput({
             name={name}
             render={({ field }) => (
                 <div className="flex flex-col gap-1">
-                    <FormLabel>{label}</FormLabel>
+                    <FormLabel htmlFor={name} >{label}</FormLabel>
                     <FormControl>
                         <Input
                             {...field}
+                            id={name}
                             value={(field.value ?? "") as string}
                             placeholder={placeholder}
                             type={type ?? (name === "phone" ? "tel" : "text")}
