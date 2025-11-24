@@ -1,8 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { NavSheet } from "@/components/NavSheet";
@@ -13,17 +11,9 @@ export default function Header() {
 
     return (
         <header className="header">
-            <div className="w-full mx-auto flex items-center justify-between">
-                <div className="nav-logo">
-                    <Image
-                        src="/logo.svg"
-                        alt="SPLartey Logo"
-                        width={32}
-                        height={32}
-                        priority
-                        className="w-7 h-7 md:w-8 md:h-8"
-                    />
+            <div className="max-w-7xl mx-auto flex items-center justify-between w-full">
 
+                <div className="nav-logo">
                     <Link
                         href="/"
                         className="text-lg md:text-2xl font-bold text-primary tracking-wide"
@@ -32,30 +22,36 @@ export default function Header() {
                         <span className="md:hidden">SPLartey.</span>
                     </Link>
                 </div>
-                <nav className="hidden lg:flex flex-1 justify-center items-center">
+
+                <nav className="hidden lg:flex flex-1 justify-center items-center gap-8">
                     {navLinks.map((link) => {
                         const isActive = pathname === link.href;
                         return (
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className={`mx-4 text-gray-700 hover:text-primary transition-colors ${isActive ? "border-b-2 border-primary text-primary pb-1" : ""}`}
+                                className={`text-gray-700 hover:text-primary transition-colors text-sm font-medium tracking-wide ${isActive
+                                    ? "text-primary underline-offset-8 underline"
+                                    : ""
+                                    }`}
                             >
                                 {link.name}
                             </Link>
                         );
                     })}
                 </nav>
+
                 <div className="hidden lg:flex justify-end">
                     <Button
                         asChild
-                        className="btn-primary"
-                        size="lg"
+                        className="btn-primary px-6 text-sm"
+                    // size="lg"
                     >
                         <Link href="/contact">Get in touch</Link>
                     </Button>
                 </div>
-                <div className="lg:hidden">
+
+                <div className="lg:hidden flex items-center ml-4">
                     <NavSheet />
                 </div>
             </div>

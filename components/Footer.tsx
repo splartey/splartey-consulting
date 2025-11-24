@@ -1,45 +1,40 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { footerContent } from "@/constants"
+import { footerContent } from "@/constants";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="footer">
+        <footer className="footer" aria-label="Footer">
             <div className="footer-top">
                 <div className="footer-top-container">
-                    <div className="col-span-full xl:col-span-2">
+                    <div className="col-span-full md:col-span-2 xl:col-span-2">
                         <Link href="/" className="flex items-center gap-2">
-                            <Image
-                                src="/logo.svg"
-                                width={36}
-                                height={36}
-                                alt="SPLartey Consulting Logo"
-                                priority
-                            />
                             <span className="text-2xl font-bold text-primary">
-                                SPLartey Consulting.
+                                SP Lartey Consulting.
                             </span>
                         </Link>
-                        <article className="mt-4 text-sm text-gray-600 leading-relaxed">
+
+                        <p className="mt-4 text-base text-gray-600 leading-relaxed max-w-sm">
                             Strategy, Performance, Leadership
-                        </article>
+                        </p>
                     </div>
+
                     {footerContent.map(({ title, links }) => (
-                        <div key={title}>
+                        <div
+                            key={title}
+                            className="col-span-1 min-w-[120px] space-y-4"
+                        >
                             <h6 className="font-semibold text-gray-900 uppercase tracking-wide text-sm">
                                 {title}
                             </h6>
-                            <ul className="mt-4 space-y-3">
+
+                            <ul className="space-y-3">
                                 {links.map(({ title, href }) => (
                                     <li key={title}>
-                                        <Link
-                                            href={href}
-                                            className="footer-link"
-                                        >
+                                        <Link href={href} className="footer-link">
                                             {title}
                                         </Link>
                                     </li>
@@ -51,14 +46,19 @@ export default function Footer() {
             </div>
 
             <div className="footer-bottom">
-                <span className="text-center sm:text-left">
-                    &copy; {currentYear}{" "}
-                    <Link href="/" className="hover:underline underline-offset-5  font-medium">
-                        SPLartey Consulting
-                    </Link>
-                    . All rights reserved.
-                </span>
+                <div className="max-w-7xl w-full mx-auto text-center sm:text-left">
+                    <span>
+                        &copy; {currentYear}{" "}
+                        <Link
+                            href="/"
+                            className="hover:underline underline-offset-4 font-medium"
+                        >
+                            SP Lartey Consulting
+                        </Link>
+                        . All rights reserved.
+                    </span>
+                </div>
             </div>
         </footer>
     );
-};
+}

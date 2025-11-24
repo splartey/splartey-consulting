@@ -30,7 +30,7 @@ export default function AboutHero({
         />
       </div>
 
-      <div className="relative z-2 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 md:gap-10 text-white">
+      <article className="relative z-2 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 md:gap-10 text-white">
         <div>
           <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
             {title}
@@ -46,7 +46,7 @@ export default function AboutHero({
             {description2}
           </p>
         </div>
-      </div>
+      </article>
     </section>
   );
 }

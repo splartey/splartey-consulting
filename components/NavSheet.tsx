@@ -11,7 +11,6 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet";
 import { IconMenu } from "@tabler/icons-react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navLinks } from "@/constants";
@@ -22,40 +21,36 @@ export function NavSheet() {
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <div className="flex items-center justify-center gap-2 cursor-pointer">
+                <button className="flex items-center justify-center gap-2 cursor-pointer hover:opacity-80 transition">
                     <IconMenu stroke={2} />
-                    <span>Menu</span>
-                </div>
+                    <span className="font-medium">Menu</span>
+                </button>
             </SheetTrigger>
+
             <SheetContent
                 side="right"
-                className="px-4 sm:px-6 py-6 flex flex-col justify-between"
+                className="px-6 py-8 flex flex-col justify-between border-l border-border"
             >
-                <SheetHeader className="flex items-center space-x-3">
-                    <SheetTitle className="flex items-center space-x-3">
-                        <Image
-                            src="/logo.svg"
-                            alt="SPLartey Logo"
-                            width={34}
-                            height={34}
-                            priority
-                        />
-                        <span className="text-lg sm:text-xl font-semibold text-primary">
-                            SPLartey Consulting.
-                        </span>
+                <SheetHeader className="space-y-2">
+                    <SheetTitle className="text-2xl font-semibold tracking-tight text-primary">
+                        SP Lartey Consulting.
                     </SheetTitle>
+
+                    <p className="text-sm text-muted-foreground">
+                        Empowering organizations through expert consulting.
+                    </p>
                 </SheetHeader>
 
-                <nav className="flex flex-col mt-10 space-y-6 text-base sm:text-lg">
+                <nav className="mt-12 flex flex-col space-y-4">
                     {navLinks.map((link) => {
                         const isActive = pathname === link.href;
                         return (
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className={`transition-colors ${isActive
-                                    ? "text-primary font-semibold"
-                                    : "text-muted-foreground hover:text-primary"
+                                className={`text-lg transition-all font-medium py-1 ${isActive
+                                        ? "text-primary"
+                                        : "text-muted-foreground hover:text-primary"
                                     }`}
                             >
                                 {link.name}
@@ -64,12 +59,16 @@ export function NavSheet() {
                     })}
                 </nav>
 
-                <SheetFooter className="flex flex-col gap-3 mt-10">
-                    <Button asChild size="lg" className="w-full btn-primary">
+                <SheetFooter className="flex flex-col gap-4 mt-12">
+                    <Button size="lg" className="w-full btn-primary" asChild>
                         <Link href="/contact">Get in Touch</Link>
                     </Button>
+
                     <SheetClose asChild>
-                        <Button variant="outline" className="w-full btn-outline">
+                        <Button
+                            variant="outline"
+                            className="w-full border-border hover:bg-muted/50"
+                        >
                             Close
                         </Button>
                     </SheetClose>
