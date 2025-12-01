@@ -15,7 +15,7 @@ interface ProjectCardProps {
 interface ServiceCardProps {
     title: string;
     description: string;
-    items: string[];
+    serviceList: string[];
     bgColor: string;
     borderColor: string;
 }

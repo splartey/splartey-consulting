@@ -11,5 +11,7 @@ export const contactFormSchema = z.object({
   lastName: z.string().min(2, "Last name must be at least 2 characters"),
   email: z.string().email("Invalid email address"),
   message: z.string().min(10, "Message must be at least 10 characters"),
-  phone: z.string().optional(),
+  privacy: z.boolean().refine(val => val === true, {
+    message: "You must accept the privacy policy."
+  })
 })

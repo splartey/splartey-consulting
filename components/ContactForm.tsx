@@ -34,8 +34,8 @@ export function ContactForm() {
             firstName: "",
             lastName: "",
             email: "",
-            phone: "",
-            message: ""
+            message: "",
+            privacy: false
         }
     });
 
@@ -51,7 +51,7 @@ export function ContactForm() {
             setTimeout(() => {
                 setIsLoading(false);
                 toast.success(`Thank you for the submission`)
-            }, 1500)
+            }, 800)
         }
     };
 
@@ -83,15 +83,6 @@ export function ContactForm() {
                     type="email"
                 />
 
-                <CustomInput
-                    control={form.control}
-                    name="phone"
-                    label="Phone"
-                    placeholder="+44 555 000 000"
-                    type="tel"
-                    autoComplete
-                />
-
                 <FormField
                     control={form.control}
                     name="message"
@@ -110,18 +101,26 @@ export function ContactForm() {
                     )}
                 />
 
-                <div className="flex items-center space-x-2">
-                    <Checkbox id="privacy" name="privacy" required />
-                    <Label
-                        htmlFor="privacy"
-                        className="text-sm md:text-base text-gray-700 leading-snug"
-                    >
-                        You agree to our friendly{" "}
-                        <Link href="/privacy" className="underline underline-offset-4 text-primary hover:text-primary/80">
-                            Privacy Policy
-                        </Link>.
-                    </Label>
-                </div>
+                <FormField
+                    control={form.control}
+                    name="privacy"
+                    render={({ field }) => (
+                        <FormItem className="flex items-center space-x-2">
+                            <FormControl>
+                                <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                            </FormControl>
+
+                            <Label htmlFor="privacy" className="text-sm text-gray-700">
+                                You agree to the{" "}
+                                <Link href="/privacy" className="text-primary underline underline-offset-4">
+                                    Privacy Policy
+                                </Link>.
+                            </Label>
+
+                            <FormMessage />
+                        </FormItem>
+                    )}
+                />
 
                 <Button type="submit" className="w-full btn-primary" disabled={isLoading}>
                     {isLoading ? (

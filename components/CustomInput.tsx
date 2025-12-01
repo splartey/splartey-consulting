@@ -42,7 +42,7 @@ export function CustomInput({
                             id={name}
                             value={(field.value ?? "") as string}
                             placeholder={placeholder}
-                            type={type ?? (name === "phone" ? "tel" : "text")}
+                            type={type ?? (name === "email" ? "email" : "text")}
                         />
                     </FormControl>
                     <FormMessage />

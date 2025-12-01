@@ -18,7 +18,7 @@ export default function Footer() {
                         </Link>
 
                         <p className="mt-4 text-base md:text-lg text-gray-600 leading-relaxed max-w-sm">
-                            Strategy, Performance, Leadership
+                            Independent expertise in international development
                         </p>
                     </div>
 
@@ -46,17 +46,13 @@ export default function Footer() {
             </div>
 
             <div className="footer-bottom">
-                <div className="max-w-7xl w-full mx-auto text-center sm:text-left">
-                    <span>
-                        &copy; {currentYear}{" "}
-                        <Link
-                            href="/"
-                            className="hover:underline underline-offset-4 font-medium"
-                        >
-                            SP Lartey Consulting
-                        </Link>
-                        . All rights reserved.
-                    </span>
+                <div className=" max-w-7xl mx-auto flex flex-col items-center justify-between gap-2  py-4 text-white text-sm md:flex-row">
+                    <p>
+                        &copy; {currentYear} SP Lartey Consulting, All rights reserved.
+                    </p>
+                    <p >
+                        Based in UK and Ghana.
+                    </p>
                 </div>
             </div>
         </footer>

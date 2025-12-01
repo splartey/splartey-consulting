@@ -6,11 +6,11 @@ import Image from "next/image";
 export default function ServicesPage() {
     return (
         <section className="relative w-full px-6 py-28 md:px-10 md:py-36 lg:py-40 overflow-hidden">
-
             <div className="pointer-events-none absolute top-0 right-0 opacity-30 md:opacity-40 lg:opacity-60">
                 <Image
                     src="/images/decors/line.svg"
                     alt="decorative shape"
+                    loading="eager"
                     width={420}
                     height={420}
                     className="w-[200px] md:w-[300px] lg:w-[420px]" />
@@ -20,6 +20,7 @@ export default function ServicesPage() {
                 <Image
                     src="/images/decors/line.svg"
                     alt="decorative shape"
+                    loading="eager"
                     width={420}
                     height={420}
                     className="w-[200px] md:w-[300px] lg:w-[420px]" />

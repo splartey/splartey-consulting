@@ -5,8 +5,10 @@ import {
     Sheet,
     SheetClose,
     SheetContent,
+    SheetDescription,
     SheetFooter,
     SheetHeader,
+
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet";
@@ -36,9 +38,9 @@ export function NavSheet() {
                         SP Lartey Consulting.
                     </SheetTitle>
 
-                    <p className="text-base text-gray-500">
+                    <SheetDescription className="text-base text-gray-600">
                         Empowering organizations through expert consulting.
-                    </p>
+                    </SheetDescription>
                 </SheetHeader>
 
                 <div className="ml-6" >

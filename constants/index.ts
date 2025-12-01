@@ -60,7 +60,7 @@ export const servicesData = [
         title: "Strategy Advisory",
         description:
             `Whether you are designing a new programme, refining your organisational strategy, or planning for local ownership, I bring practical experience in creating strategies that are both ambitious and achievable. I work with you to ensure your approach genuinely empowers communities and builds local capacity from the start.`,
-        items: [
+        serviceList: [
             "Development of strategic plans and organisational strategies",
             "Policy frameworks and analysis",
             "Programme design and theory of change development",
@@ -74,7 +74,7 @@ export const servicesData = [
         title: "Project Management",
         description:
             `I help organisations manage complex programmes effectively while maintaining flexibility to respond to changing contexts. My approach emphasises building strong local teams, ensuring community voice in programme direction, and creating systems that enable rather than constrain locally-led action.`,
-        items: [
+        serviceList: [
             "Portfolio management and oversight",
             "Programme design and implementation support",
             "Risk management and compliance frameworks",
@@ -88,7 +88,7 @@ export const servicesData = [
         title: "Monitoring, Evaluation & Learning Support",
         description:
             `I have extensive experience working with M&E specialists and can provide strategic input into frameworks, ensure monitoring systems support programme management, and help integrate learning into decision-making. I have pioneered community feedback mechanisms that give communities genuine voice in programme direction and can advise on participatory and decolonised approaches to monitoring and evaluation.`,
-        items: [
+        serviceList: [
             "Input into M&E framework development",
             "Liaison with M&E specialists and advisors",
             "Community feedback mechanisms and participatory approaches",
@@ -102,7 +102,7 @@ export const servicesData = [
         title: "Grant-Making Fund Management",
         description:
             `I have managed grant portfolios ranging from £3.8 million to £30 million, working with hundreds of local organisations across multiple countries. I have disbursed over £14.8m across diverse sectors including anti-corruption, gender equality, local governance, and media, reaching millions of people. I understand how to design grant-making systems that balance accountability with accessibility, ensuring smaller, grassroots organisations can access funding alongside larger players. My approach prioritises equity, transparency, and building grantee capacity.`,
-        items: [
+        serviceList: [
             "Grant strategy development",
             "Grant-making system design and implementation",
             "Due diligence and compliance processes",
@@ -116,7 +116,7 @@ export const servicesData = [
         title: "Capacity Building",
         description:
             "Building capacity isn't about importing external solutions - it is about strengthening what exists and enabling people to lead their own development. I provide training, coaching, and mentoring that respects local knowledge, builds on existing strengths, and creates lasting change. I am particularly committed to developing the next generation of development leaders",
-        items: [
+        serviceList: [
             "Skills development in strategic planning, M&E, and adaptive management",
             "Training workshops for organisations and teams",
             "Coaching and mentoring for programme leaders",
@@ -171,11 +171,12 @@ export const valueProposition = [
 ];
 
 export const propositionContent = {
-    tagline: "How I can help",
+    tagline: "Why I work independently",
     heading: "Bringing clarity and integrity to strategy, performance, and leadership.",
     intro: `I provide tailored consulting services to international development organisations. All services are designed to meet your specific context and challenges, with a focus on mpowering local actors and building sustainable capacity.`,
-    subheading: "Why we're better",
-    details: [``],
+    subheading: "What drives my work",
+    details: [`I believe development must be locally owned and community-driven. Throughout my career, I have championed approaches that:  Put communities at the centre of programme design and decision-making, Build local capacity rather than creating dependency, Ensure genuine participation, not token consultation, Transfer power and resources to local actors, Create systems that continue after external funding ends, I also believe in mentoring emerging professionals and helping them translate their values into purposeful career choices. This commitment to developing others shapes how I approach consulting - sharing knowledge, building capacity, and creating sustainable solutions that empower people and organisations to lead their own development.
+`],
     image: {
         src: "/images/Team-collaboration.JPG",
         alt: "Team collaboration - two people working on a project board",
@@ -241,7 +242,7 @@ export const footerContent = [
         title: "Socials",
         links: [
             { title: "LinkedIn", href: "https://www.linkedin.com/in/seth-lartey" },
-            { title: "Devex", href: "#" },
+            // { title: "Devex", href: "#" },
         ],
     },
     {
@@ -263,7 +264,7 @@ export const footerContent = [
                 href: "mailto:admin@splarteyconsulting.com"
             },
             {
-                title: "London UK",
+                title: "Based in UK and Ghana",
                 href: "#"
             },
         ],
