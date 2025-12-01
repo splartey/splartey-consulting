@@ -1,26 +1,50 @@
-import { CheckCircle } from "lucide-react";
-import { Tilt } from "@/components/ui/tilt";
+import { CircleCheck } from "lucide-react";
+import {
+    Card,
+    CardHeader,
+    CardContent,
+    CardFooter,
+    CardTitle,
+    CardDescription
+} from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
-export default function ServiceCard({ title, description, items, bgColor, borderColor }: ServiceCardProps) {
+export default function ServiceCard({
+    title,
+    items,
+    bgColor,
+    borderColor
+}: ServiceCardProps) {
     return (
+        <Card
+            className={cn(
+                "relative overflow-hidden rounded-3xl border shadow-sm transition-all p-6 flex flex-col h-full",
+                borderColor,
+                bgColor
+            )}
+        >
+            <CardHeader className="p-0">
+                <CardTitle className="text-xl md:text-2xl font-semibold tracking-tight">
+                    {title}
+                </CardTitle>
+            </CardHeader>
 
-        <Tilt rotationFactor={8} className={`rounded-3xl p-4 md:p-6 border ${bgColor} ${borderColor} transition-all`}>
-            <h3 className="font-semibold text-xl md:text-2xl mb-3">
-                {title}
-            </h3>
+            <CardContent className="p-0  flex-1">
 
-            <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-6">
-                {description}
-            </p>
-
-            <div className="space-y-3">
-                {items.map((item, index) => (
-                    <div key={index} className="flex items-start gap-2 text-sm md:text-[15px]">
-                        <CheckCircle className="h-4 w-4 mt-0.5 text-primary" />
-                        <span>{item}</span>
-                    </div>
-                ))}
-            </div>
-        </Tilt>
+                <ul className="space-y-3">
+                    {items.map((item, index) => (
+                        <li key={index} className="flex gap-2.5 cursor-pointer" >
+                            <span className="h-6 w-6 shrink-0 mt-0.5">
+                                <CircleCheck className="h-6 w-6 text-primary" />
+                            </span>
+                            <p className="font-medium text-gray-700">
+                                {item}
+                            </p>
+                        </li>
+                    ))}
+                </ul>
+            </CardContent>
+            <CardFooter className="p-0 mt-2" />
+        </Card >
     );
 }

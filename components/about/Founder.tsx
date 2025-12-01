@@ -1,8 +1,13 @@
 import Image from "next/image";
-import { founderData } from "@/constants";
 
-export default function Founder() {
-    const { title, image, alt, paragraphs } = founderData;
+interface FounderProps {
+    title: string;
+    image: string;
+    alt: string;
+    paragraphs: string[];
+}
+
+export default function Founder({ title, image, alt, paragraphs }: FounderProps) {
 
     return (
         <section className="py-20 lg:py-28 bg-[#f0efea]">

@@ -10,7 +10,7 @@ export default function Header() {
     const pathname = usePathname();
 
     return (
-        <header className="header">
+        <nav className="header">
             <div className="max-w-7xl mx-auto flex items-center justify-between w-full">
 
                 <div className="nav-logo">
@@ -18,8 +18,8 @@ export default function Header() {
                         href="/"
                         className="text-lg md:text-2xl font-bold text-primary tracking-wide"
                     >
-                        <span className="hidden md:inline">SPLartey Consulting.</span>
-                        <span className="md:hidden">SPLartey.</span>
+                        <span className="hidden md:inline">SP Lartey Consulting.</span>
+                        <span className="md:hidden">SP Lartey.</span>
                     </Link>
                 </div>
 
@@ -45,7 +45,7 @@ export default function Header() {
                     <Button
                         asChild
                         className="btn-primary px-6 text-sm"
-                    // size="lg"
+                        size="lg"
                     >
                         <Link href="/contact">Get in touch</Link>
                     </Button>
@@ -55,6 +55,6 @@ export default function Header() {
                     <NavSheet />
                 </div>
             </div>
-        </header>
+        </nav>
     );
 }

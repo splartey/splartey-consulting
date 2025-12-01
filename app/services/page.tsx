@@ -1,4 +1,5 @@
 import ServiceCard from "@/components/ServiceCard";
+import { BlurFade } from "@/components/ui/blur-fade";
 import { servicesData } from "@/constants";
 import Image from "next/image";
 
@@ -8,46 +9,53 @@ export default function ServicesPage() {
 
             <div className="pointer-events-none absolute top-0 right-0 opacity-30 md:opacity-40 lg:opacity-60">
                 <Image
-                    src="/line.svg"
+                    src="/images/decors/line.svg"
                     alt="decorative shape"
                     width={420}
                     height={420}
-                    className="w-[200px] md:w-[300px] lg:w-[420px]"
-                />
+                    className="w-[200px] md:w-[300px] lg:w-[420px]" />
             </div>
 
             <div className="pointer-events-none absolute bottom-0 left-0 opacity-30 md:opacity-40 lg:opacity-60">
                 <Image
-                    src="/line.svg"
+                    src="/images/decors/line.svg"
                     alt="decorative shape"
                     width={420}
                     height={420}
-                    className="w-[200px] md:w-[300px] lg:w-[420px]"
-                />
+                    className="w-[200px] md:w-[300px] lg:w-[420px]" />
             </div>
 
             <div className="max-w-7xl mx-auto relative">
 
                 <div className="mb-20 text-center md:text-left max-w-2xl">
-                    <p className="text-sm text-primary font-semibold tracking-wide uppercase">
-                        What we do
-                    </p>
-                    <h2 className="text-3xl md:text-5xl font-bold leading-tight mt-2">
-                        Our Services
-                    </h2>
-
-                    <p className="mt-4 text-gray-600 text-base md:text-lg">
-                        We provide a range of tailored services designed to elevate
-                        performance, strategy, and leadership across organizations.
-                    </p>
+                    <BlurFade delay={0.25} inView>
+                        <p className="text-sm text-primary font-semibold tracking-wide uppercase">
+                            What I offer
+                        </p>
+                    </BlurFade>
+                    <BlurFade delay={0.25 * 2} inView>
+                        <h2 className="text-3xl md:text-5xl font-bold leading-tight mt-2">
+                            Consulting Services
+                        </h2>
+                    </BlurFade>
+                    <BlurFade delay={0.25 * 3} inView>
+                        <p className="mt-4 text-gray-600 text-base md:text-lg">
+                            I provide tailored consulting services designed to strengthen leadership, strategy, and performance for international development organisations around the world.
+                        </p>
+                    </BlurFade>
                 </div>
 
-                <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-
+                <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[1fr]">
                     {servicesData.map((service, index) => (
-                        <ServiceCard key={index} {...service} />
+                        <BlurFade key={index} delay={0.25 * 4} inView>
+                            <ServiceCard
+                                key={index}
+                                {...service}
+                            />
+                        </BlurFade>
                     ))}
                 </div>
+
 
                 <div className="mt-24 md:mt-32 lg:mt-40" />
             </div>

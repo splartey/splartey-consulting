@@ -5,49 +5,51 @@ export const navLinks = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     { name: "About", href: "/about" },
-    { name: "Our Work", href: "/works" },
+    { name: "Projects", href: "/works" },
 ];
 
 // Home page
 export const heroData = {
     badgeImageUrl: "/badge.svg",
-    badgeText: "Trusted Development Partner",
-    heroTitle: "Strengthening Organizations for Sustainable Development & Social Impact",
-    heroDescription:
-        "SPLartey Consulting supports NGOs, foundations, and public sector partners to unlock strategic clarity, strengthen leadership, and drive measurable change. We turn vision into action through practical strategy, capacity building, and performance-focused support.",
-    heroImageUrl: "/hero-image.JPG"
+    badgeText: "Independent Management Consultant",
+    heroTitle: "Strategy, Performance, Leadership.",
+    heroDescription: `I deliver strategic, technical, and operational solutions that help organisations in international development achieve measurable results.`,
+    heroImageUrl: "/images/hero-image.JPG"
 }
 
 // Skills marquee
 export const skills = [
-    "Programme Design & Delivery",
-    "Team Leadership & People Development",
-    "Partnership & Stakeholder Management",
-    "Governance & Compliance",
+    "Strategic programme leadership",
+    "Grant-making and fund management",
+    "Portfolio management and delivery",
+    "Monitoring, evaluation, and adaptive learning",
+    "Risk management and compliance",
+    "Capacity building and team development",
 ];
+
 // Impact section - below marquee 
 export const impactContent = {
-    title: "Strategic Solutions for Transformative Impact",
-    description1: "We provide bespoke consulting solutions that empower organizations to lead with clarity, strengthen performance, and achieve lasting impact. Our services span strategy development, institutional strengthening, governance, leadership, and program delivery, ensuring that every intervention is both practical and sustainable.",
-    description2: "With a deep understanding of complex development environments across Africa, Asia, and the Caribbean, we bridge global insight with local realities to help partners navigate change effectively. Guided by our core values of equity, accountability, and innovation, we design solutions that translate ambition into measurable results."
-}
+    title: "Driving Results Through Experience, Insight, and Locally-Led Approaches",
+    description1: "With over 20 years of experience across Africa, Asia, Latin America, and the Caribbean, I help organisations bridge the gap between strategic vision and operational reality. My approach is grounded in locally-led development, meaningful community participation, and practical solutions that strengthen systems and teams.",
+    description2: "I draw on both field-based programme leadership and headquarters-level strategy to design interventions that are ambitious, achievable, and sustainable. Whether supporting programme design, governance, capacity strengthening, or adaptive management, my focus is on equity, ownership, and measurable impact that lasts beyond donor funding."
+};
 
 // Accreditation section
 export const accreditation = [
     {
-        imageUrl: "/images/g-leadership.png",
+        imageUrl: "/images/stats/g-leadership.png",
         title: "Global Programme Leadership"
     },
     {
-        imageUrl: "/images/donor-rating.png",
+        imageUrl: "/images/stats/donor-rating.png",
         title: "Top Donor Performance Ratings"
     },
     {
-        imageUrl: "/images/resources.png",
+        imageUrl: "/images/stats/resources.png",
         title: "Resource Mobilisation Excellence"
     },
     {
-        imageUrl: "/images/mo-ibrahim.png",
+        imageUrl: "/images/stats/image.png",
         title: "Mo Ibrahim Foundation Fellow"
     },
 ];
@@ -57,55 +59,69 @@ export const servicesData = [
     {
         title: "Strategy Advisory",
         description:
-            "We craft a roadmap that aligns with your vision, ensuring every move is purposeful and impactful.",
+            `Whether you are designing a new programme, refining your organisational strategy, or planning for local ownership, I bring practical experience in creating strategies that are both ambitious and achievable. I work with you to ensure your approach genuinely empowers communities and builds local capacity from the start.`,
         items: [
-            "Strategy development & facilitation",
-            "Policy framework design",
-            "Organizational assessments",
+            "Development of strategic plans and organisational strategies",
+            "Policy frameworks and analysis",
+            "Programme design and theory of change development",
+            "Partnership strategy and stakeholder engagement planning",
+            "Locally-led development transitions and sustainability planning",
         ],
         bgColor: "bg-[#D7F8E1]",
         borderColor: "border-[#B8EAC7]",
     },
     {
-        title: "Project Design & Management",
+        title: "Project Management",
         description:
-            "From concept to completion, we help organizations design, launch, and manage impactful initiatives.",
+            `I help organisations manage complex programmes effectively while maintaining flexibility to respond to changing contexts. My approach emphasises building strong local teams, ensuring community voice in programme direction, and creating systems that enable rather than constrain locally-led action.`,
         items: [
-            "Proposal development",
-            "Strategy development & facilitation",
-            "Programme inception/start-up",
-            "Risk & performance management",
+            "Portfolio management and oversight",
+            "Programme design and implementation support",
+            "Risk management and compliance frameworks",
+            "Operational planning and performance systems",
+            "Adaptive management approaches",
         ],
         bgColor: "bg-[#E8FF88]",
         borderColor: "border-[#D9F76A]",
     },
     {
-        title: "Capacity Building",
+        title: "Monitoring, Evaluation & Learning Support",
         description:
-            "We strengthen leadership, systems, and teams, empowering organizations to lead lasting change.",
+            `I have extensive experience working with M&E specialists and can provide strategic input into frameworks, ensure monitoring systems support programme management, and help integrate learning into decision-making. I have pioneered community feedback mechanisms that give communities genuine voice in programme direction and can advise on participatory and decolonised approaches to monitoring and evaluation.`,
         items: [
-            "Leadership and governance training",
-            "Coaching for NGOs and CBOs",
-            "Systems strengthening",
+            "Input into M&E framework development",
+            "Liaison with M&E specialists and advisors",
+            "Community feedback mechanisms and participatory approaches",
+            "Integration of learning into programme management",
+            "Programme-level advice on decolonised monitoring and learning systems",
         ],
         bgColor: "bg-[#E9D7FF]",
         borderColor: "border-[#D0B2FF]",
     },
     {
-        title: "Monitoring Evaluation & Learning",
+        title: "Grant-Making Fund Management",
         description:
-            "We design systems that measure progress, amplify learning, and promote evidence-based decisions.",
-        items: ["MEL Framework Design", "Decolonized feedback systems"],
+            `I have managed grant portfolios ranging from £3.8 million to £30 million, working with hundreds of local organisations across multiple countries. I have disbursed over £14.8m across diverse sectors including anti-corruption, gender equality, local governance, and media, reaching millions of people. I understand how to design grant-making systems that balance accountability with accessibility, ensuring smaller, grassroots organisations can access funding alongside larger players. My approach prioritises equity, transparency, and building grantee capacity.`,
+        items: [
+            "Grant strategy development",
+            "Grant-making system design and implementation",
+            "Due diligence and compliance processes",
+            "Portfolio analysis and performance management",
+            "Equity-focused grant-making approaches",
+        ],
         bgColor: "bg-[#CCE8FF]",
         borderColor: "border-[#A8D4F9]",
     },
     {
-        title: "Reporting & Knowledge Products",
+        title: "Capacity Building",
         description:
-            "We transform data and insights into powerful communication tools that inspire trust and impact.",
+            "Building capacity isn't about importing external solutions - it is about strengthening what exists and enabling people to lead their own development. I provide training, coaching, and mentoring that respects local knowledge, builds on existing strengths, and creates lasting change. I am particularly committed to developing the next generation of development leaders",
         items: [
-            "Donor communication tools",
-            "Learning papers & thought leadership content",
+            "Skills development in strategic planning, M&E, and adaptive management",
+            "Training workshops for organisations and teams",
+            "Coaching and mentoring for programme leaders",
+            "Support for locally-led development transitions",
+            "Leadership development programmes",
         ],
         bgColor: "bg-[#FFD5D5]",
         borderColor: "border-[#FFB3B3]",
@@ -113,18 +129,18 @@ export const servicesData = [
 ];
 
 // About page
-export const aboutcontent = {
-    title: "About us",
-    description1: " SP Lartey Consulting is a specialist management consultancy dedicated  to strengthening strategy, performance, and leadership across the       international development sector. We partner with NGOs, INGOs,governments, and development organizations to design and implement solutions that drive meaningful, measurable change.",
-    description2: "Built on years of field-tested experience, SP Lartey Consulting blends strategic insight with practical execution. Our approach is rooted in collaboration, accountability, and innovation, ensuring that every engagement leads to sustainable progress. Guided by deep contextual understanding, we help organizations align vision with action and deliver results that last.",
-    illustrationLeft: "/Looper-3.svg",
-    illustrationRight: "/Looper-2.svg",
+export const aboutContent = {
+    title: "About",
+    description1: `Born in the UK and raised in Germany and Ghana, I have always viewed the world through multiple lenses. This multicultural perspective shapes how I work in international development: recognising that sustainable change must be locally owned, not externally imposed. I specialise in supporting organisations to transition from donor-dependentprogrammes to genuinely locally led models—not as an aspiration, but as an operational reality. I have done this at scale, most notably leading the successful transition of STAR-Ghana, a £22m governance programme, into an independent foundation that continues to thrive beyond donor support.`,
+    description2: `My approach draws on more than 20 years of experience across 18 countries, at both field and headquarters levels. I understand what donors require, what communities rioritise, and how to design programmes that meet both—while meaningfully transferring power and resources to local actors. I have worked in countries across Africa, Asia, Latin America, and the Caribbean,including Ghana, Nigeria, Sierra Leone, Uganda, South Sudan, Burkina Faso,Ethiopia, Myanmar, Zimbabwe, Barbados, Grenada, Guyana, Jamaica, St Lucia, St. Vincent and the Grenadines, and Trinidad and Tobago.`,
+    illustrationLeft: "/images/decors/Looper-3.svg",
+    illustrationRight: "/images/decors/Looper-2.svg",
 };
 
 export const founderData = {
+    title: "About Me",
     name: "Seth Lartey",
-    title: "Meet the Founder",
-    image: "/founder.jpeg",
+    image: "/images/founder.jpeg",
     alt: "Seth Lartey - Founder",
     paragraphs: [
         `“Strategy means little without purpose. My work is about helping organisations turn intention into lasting impact.”`,
@@ -136,13 +152,13 @@ export const founderData = {
 export const valueProposition = [
     {
         icon: Eye,
-        title: "Our Vision",
+        title: "Vision",
         description:
             "To be a leading organization empowering communities through innovation, integrity, and inclusivity.",
     },
     {
         icon: Goal,
-        title: "Our Mission",
+        title: "Mission",
         description:
             "To provide impactful, data-driven solutions that enhance community development and foster sustainable growth.",
     },
@@ -155,21 +171,18 @@ export const valueProposition = [
 ];
 
 export const propositionContent = {
-    tagline: "Why we're different",
+    tagline: "How I can help",
     heading: "Bringing clarity and integrity to strategy, performance, and leadership.",
-    intro: "Our difference lies in how we think and work. We combine strategic foresight with a people-centered approach, ensuring every solution is practical, inclusive, and grounded in real-world experience. Guided by equity, accountability, and innovation, we help organizations turn ideas into lasting impact.",
+    intro: `I provide tailored consulting services to international development organisations. All services are designed to meet your specific context and challenges, with a focus on mpowering local actors and building sustainable capacity.`,
     subheading: "Why we're better",
-    details: [
-        "We bring over two decades of hands-on leadership in international development, experience that transforms strategy into measurable results. We understand the realities of working across diverse regions and systems, and we know how to design solutions that stand up to those complexities.",
-        "Our clients value our honesty, reliability, and ability to deliver results that endure. Every project reflects our commitment to excellence and to building organizations that are stronger, more adaptive, and better equipped to lead change.",
-    ],
+    details: [``],
     image: {
-        src: "/Team-collaboration.jpg",
+        src: "/images/Team-collaboration.JPG",
         alt: "Team collaboration - two people working on a project board",
     }
 };
 
-// Works page
+// Works /Projects Page
 export const projects = [
     {
         title: "Identify Opportunities",
@@ -202,17 +215,32 @@ export const footerContent = [
     {
         title: "Quick Links",
         links: [
-            { title: "Home", href: "/" },
-            { title: "About Us", href: "/about" },
-            { title: "Our Services", href: "/services" },
-            { title: "Our Works", href: "/works" },
-            { title: "Contact Us", href: "/contact" },
+            {
+                title: "Home",
+                href: "/"
+            },
+            {
+                title: "About",
+                href: "/about"
+            },
+            {
+                title: "Services",
+                href: "/services"
+            },
+            {
+                title: "Projects",
+                href: "/works"
+            },
+            {
+                title: "Contact",
+                href: "/contact"
+            },
         ],
     },
     {
         title: "Socials",
         links: [
-            { title: "LinkedIn", href: "#" },
+            { title: "LinkedIn", href: "https://www.linkedin.com/in/seth-lartey" },
             { title: "Devex", href: "#" },
         ],
     },
@@ -226,9 +254,18 @@ export const footerContent = [
     {
         title: "Contacts",
         links: [
-            { title: "+(000) 000 000 0000", href: "tel:+000000000000" },
-            { title: "admin@splarteyconsulting.com", href: "mailto:admin@splarteyconsulting.com" },
-            { title: "London UK", href: "#" },
+            {
+                title: "+(000) 000 000 0000",
+                href: "tel:+000000000000"
+            },
+            {
+                title: "admin@splarteyconsulting.com",
+                href: "mailto:admin@splarteyconsulting.com"
+            },
+            {
+                title: "London UK",
+                href: "#"
+            },
         ],
     },
 ];

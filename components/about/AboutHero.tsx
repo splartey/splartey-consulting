@@ -35,14 +35,14 @@ export default function AboutHero({
           <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
             {title}
           </h2>
-
-          <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-200">
+          
+          <p className="text-sm sm:text-base md:text-xl leading-relaxed text-gray-300">
             {description1}
           </p>
         </div>
 
         <div>
-          <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-200">
+          <p className="text-sm sm:text-base md:text-xl leading-relaxed text-gray-300">
             {description2}
           </p>
         </div>

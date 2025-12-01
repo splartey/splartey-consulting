@@ -10,21 +10,21 @@ export default function Footer() {
         <footer className="footer" aria-label="Footer">
             <div className="footer-top">
                 <div className="footer-top-container">
-                    <div className="col-span-full md:col-span-2 xl:col-span-2">
+                    <div className="col-span-full md:col-span-2">
                         <Link href="/" className="flex items-center gap-2">
                             <span className="text-2xl font-bold text-primary">
                                 SP Lartey Consulting.
                             </span>
                         </Link>
 
-                        <p className="mt-4 text-base text-gray-600 leading-relaxed max-w-sm">
+                        <p className="mt-4 text-base md:text-lg text-gray-600 leading-relaxed max-w-sm">
                             Strategy, Performance, Leadership
                         </p>
                     </div>
 
-                    {footerContent.map(({ title, links }) => (
+                    {footerContent.map(({ title, links }, index) => (
                         <div
-                            key={title}
+                            key={index}
                             className="col-span-1 min-w-[120px] space-y-4"
                         >
                             <h6 className="font-semibold text-gray-900 uppercase tracking-wide text-sm">

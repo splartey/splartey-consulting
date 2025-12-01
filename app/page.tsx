@@ -1,4 +1,4 @@
-import Accreditation from "@/components/home/Accreditation";
+
 import Hero from "@/components/home/Hero";
 import HeroMarquee from "@/components/home/HeroMarquee";
 import ImpactSection from "@/components/home/Impact";
@@ -8,9 +8,8 @@ export default function HomePage() {
   return (
     <div>
       <Hero {...heroData} />
-      <HeroMarquee iconUrl="/decor.svg" items={skills} />
+      <HeroMarquee iconUrl="/images/decors/decor.svg" items={skills} />
       <ImpactSection {...impactContent} />
-      <Accreditation />
     </div>
   );
 }

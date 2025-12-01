@@ -36,28 +36,30 @@ export function NavSheet() {
                         SP Lartey Consulting.
                     </SheetTitle>
 
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-base text-gray-500">
                         Empowering organizations through expert consulting.
                     </p>
                 </SheetHeader>
 
-                <nav className="mt-12 flex flex-col space-y-4">
-                    {navLinks.map((link) => {
-                        const isActive = pathname === link.href;
-                        return (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                className={`text-lg transition-all font-medium py-1 ${isActive
-                                        ? "text-primary"
+                <div className="ml-6" >
+                    <nav className="mt-12 flex flex-col space-y-4" >
+                        {navLinks.map((link) => {
+                            const isActive = pathname === link.href;
+                            return (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    className={`text-lg transition-all font-medium py-1 ${isActive
+                                        ? "text-primary font-semibold"
                                         : "text-muted-foreground hover:text-primary"
-                                    }`}
-                            >
-                                {link.name}
-                            </Link>
-                        );
-                    })}
-                </nav>
+                                        }`}
+                                >
+                                    {link.name}
+                                </Link>
+                            );
+                        })}
+                    </nav>
+                </div>
 
                 <SheetFooter className="flex flex-col gap-4 mt-12">
                     <Button size="lg" className="w-full btn-primary" asChild>
