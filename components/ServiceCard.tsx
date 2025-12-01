@@ -76,7 +76,7 @@ export default function ServiceCard({
                     variants={contentVariants}
                 >
                     <DisclosureTrigger>
-                        <button className="text-primary font-semibold text-sm flex items-center px-2 p-2 gap-1">
+                        <button className="text-primary font-semibold text-sm flex items-center px-2 p-2 gap-1 hover:underline underline-offset-4 transition-all duration-500 ease-in-out">
                             {isOpen ? (
                                 <>
                                     Hide description <ChevronUp className="h-4 w-4" />

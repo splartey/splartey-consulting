@@ -1,5 +1,7 @@
 "use client";
 
+import { sendEmail } from "@/app/actions/sendEmail";
+
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -23,6 +25,8 @@ import Link from "next/link";
 import { toast } from "sonner";
 import { Loader } from "lucide-react";
 
+
+
 type ContactFormType = z.infer<typeof contactFormSchema>;
 
 export function ContactForm() {
@@ -42,16 +46,21 @@ export function ContactForm() {
     const onSubmit = async (data: ContactFormType) => {
         setIsLoading(true);
         try {
-            console.log("Form Data:", data);
-            // Later we'll call API `/api/contact`
+            console.log("Form data being sent:", data);
 
+            const response = await sendEmail(data);
+
+            if (!response.success) {
+                toast.error("Something went wrong. Please try again later.");
+                return;
+            }
+
+            toast.success("Message sent successfully!");
+            form.reset();
         } catch (error) {
-            console.error("Form submission error:", error);
+            toast.error("Failed to send message");
         } finally {
-            setTimeout(() => {
-                setIsLoading(false);
-                toast.success(`Thank you for the submission`)
-            }, 800)
+            setIsLoading(false);
         }
     };
 

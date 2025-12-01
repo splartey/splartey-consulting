@@ -188,9 +188,6 @@
     @apply border-t bg-white text-gray-700 overflow-hidden;
   }
 
-  /* .footer-top {
-    @apply ;
-  } */
   .footer-top {
     @apply max-w-7xl mx-auto py-6 max-sm:px-6 md:px-12;
   }

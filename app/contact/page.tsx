@@ -31,6 +31,7 @@ export default function ContactPage() {
                             alt="Team discussing project"
                             fill
                             className="object-cover"
+                            sizes="100vw"
                             priority
                         />
                     </div>
