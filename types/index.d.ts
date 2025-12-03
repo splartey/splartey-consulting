@@ -1,15 +1,9 @@
-interface AboutHeroProps {
+type AboutHeroProps = {
     title: string;
     description1: string;
     description2: string;
     illustrationLeft: string;
     illustrationRight: string;
-}
-
-interface ProjectCardProps {
-    title: string;
-    description: string;
-    imageUrl: string;
 }
 
 interface ServiceCardProps {
@@ -43,4 +37,14 @@ interface ValueCardProps {
     icon: LucideIcon;
     title: string;
     description: string;
+}
+
+type FooterLink = {
+    title: string;
+    href: string;
+}
+
+type FooterSection = {
+    label: string;
+    links: FooterLink[];
 }

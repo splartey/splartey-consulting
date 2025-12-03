@@ -1,58 +1,75 @@
 "use client";
 
+import { footerLinks } from "@/constants";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { footerContent } from "@/constants";
 
 export default function Footer() {
-    const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="footer" aria-label="Footer">
-            <div className="footer-top">
-                <div className="footer-top-container">
-                    <div className="col-span-full md:col-span-2">
-                        <Link href="/" className="flex items-center gap-2">
+        <footer className="relative" aria-label="Footer">
+            <div
+                className={cn(
+                    "mx-auto max-w-7xl lg:border-x",
+                    "dark:bg-[radial-gradient(35%_80%_at_30%_0%,--theme(--color-foreground/.1),transparent)]"
+                )}
+            >
+                <div className="absolute inset-x-0 h-px w-full bg-border" />
+
+                <div className="grid max-w-7xl grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-10 p-8 md:py-16">
+                    <div className="col-span-1 sm:col-span-2 md:col-span-2 flex flex-col gap-5">
+                        <Link href="/" className="w-max">
                             <span className="text-2xl font-bold text-primary">
                                 SP Lartey Consulting.
                             </span>
                         </Link>
 
-                        <p className="mt-4 text-base md:text-lg text-gray-600 leading-relaxed max-w-sm">
+                        <p className="max-w-sm text-muted-foreground text-sm">
                             Independent expertise in international development
                         </p>
                     </div>
 
-                    {footerContent.map(({ title, links }, index) => (
-                        <div
-                            key={index}
-                            className="col-span-1 min-w-[120px] space-y-4"
-                        >
-                            <h6 className="font-semibold text-gray-900 uppercase tracking-wide text-sm">
-                                {title}
-                            </h6>
+                    <div className="col-span-1 sm:col-span-2 md:col-span-4">
+                        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-10">
 
-                            <ul className="space-y-3">
-                                {links.map(({ title, href }) => (
-                                    <li key={title}>
-                                        <Link href={href} className="footer-link">
-                                            {title}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
+                            {footerLinks.map(({ label, links }) => (
+                                <div key={label} className="flex flex-col">
+                                    <h6 className="font-semibold uppercase tracking-wide text-sm text-black">
+                                        {label}
+                                    </h6>
+
+                                    <ul className="mt-4 space-y-3 text-muted-foreground text-sm">
+                                        {links.map(({ title, href }) => (
+                                            <li key={title}>
+                                                <Link
+                                                    href={href}
+                                                    className="inline-flex items-center transition-all duration-300 hover:text-foreground"
+                                                >
+                                                    {title}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+
                         </div>
-                    ))}
+                    </div>
                 </div>
             </div>
 
-            <div className="footer-bottom">
-                <div className=" max-w-7xl mx-auto flex flex-col items-center justify-between gap-2  py-4 text-white text-sm md:flex-row">
+            <div className="py-3 px-12 bg-primary">
+                <div className="max-w-7xl mx-auto flex flex-col items-center justify-between gap-2 py-3 px-2 text-white text-sm md:flex-row">
                     <p>
-                        &copy; {currentYear} SP Lartey Consulting, All rights reserved.
+                        &copy; {" "} {new Date().getFullYear()} SP Lartey Consulting, All rights reserved.
                     </p>
-                    <p >
-                        Based in UK and Ghana.
-                    </p>
+
+                    <Link
+                        href="/"
+                        className="underline underline-offset-4 hover:text-zinc-300"
+                    >
+                        Privacy Policy & Terms
+                    </Link>
                 </div>
             </div>
         </footer>
