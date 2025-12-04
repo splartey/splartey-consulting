@@ -184,25 +184,6 @@
     @apply flex flex-col border rounded-3xl py-8 px-6 bg-gray-50 hover:bg-white text-left shadow-sm hover:shadow-md transition-all duration-300;
   }
 
-  .footer {
-    @apply border-t bg-white text-gray-700 overflow-hidden;
-  }
-
-  .footer-top {
-    @apply max-w-7xl mx-auto py-6 max-sm:px-6 md:px-12;
-  }
-
-  .footer-top-container {
-    @apply py-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-x-8 gap-y-10;
-  }
-
-  .footer-bottom {
-    @apply py-4 px-6 md:px-20 bg-primary;
-  }
-
-  .footer-link {
-    @apply text-base text-gray-700 hover:text-primary underline-offset-5 hover:underline transition wrap-break-word;
-  }
 }
 
 @layer base {

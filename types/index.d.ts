@@ -1,5 +1,5 @@
 type AboutHeroProps = {
-    title: string;
+    headLine: string;
     description1: string;
     description2: string;
     illustrationLeft: string;
@@ -8,25 +8,30 @@ type AboutHeroProps = {
 
 interface ServiceCardProps {
     title: string;
-    description: string;
+    description?: string;
     serviceList: string[];
     bgColor: string;
     borderColor: string;
 }
 
-interface ImpactSectionProps {
+type ImpactSectionProps = {
     title: string;
     description1: string;
     description2?: string;
 }
 
-interface HeroSectionProps {
-    badgeImageUrl: string;
-    badgeText: string;
-    heroTitle: string;
-    heroDescription: string;
+type CtaButton = {
+    label: string;
+    href: string;
+};
+
+type HeroSectionProps = {
+    heading: string;
+    subHeading: string;
     heroImageUrl: string;
-}
+    primaryCta: CtaButton;
+    secondaryCta: CtaButton;
+};
 
 interface SkillsMarqueeProps {
     iconUrl: string;

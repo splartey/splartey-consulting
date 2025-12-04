@@ -1,20 +1,57 @@
 import { Eye, Goal, Gem } from "lucide-react";
 
+export const APP_CONFIG = {
+    COMPANY_NAME: "SP Lartey Consulting",
+    COMPANY_ABBR: "SP Lartey.",
+    COMPANY_SLOGAN: "Strategy, Performance, Leadership.",
+    SITE_URL: "https://www.splarteyconsulting.com",
+    COMPANY_DESCRIPTION: "Professional consulting services to elevate your business.",
+    SITE_KEYWORDS: [
+        "consulting",
+        "International Development Consultant",
+        "strategy",
+        "performance",
+        "leadership",
+        "development",
+        "consultancy",
+        "NGO",
+        "non-profit",
+        "development consulting",
+        "international development",
+        "development strategy",
+        "programme management",
+        "capacity building",
+        "monitoring and evaluation",
+        "business",
+        "SPLartey",
+        "Seth",
+        "Lartey",
+
+    ],
+    AUTHOR: "Seth Lartey",
+}
+
 // Navigation links
 export const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
     { name: "About", href: "/about" },
-    { name: "Projects", href: "/works" },
+    { name: "Services", href: "/services" },
+    { name: "Gallery", href: "/gallery" },
 ];
 
 // Home page
 export const heroData = {
-    badgeImageUrl: "/badge.svg",
-    badgeText: "Independent Management Consultant",
-    heroTitle: "Strategy, Performance, Leadership.",
-    heroDescription: `I deliver strategic, technical, and operational solutions that help organisations in international development achieve measurable results.`,
-    heroImageUrl: "/images/hero-image.JPG"
+    heading: "Strategy, Performance, Leadership.",
+    subHeading: `I deliver strategic, technical, and operational solutions that help organisations in international development achieve measurable results.`,
+    heroImageUrl: "/images/hero-image.JPG",
+    primaryCta: {
+        label: "Learn more",
+        href: "/about",
+    },
+    secondaryCta: {
+        label: "Reach out",
+        href: "/contact",
+    },
 }
 
 // Skills marquee
@@ -34,27 +71,7 @@ export const impactContent = {
     description2: "I draw on both field-based programme leadership and headquarters-level strategy to design interventions that are ambitious, achievable, and sustainable. Whether supporting programme design, governance, capacity strengthening, or adaptive management, my focus is on equity, ownership, and measurable impact that lasts beyond donor funding."
 };
 
-// Accreditation section
-export const accreditation = [
-    {
-        imageUrl: "/images/stats/g-leadership.png",
-        title: "Global Programme Leadership"
-    },
-    {
-        imageUrl: "/images/stats/donor-rating.png",
-        title: "Top Donor Performance Ratings"
-    },
-    {
-        imageUrl: "/images/stats/resources.png",
-        title: "Resource Mobilisation Excellence"
-    },
-    {
-        imageUrl: "/images/stats/image.png",
-        title: "Mo Ibrahim Foundation Fellow"
-    },
-];
-
-// Services page
+// Services card data
 export const servicesData = [
     {
         title: "Strategy Advisory",
@@ -125,28 +142,45 @@ export const servicesData = [
         ],
         bgColor: "bg-[#FFD5D5]",
         borderColor: "border-[#FFB3B3]",
-    },
+    }, {
+        title: "Reporting Systems",
+        description: "",
+        serviceList: [
+            "Design and implementation of reporting structures",
+            "Data collection, analysis, and presentation frameworks",
+            "Donor reporting and compliance support",
+            "Streamlined reporting that reduces burden while maintaining quality",
+        ],
+        bgColor: "bg-[#FFF4CC]",
+        borderColor: "border-[#FFE699]",
+    }
 ];
 
 // About page
 export const aboutContent = {
-    title: "About",
-    description1: `Born in the UK and raised in Germany and Ghana, I have always viewed the world through multiple lenses. This multicultural perspective shapes how I work in international development: recognising that sustainable change must be locally owned, not externally imposed. I specialise in supporting organisations to transition from donor-dependentprogrammes to genuinely locally led models—not as an aspiration, but as an operational reality. I have done this at scale, most notably leading the successful transition of STAR-Ghana, a £22m governance programme, into an independent foundation that continues to thrive beyond donor support.`,
-    description2: `My approach draws on more than 20 years of experience across 18 countries, at both field and headquarters levels. I understand what donors require, what communities rioritise, and how to design programmes that meet both—while meaningfully transferring power and resources to local actors. I have worked in countries across Africa, Asia, Latin America, and the Caribbean,including Ghana, Nigeria, Sierra Leone, Uganda, South Sudan, Burkina Faso,Ethiopia, Myanmar, Zimbabwe, Barbados, Grenada, Guyana, Jamaica, St Lucia, St. Vincent and the Grenadines, and Trinidad and Tobago.`,
+    headLine: "Seth Lartey",
+    description1: `Born in the UK and raised in Germany and Ghana, I have always viewed the world through multiple lenses. This multicultural perspective shapes how I work in international development: recognising that sustainable change must be locally owned, not externally imposed. I specialise in supporting organisations to transition from donor-dependent programmes to genuinely locally led models—not as an aspiration, but as an operational reality. I have done this at scale, most notably leading the successful transition of STAR-Ghana, a £22m governance programme, into an independent foundation that continues to thrive beyond donor support.`,
+    description2: `My approach draws on more than 20 years of experience across 18 countries, at both field and headquarters levels. I understand what donors require, what communities prioritise, and how to design programmes that meet both—while meaningfully transferring power and resources to local actors. I have worked in countries across Africa, Asia, Latin America, and the Caribbean, including Ghana, Nigeria, Sierra Leone, Uganda, South Sudan, Burkina Faso, Ethiopia, Myanmar, Zimbabwe, Barbados, Grenada, Guyana, Jamaica, St Lucia, St Vincent and the Grenadines, and Trinidad and Tobago.`,
     illustrationLeft: "/images/decors/Looper-3.svg",
     illustrationRight: "/images/decors/Looper-2.svg",
 };
 
 export const founderData = {
-    title: "About Me",
+    // title: "About Me",
     name: "Seth Lartey",
     image: "/images/founder.jpeg",
-    alt: "Seth Lartey - Founder",
+    alt: "A portrait image of Seth Lartey",
     paragraphs: [
-        `“Strategy means little without purpose. My work is about helping organisations turn intention into lasting impact.”`,
-        `As an international development and strategy expert I have helped organisations strengthen leadership, governance, and performance. I led transformational initiatives including the transition of STAR-Ghana into an independent national entity. Guided by values of equity, accountability, and innovation, I support mission-driven organisations to move from vision to action — and action to impact.`,
-        `My work reflects a deep belief that strong institutions and empowered leadership are the foundation of social progress. Whether advising executive teams, supporting grassroots organisations, or guiding multi-country programmes, I bring a thoughtful, values-driven approach rooted in real-world experience and a commitment to meaningful impact.`
-    ],
+        `I have held senior roles at Christian Aid, Commonwealth Foundation, ENCISS (Sierra Leone), and STAR-Ghana, leading programmes on governance, civil society strengthening, climate change, and inclusion.`,
+
+        `My career spans both field-based programme leadership and headquarters strategic roles, giving me unique insight into what works at both levels. I understand donor requirements, community priorities, and how to design programmes that meet both while transferring power and resources to local actors.`,
+
+        `Key achievements include managing multi-million-pound portfolios, leading programmes reaching millions of marginalised people, transforming underperforming programmes into high-performing ones, securing new funding, and pioneering community feedback mechanisms.`,
+
+        `I established SP Lartey Consulting to offer organisations flexible, high-quality expertise without the overhead of larger firms, providing personalised attention, cost-effective solutions, and rapid adaptation to client needs.`,
+
+        `I also mentor emerging professionals, helping them translate values into purposeful career choices and empowering organisations to lead their own development.`
+    ]
 };
 
 export const valueProposition = [
@@ -183,90 +217,41 @@ export const propositionContent = {
     }
 };
 
-// Works /Projects Page
-export const projects = [
-    {
-        title: "Identify Opportunities",
-        description:
-            "Easily uncover untapped areas to explore and expand your reach effortlessly.",
-        imageUrl: "/images/project/1.JPG"
-    },
-    {
-        title: "Build Authority",
-        description:
-            "Create valuable content that resonates, inspires trust, and positions you as an expert.",
-        imageUrl: "/images/project/2.JPG"
-    },
-    {
-        title: "Instant Insights",
-        description:
-            "Gain immediate, actionable insights with a quick glance, enabling fast decision-making.",
-        imageUrl: "/images/project/3.jpeg"
-    },
-    {
-        title: "Engage with Your Audience",
-        description:
-            "Boost audience engagement with interactive features like polls, quizzes, and forms.",
-        imageUrl: "/images/project/4.jpeg"
-    },
-];
+// Gallery page
+export const imageGallery = {
+    imageUrl: [
+        "/images/project/1.JPG",
+        "/images/project/2.JPG",
+        "/images/project/3.jpeg",
+        "/images/project/4.jpeg",
+    ],
+}
 
 // Footer 
-export const footerContent = [
+export const footerLinks: FooterSection[] = [
     {
-        title: "Quick Links",
+        label: "Quick Links",
         links: [
-            {
-                title: "Home",
-                href: "/"
-            },
-            {
-                title: "About",
-                href: "/about"
-            },
-            {
-                title: "Services",
-                href: "/services"
-            },
-            {
-                title: "Projects",
-                href: "/works"
-            },
-            {
-                title: "Contact",
-                href: "/contact"
-            },
+            { title: "Home", href: "/" },
+            { title: "About", href: "/about" },
+            { title: "Services", href: "/services" },
+            { title: "Gallery", href: "/gallery" },
+            { title: "Contact", href: "/contact" },
         ],
     },
     {
-        title: "Socials",
+        label: "Socials",
         links: [
             { title: "LinkedIn", href: "https://www.linkedin.com/in/seth-lartey" },
-            // { title: "Devex", href: "#" },
+            { title: "Devex", href: "#" },
         ],
     },
     {
-        title: "Legal",
+        label: "Contacts",
         links: [
-            { title: "Privacy Policy", href: "#" },
-            { title: "Terms and Conditions", href: "#" },
-        ],
-    },
-    {
-        title: "Contacts",
-        links: [
-            {
-                title: "+(000) 000 000 0000",
-                href: "tel:+000000000000"
-            },
-            {
-                title: "admin@splarteyconsulting.com",
-                href: "mailto:admin@splarteyconsulting.com"
-            },
-            {
-                title: "Based in UK and Ghana",
-                href: "#"
-            },
+            { title: "+(000) 000 000 0000", href: "tel:+000000000000" },
+            { title: "admin@splarteyconsulting.com", href: "mailto:admin@splarteyconsulting.com" },
+            { title: "Based in UK and Ghana", href: "#" },
         ],
     },
 ];

@@ -5,6 +5,16 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { APP_CONFIG } from "@/constants";
+
+const {
+  COMPANY_NAME,
+  COMPANY_DESCRIPTION,
+  SITE_URL,
+  SITE_KEYWORDS,
+  AUTHOR
+} = APP_CONFIG;
+
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -12,21 +22,21 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "SPLartey Consulting",
-  description: "Professional consulting services to elevate your business.",
-  keywords: ["consulting", "business", "SPLartey", "Seth", "Lartey"],
+  title: COMPANY_NAME,
+  description: COMPANY_DESCRIPTION,
+  keywords: SITE_KEYWORDS,
   authors: [
     {
-      name: "Seth Lartey",
+      name: AUTHOR,
       url: "https://www.linkedin.com/in/sethlartey",
     },
     {
-      name: "Seth Lartey",
+      name: AUTHOR,
       url: "https://www.devex.com/people/seth-lartey",
     },
   ],
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_BASE_URL || "https://splarteyconsulting.com"
+    process.env.NEXT_PUBLIC_BASE_URL || SITE_URL
   ),
   icons: {
     icon: [
@@ -61,16 +71,16 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "SPLartey Consulting",
-    description: "Professional consulting services to elevate your business.",
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
-    siteName: "SPLartey Consulting",
+    title: COMPANY_NAME,
+    description: COMPANY_DESCRIPTION,
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}` || SITE_URL,
+    siteName: COMPANY_NAME,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_URL}/og-image.png`,
+        url: `${process.env.NEXT_PUBLIC_BASE_URL}/og-image.png` || SITE_URL + "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "SPLartey Consulting",
+        alt: COMPANY_NAME,
       },
     ],
     locale: "en_GB",

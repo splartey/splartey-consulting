@@ -55,6 +55,7 @@
   "scope": "/",
   "start_url": "/?source=pwa",
   "display": "standalone",
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff"
+  "theme_color": "#014d4e",
+  "background_color": "#ffffff",
+  "orientation": "portrait"
 }

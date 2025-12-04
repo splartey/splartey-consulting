@@ -17,6 +17,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navLinks } from "@/constants";
 
+import { APP_CONFIG } from "@/constants";
+
+const { COMPANY_NAME,COMPANY_DESCRIPTION } = APP_CONFIG;
+
 export function NavSheet() {
     const pathname = usePathname();
 
@@ -35,11 +39,11 @@ export function NavSheet() {
             >
                 <SheetHeader className="space-y-2">
                     <SheetTitle className="text-2xl font-semibold tracking-tight text-primary">
-                        SP Lartey Consulting.
+                        {COMPANY_NAME}
                     </SheetTitle>
 
                     <SheetDescription className="text-base text-gray-600">
-                        Empowering organizations through expert consulting.
+                        {COMPANY_DESCRIPTION}
                     </SheetDescription>
                 </SheetHeader>
 

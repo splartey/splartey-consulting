@@ -1,7 +1,7 @@
 import AboutHero from "@/components/about/AboutHero";
 import Founder from "@/components/about/Founder";
 import Proposition from "@/components/about/Proposition";
-import ValueSection from "@/components/about/Value";
+// import CallToAction from "@/components/about/CTA";
 import { aboutContent } from "@/constants";
 import { founderData } from "@/constants";
 
@@ -10,8 +10,8 @@ export default function About() {
         <>
             <AboutHero {...aboutContent} />
             <Founder {...founderData} />
-            <ValueSection />
             <Proposition />
+            {/* <CallToAction /> */}
         </>
     );
 }
