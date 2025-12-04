@@ -25,7 +25,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="hidden lg:block">
-                    <div className="relative w-full h-[680px] rounded-2xl overflow-hidden">
+                    <div className="relative w-full h-[680px] rounded-3xl overflow-hidden outline outline-border/20 outline-offset-4 shadow-md">
                         <Image
                             src={imageUrl}
                             alt="Team discussing project"
