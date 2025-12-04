@@ -45,11 +45,11 @@ interface ValueCardProps {
 }
 
 type FooterLink = {
-    title: string;
+    label: string;
     href: string;
 }
 
 type FooterSection = {
-    label: string;
+    title: string;
     links: FooterLink[];
 }

@@ -227,31 +227,38 @@ export const imageGallery = {
     ],
 }
 
+export const contactPageData = {
+    title: "Reach Out",
+    description: "Interested in working together? I'd be glad to discuss your needs and how I might support your work.",
+    imageUrl: "/images/contact.jpg",
+    alt: "Team discussing project"
+}
+
 // Footer 
 export const footerLinks: FooterSection[] = [
     {
-        label: "Quick Links",
+        title: "Quick Links",
         links: [
-            { title: "Home", href: "/" },
-            { title: "About", href: "/about" },
-            { title: "Services", href: "/services" },
-            { title: "Gallery", href: "/gallery" },
-            { title: "Contact", href: "/contact" },
+            { label: "Home", href: "/" },
+            { label: "About", href: "/about" },
+            { label: "Services", href: "/services" },
+            { label: "Gallery", href: "/gallery" },
+            { label: "Contact", href: "/contact" },
         ],
     },
     {
-        label: "Socials",
+        title: "Socials",
         links: [
-            { title: "LinkedIn", href: "https://www.linkedin.com/in/seth-lartey" },
-            { title: "Devex", href: "#" },
+            { label: "LinkedIn", href: "https://www.linkedin.com/in/seth-lartey" },
+            { label: "Devex", href: "#" },
         ],
     },
     {
-        label: "Contacts",
+        title: "Contacts",
         links: [
-            { title: "+(000) 000 000 0000", href: "tel:+000000000000" },
-            { title: "admin@splarteyconsulting.com", href: "mailto:admin@splarteyconsulting.com" },
-            { title: "Based in UK and Ghana", href: "#" },
+            { label: "+(000) 000 000 0000", href: "tel:+000000000000" },
+            { label: "admin@splarteyconsulting.com", href: "mailto:admin@splarteyconsulting.com" },
+            { label: "Based in UK and Ghana", href: "#" },
         ],
-    },
+    }
 ];

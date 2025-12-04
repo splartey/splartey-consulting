@@ -1,76 +1,55 @@
-"use client";
-
-import { footerLinks } from "@/constants";
-import { cn } from "@/lib/utils";
+import { APP_CONFIG, footerLinks } from "@/constants";
 import Link from "next/link";
-import { APP_CONFIG } from "@/constants";
+import LinksGroup from "@/components/LinksGroup";
 
 const { COMPANY_NAME, COMPANY_DESCRIPTION } = APP_CONFIG;
 
 export default function Footer() {
-
     return (
-        <footer className="relative bg-white" aria-label="Footer">
-            <div
-                className={cn(
-                    "mx-auto max-w-7xl lg:border-x",
-                    "dark:bg-[radial-gradient(35%_80%_at_30%_0%,--theme(--color-foreground/.1),transparent)]"
-                )}
-            >
+        <footer className="relative">
+            <div className="mx-auto max-w-5xl lg:border-x dark:bg-[radial-gradient(35%_80%_at_30%_0%,--theme(--color-foreground/.1),transparent)]">
                 <div className="absolute inset-x-0 h-px w-full bg-border" />
 
-                <div className="grid max-w-7xl grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-10 p-8 md:py-16">
-                    <div className="col-span-1 sm:col-span-2 md:col-span-2 flex flex-col gap-5 max-w-xs">
-                        <Link href="/" className="w-max">
-                            <span className="text-2xl font-bold text-primary">
-                                {COMPANY_NAME}
-                            </span>
+                <div className="relative flex flex-col justify-between gap-8 py-6 px-4 lg:flex-row">
+                    <div className="w-full max-w-sm space-y-4">
+                        <Link
+                            className="w-max text-xl lg:mb-2 font-bold text-primary"
+                            href="/"
+                        >
+                            {COMPANY_NAME}
                         </Link>
-
-                        <p className="max-w-sm text-muted-foreground text-sm">
+                        <p className="max-w-[280px] mt-8 text-muted-foreground text-sm md:mt-0 wrap-break-word">
                             {COMPANY_DESCRIPTION}
                         </p>
                     </div>
 
-                    <div className="col-span-1 sm:col-span-2 md:col-span-4">
-                        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-10">
-                            {footerLinks.map(({ label, links }) => (
-                                <div key={label} className="flex flex-col">
-                                    <h6 className="font-semibold uppercase tracking-wide text-sm text-black">
-                                        {label}
-                                    </h6>
-
-                                    <ul className="mt-4 space-y-3 text-muted-foreground text-sm">
-                                        {links.map(({ title, href }) => (
-                                            <li key={title}>
-                                                <Link
-                                                    href={href}
-                                                    className="inline-flex items-center transition-all duration-300 hover:text-foreground"
-                                                >
-                                                    {title}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ))}
-                        </div>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        {footerLinks.map(({ title, links }) => (
+                            <LinksGroup
+                                key={title}
+                                title={title}
+                                links={links.map((link) => ({
+                                    title: link.label,
+                                    href: link.href,
+                                }))}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>
-
-            <div className="py-3 px-12 bg-primary">
-                <div className="max-w-7xl mx-auto flex flex-col items-center justify-between gap-2 py-3 px-2 text-white text-sm md:flex-row">
-                    <p>
-                        &copy; {" "} {new Date().getFullYear()} SP Lartey Consulting - All rights reserved.
+            <div className="w-full bg-primary text-white py-4 px-3">
+                <div className="max-w-5xl px-2.5 mx-auto flex flex-col sm:flex-row items-center sm:items-center justify-between gap-2">
+                    <p className="font-light text-xs text-center sm:text-left">
+                        &copy; {new Date().getFullYear()} {COMPANY_NAME}, All rights reserved
                     </p>
 
                     <Link
-                        href="/"
-                        className="underline underline-offset-4 hover:text-zinc-300"
+                        href="/privacy-policy"
+                        className="font-light text-xs text-center sm:text-right"
                     >
                         Privacy Policy & Terms
                     </Link>
+
                 </div>
             </div>
         </footer>
