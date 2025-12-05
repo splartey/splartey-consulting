@@ -8,22 +8,22 @@ export default function SkillsMarquee({ iconUrl, items, }: SkillsMarqueeProps) {
         <div className="flex items-center gap-4 space-x-4">
             <Image
                 src={iconUrl}
-                width={33}
-                height={33}
+                width={30}
+                height={30}
                 alt="skill separator"
                 className="object-contain"
             />
-            <span className="whitespace-nowrap text-white text-sm md:text-base">
+            <span className="whitespace-nowrap text-white text-base">
                 {text}
             </span>
         </div>
     );
 
     return (
-        <div className="w-full bg-primary md:py-2.5 overflow-hidden">
+        <div className="w-full bg-primary overflow-hidden">
             <Marquee
                 pauseOnHover
-                className="[--duration:20s]">
+                className="[--duration:50s]">
                 {items.map((item, index) => (
                     <MarqueeItem
                         key={index}

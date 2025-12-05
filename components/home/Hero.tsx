@@ -1,67 +1,62 @@
-import { Button } from "@/components/ui/button";
-import { ArrowUpRight } from "lucide-react";
-import { LightRays } from "@/components/ui/light-rays";
-import { BlurFade } from "@/components/ui/blur-fade";
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-
+import { Button } from "@/components/ui/button";
+import { BlurFade } from "@/components/ui/blur-fade";
+import { LightRays } from "@/components/ui/light-rays";
 
 export default function Hero({
     heading,
     subHeading,
     heroImageUrl,
     primaryCta,
-    secondaryCta
+    secondaryCta,
 }: HeroSectionProps) {
     return (
-        <section className="relative min-h-screen flex items-center overflow-hidden">
-            <div className="max-w-7xl w-full mx-auto grid lg:grid-cols-2 gap-12 px-6 py-20 lg:py-0 ">
-                <article className="relative my-auto">
-                    <div className="relative z-10">
-                        <BlurFade delay={0.25 * 2} inView>
-                            <h1 className="mt-6 text-4xl md:text-5xl font-bold tracking-wide wrap-break-word max-w-[20ch] leading-[1.3] text-primary"
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <div className="max-w-6xl w-full mx-auto grid lg:grid-cols-2 gap-12 px-6 py-16 lg:py-0">
+
+                <div className="my-auto">
+                    <BlurFade delay={0.2} inView>
+                        <h1 className="max-w-[17ch] text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] font-semibold leading-[1.15] tracking-[-0.035em] text-primary">
+                            {heading}
+                        </h1>
+                    </BlurFade>
+
+                    <BlurFade delay={0.4} inView>
+                        <p className="mt-6 max-w-[60ch] text-xl md:text-lg text-foreground/80">
+                            {subHeading}
+                        </p>
+                    </BlurFade>
+
+                    <BlurFade delay={0.6} inView>
+                        <div className="mt-12 flex items-center gap-4">
+                            <Button size="lg" className="rounded-full text-base" asChild>
+                                <Link href={primaryCta.href}>
+                                    {primaryCta.label}
+                                </Link>
+                            </Button>
+
+                            <Button
+                                variant="outline"
+                                size="lg"
+                                className="rounded-full text-base shadow-none"
+                                asChild
                             >
-                                {heading}
-                            </h1>
-                        </BlurFade>
+                                <Link href={secondaryCta.href}>
+                                    {secondaryCta.label}
+                                </Link>
+                            </Button>
+                        </div>
+                    </BlurFade>
+                </div>
 
-                        <BlurFade delay={0.25 * 3} inView>
-                            <article className="mt-6 text-gray-800 text-lg md:text-xl leading-relaxed wrap-break-word max-w-xl">
-                                {subHeading}
-                            </article>
-                        </BlurFade>
-
-                        <BlurFade delay={0.25 * 4} inView >
-                            <div className="mt-12 flex items-center gap-4">
-                                <Button
-                                    asChild
-                                    variant="outline"
-                                    size="lg"
-                                    className="text-base px-6 btn-outline shadow-none rounded-full"
-                                >
-
-                                    <Link href={primaryCta.href}>{primaryCta.label}</Link>
-                                </Button>
-                                <Button
-                                    asChild
-                                    size="lg"
-                                    className="btn-primary rounded-full text-base px-6 shadow-none"
-                                >
-                                    <Link href={secondaryCta.href}>
-                                        {secondaryCta.label}
-                                        <ArrowUpRight className="h-5! w-5!" />
-                                    </Link>
-                                </Button>
-                            </div>
-                        </BlurFade>
-                    </div>
-                </article>
-
-                <BlurFade delay={0.25 * 3} inView >
-                    <div className="relative w-full aspect-video lg:aspect-auto lg:w-[1000] lg:h-screen rounded-xl lg:rounded-none overflow-hidden bg-accent shadow">
+                <BlurFade delay={0.3} inView>
+                    <div className="relative w-full lg:h-[calc(100vh-6rem)] aspect-video lg:aspect-auto rounded-3xl overflow-hidden bg-accent/50">
                         <Image
                             src={heroImageUrl}
-                            alt="Photo of Seth Lartey doing a presentation"
+                            alt="Hero visual"
                             fill
                             priority
                             className="object-cover"
@@ -69,6 +64,7 @@ export default function Hero({
                     </div>
                 </BlurFade>
             </div>
+
             <LightRays />
         </section>
     );
