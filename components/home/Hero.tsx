@@ -14,10 +14,9 @@ export default function Hero({
     secondaryCta,
 }: HeroSectionProps) {
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-            <div className="max-w-6xl w-full mx-auto grid lg:grid-cols-2 gap-12 px-6 py-16 lg:py-0">
-
-                <div className="my-auto">
+        <section className="relative flex items-center justify-center overflow-hidden py-8 md:py-8.5">
+            <div className="max-w-5xl w-full mx-auto grid lg:grid-cols-2 gap-12 px-6 lg:py-0">
+                <div className="my-auto py-12 lg:py-0">
                     <BlurFade delay={0.2} inView>
                         <h1 className="max-w-[17ch] text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] font-semibold leading-[1.15] tracking-[-0.035em] text-primary">
                             {heading}
@@ -25,14 +24,14 @@ export default function Hero({
                     </BlurFade>
 
                     <BlurFade delay={0.4} inView>
-                        <p className="mt-6 max-w-[60ch] text-xl md:text-lg text-foreground/80">
+                        <p className="mt-6 max-w-[60ch] text-lg text-foreground/80 text-balance">
                             {subHeading}
                         </p>
                     </BlurFade>
 
                     <BlurFade delay={0.6} inView>
                         <div className="mt-12 flex items-center gap-4">
-                            <Button size="lg" className="rounded-full text-base" asChild>
+                            <Button className="rounded-full btn-primary" asChild>
                                 <Link href={primaryCta.href}>
                                     {primaryCta.label}
                                 </Link>
@@ -40,8 +39,7 @@ export default function Hero({
 
                             <Button
                                 variant="outline"
-                                size="lg"
-                                className="rounded-full text-base shadow-none"
+                                className="btn-outline rounded-full shadow-none"
                                 asChild
                             >
                                 <Link href={secondaryCta.href}>
@@ -53,18 +51,17 @@ export default function Hero({
                 </div>
 
                 <BlurFade delay={0.3} inView>
-                    <div className="relative w-full lg:h-[calc(100vh-6rem)] aspect-video lg:aspect-auto rounded-3xl overflow-hidden bg-accent/50">
+                    <div className="relative w-full aspect-square lg:aspect-auto lg:h-[550px] rounded-3xl overflow-hidden bg-accent/50 outline-1 outline-offset-2 outline-border">
                         <Image
                             src={heroImageUrl}
                             alt="Hero visual"
                             fill
                             priority
-                            className="object-cover"
+                            className="object-cover object-center"
                         />
                     </div>
                 </BlurFade>
             </div>
-
             <LightRays />
         </section>
     );

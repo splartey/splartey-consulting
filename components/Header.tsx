@@ -10,13 +10,13 @@ export default function Header() {
     const pathname = usePathname();
 
     return (
-        <nav className="header">
-            <div className="max-w-7xl mx-auto flex items-center justify-between w-full">
+        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/50">
+            <div className="mx-auto flex h-14 w-full max-w-5xl items-center justify-between px-4">
 
-                <div className="nav-logo">
+                <div>
                     <Link
                         href="/"
-                        className="text-lg md:text-2xl font-bold text-primary tracking-wide"
+                        className="text-2xl font-bold text-primary"
                     >
                         <span className="hidden md:inline">SP Lartey Consulting.</span>
                         <span className="md:hidden">SP Lartey.</span>
@@ -25,36 +25,39 @@ export default function Header() {
 
                 <nav className="hidden lg:flex flex-1 justify-center items-center gap-8">
                     {navLinks.map((link) => {
+
                         const isActive = pathname === link.href;
+                        const { name, href } = link
+
                         return (
                             <Link
-                                key={link.name}
-                                href={link.href}
-                                className={`text-gray-700 hover:text-primary transition-colors text-sm font-medium tracking-wide ${isActive
-                                    ? "text-primary underline-offset-8 underline"
-                                    : ""
-                                    }`}
+                                key={name}
+                                href={href}
+                                className={`text-foreground/80 hover:text-primary transition-colors text-base font-medium tracking-wide
+                                    ${isActive && "text-primary underline underline-offset-8"}`}
                             >
-                                {link.name}
+                                {name}
                             </Link>
                         );
                     })}
                 </nav>
 
                 <div className="hidden lg:flex justify-end">
-                    <Button
-                        asChild
-                        className="btn-primary px-6 text-sm"
-                        size="lg"
-                    >
-                        <Link href="/contact">Get in touch</Link>
-                    </Button>
+                    <div className="relative">
+                        <Button
+                            asChild
+                            className="btn-primary"
+                            size="default"
+                        >
+                            <Link href="/contact">Get in touch</Link>
+                        </Button>
+                    </div>
                 </div>
 
                 <div className="lg:hidden flex items-center ml-4">
                     <NavSheet />
                 </div>
             </div>
-        </nav>
+        </header>
     );
 }

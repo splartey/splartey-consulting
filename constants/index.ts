@@ -2,7 +2,7 @@ import { Eye, Goal, Gem } from "lucide-react";
 
 export const APP_CONFIG = {
     COMPANY_NAME: "SP Lartey Consulting",
-    COMPANY_ABBR: "SP Lartey.",
+    COMPANY_ABBR: "SP Lartey",
     COMPANY_SLOGAN: "Strategy, Performance, Leadership.",
     SITE_URL: "https://www.splarteyconsulting.com",
     COMPANY_DESCRIPTION: "Professional consulting services to elevate your business.",
@@ -161,8 +161,6 @@ export const aboutContent = {
     headLine: "Seth Lartey",
     description1: `Born in the UK and raised in Germany and Ghana, I have always viewed the world through multiple lenses. This multicultural perspective shapes how I work in international development: recognising that sustainable change must be locally owned, not externally imposed. I specialise in supporting organisations to transition from donor-dependent programmes to genuinely locally led models—not as an aspiration, but as an operational reality. I have done this at scale, most notably leading the successful transition of STAR-Ghana, a £22m governance programme, into an independent foundation that continues to thrive beyond donor support.`,
     description2: `My approach draws on more than 20 years of experience across 18 countries, at both field and headquarters levels. I understand what donors require, what communities prioritise, and how to design programmes that meet both—while meaningfully transferring power and resources to local actors. I have worked in countries across Africa, Asia, Latin America, and the Caribbean, including Ghana, Nigeria, Sierra Leone, Uganda, South Sudan, Burkina Faso, Ethiopia, Myanmar, Zimbabwe, Barbados, Grenada, Guyana, Jamaica, St Lucia, St Vincent and the Grenadines, and Trinidad and Tobago.`,
-    illustrationLeft: "/images/decors/Looper-3.svg",
-    illustrationRight: "/images/decors/Looper-2.svg",
 };
 
 export const founderData = {
@@ -170,39 +168,20 @@ export const founderData = {
     name: "Seth Lartey",
     image: "/images/founder.jpeg",
     alt: "A portrait image of Seth Lartey",
-    paragraphs: [
-        `I have held senior roles at Christian Aid, Commonwealth Foundation, ENCISS (Sierra Leone), and STAR-Ghana, leading programmes on governance, civil society strengthening, climate change, and inclusion.`,
-
-        `My career spans both field-based programme leadership and headquarters strategic roles, giving me unique insight into what works at both levels. I understand donor requirements, community priorities, and how to design programmes that meet both while transferring power and resources to local actors.`,
-
-        `Key achievements include managing multi-million-pound portfolios, leading programmes reaching millions of marginalised people, transforming underperforming programmes into high-performing ones, securing new funding, and pioneering community feedback mechanisms.`,
-
-        `I established SP Lartey Consulting to offer organisations flexible, high-quality expertise without the overhead of larger firms, providing personalised attention, cost-effective solutions, and rapid adaptation to client needs.`,
-
-        `I also mentor emerging professionals, helping them translate values into purposeful career choices and empowering organisations to lead their own development.`
+    content: [
+        {
+            paragraph: "I have held senior roles at Christian Aid, Commonwealth Foundation, ENCISS (Sierra Leone), and STAR-Ghana, leading programmes on governance, civil society strengthening, climate change, and inclusion."
+        }, {
+            paragraph: "My career spans both field-based programme leadership and headquarters strategic roles, giving me unique insight into what works at both levels. I understand donor requirements, community priorities, and how to design programmes that meet both while transferring power and resources to local actors."
+        }, {
+            paragraph: "Key achievements include managing multi-million-pound portfolios, leading programmes reaching millions of marginalised people, transforming underperforming programmes into high-performing ones, securing new funding, and pioneering community feedback mechanisms."
+        }, {
+            paragraph: "I established SP Lartey Consulting to offer organisations flexible, high-quality expertise without the overhead of larger firms, providing personalised attention, cost-effective solutions, and rapid adaptation to client needs."
+        }, {
+            paragraph: "I also mentor emerging professionals, helping them translate values into purposeful career choices and empowering organisations to lead their own development."
+        }
     ]
 };
-
-export const valueProposition = [
-    {
-        icon: Eye,
-        title: "Vision",
-        description:
-            "To be a leading organization empowering communities through innovation, integrity, and inclusivity.",
-    },
-    {
-        icon: Goal,
-        title: "Mission",
-        description:
-            "To provide impactful, data-driven solutions that enhance community development and foster sustainable growth.",
-    },
-    {
-        icon: Gem,
-        title: "Unique Value",
-        description:
-            "We combine local expertise, modern technology, and strategic partnerships to deliver measurable impact and long-term value.",
-    },
-];
 
 export const propositionContent = {
     tagline: "Why I work independently",
@@ -214,8 +193,22 @@ export const propositionContent = {
     image: {
         src: "/images/Team-collaboration.JPG",
         alt: "Team collaboration - two people working on a project board",
-    }
+    },
+    ctaButton: " Get started"
 };
+
+export const CTAData: CTADefault = {
+    heading: "Let's Strengthen Your Impact Together",
+    description: "Whether you are designing a new programme, leading organisational change, or transitioning toward locally-led development, I can support you with strategic, practical, and context-driven expertise. Let's explore how we can work together to achieve sustainable, measurable results.",
+    ctaPrimaryBtn: {
+        label: "Get In Touch",
+        href: "/contact"
+    },
+    ctaSecondaryBtn: {
+        label: "Services I Offer",
+        href: "/services"
+    }
+}
 
 // Gallery page
 export const imageGallery = {
@@ -250,7 +243,7 @@ export const footerLinks: FooterSection[] = [
         title: "Socials",
         links: [
             { label: "LinkedIn", href: "https://www.linkedin.com/in/seth-lartey" },
-            { label: "Devex", href: "#" },
+            { label: "Devex", href: "https://www.devex.com/seth-lartey" },
         ],
     },
     {

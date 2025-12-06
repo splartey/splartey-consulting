@@ -6,10 +6,10 @@ import { skills, impactContent, heroData } from "@/constants";
 
 export default function HomePage() {
   return (
-    <div>
+    <>
       <Hero {...heroData} />
       <HeroMarquee iconUrl="/images/decors/decor.svg" items={skills} />
       <ImpactSection {...impactContent} />
-    </div>
+    </>
   );
 }

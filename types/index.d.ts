@@ -1,11 +1,3 @@
-type AboutHeroProps = {
-    headLine: string;
-    description1: string;
-    description2: string;
-    illustrationLeft: string;
-    illustrationRight: string;
-}
-
 interface ServiceCardProps {
     title: string;
     description?: string;
@@ -38,11 +30,30 @@ interface SkillsMarqueeProps {
     items: string[];
 }
 
-interface ValueCardProps {
-    icon: LucideIcon;
-    title: string;
-    description: string;
+// about
+type AboutHeroProps = {
+    headLine: string;
+    description1: string;
+    description2: string;
 }
+
+type contentItem = {
+    paragraph: string;
+}
+
+type FounderProps = {
+    image: string;
+    alt: string;
+    content: contentItem[];
+}
+
+type CTADefault = {
+    heading: string;
+    description: string;
+    ctaPrimaryBtn: CtaButton;
+    ctaSecondaryBtn: CtaButton;
+}
+
 
 type FooterLink = {
     label: string;

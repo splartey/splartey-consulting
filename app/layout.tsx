@@ -1,23 +1,17 @@
-import type { Metadata } from "next";
-import { Manrope } from 'next/font/google';
 
 import "./globals.css";
+import type { Metadata } from "next";
+import { APP_CONFIG } from "@/constants";
+import { Bricolage_Grotesque } from 'next/font/google';
 import { Toaster } from "@/components/ui/sonner"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { APP_CONFIG } from "@/constants";
 
-const {
-  COMPANY_NAME,
-  COMPANY_DESCRIPTION,
-  SITE_URL,
-  SITE_KEYWORDS,
-  AUTHOR
-} = APP_CONFIG;
+const { COMPANY_NAME, COMPANY_DESCRIPTION, SITE_URL, SITE_KEYWORDS, AUTHOR } = APP_CONFIG;
 
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const geistSans = Bricolage_Grotesque({
+  variable: "--font-bricolage-grotesque",
   subsets: ["latin"],
 });
 
@@ -35,9 +29,7 @@ export const metadata: Metadata = {
       url: "https://www.devex.com/people/seth-lartey",
     },
   ],
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_BASE_URL || SITE_URL
-  ),
+  metadataBase: new URL(SITE_URL),
   icons: {
     icon: [
       { url: "/favicons/favicon.ico" },
@@ -73,11 +65,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: COMPANY_NAME,
     description: COMPANY_DESCRIPTION,
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}` || SITE_URL,
+    url: SITE_URL,
     siteName: COMPANY_NAME,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_URL}/og-image.png` || SITE_URL + "/og-image.png",
+        url: SITE_URL + "/og-image.png",
         width: 1200,
         height: 630,
         alt: COMPANY_NAME,
@@ -91,11 +83,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
-      <body
-        className={`${manrope.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} antialiased`}>
         <Header />
-        <main className="min-h-screen pt-15 lg:pt-20">
+        <main className="relative min-h-screen">
           {children}
         </main>
         <Toaster />

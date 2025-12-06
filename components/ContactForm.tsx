@@ -88,7 +88,7 @@ export function ContactForm() {
                     control={form.control}
                     name="email"
                     label="Email *"
-                    placeholder="you@example.com"
+                    placeholder="youremail@example.com"
                     type="email"
                 />
 
@@ -121,7 +121,7 @@ export function ContactForm() {
 
                             <Label htmlFor="privacy" className="text-sm text-gray-700">
                                 You agree to the{" "}
-                                <Link href="/privacy" className="text-primary underline underline-offset-4">
+                                <Link href="/privacy-policy" className="text-primary underline underline-offset-4">
                                     Privacy Policy
                                 </Link>.
                             </Label>
