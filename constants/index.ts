@@ -29,6 +29,7 @@ export const APP_CONFIG = {
 
     ],
     AUTHOR: "Seth Lartey",
+    CONTACT_EMAIL: "admin@splarteyconsulting.com",
 }
 
 // Navigation links
@@ -255,3 +256,10 @@ export const footerLinks: FooterSection[] = [
         ],
     }
 ];
+
+export const PRIVACY_POLICY_DATA = {
+    effectiveDate: "January 01, 2026",
+    // contactEmail: "admin@splarteyconsulting.com",
+    contactLocation: "Based in UK and Ghana, working with organisations globally.",
+    // dataController: "Seth Lartey",
+};

@@ -1,7 +1,7 @@
 import ServiceCard from "@/components/ServiceCard";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { servicesData } from "@/constants";
-import Image from "next/image";
+// import Image from "next/image";
 
 const servicePageDefaults = {
     heading: "Consulting Services",
@@ -15,8 +15,8 @@ export default function ServicesPage() {
     const { heading, subHeading, description } = servicePageDefaults
 
     return (
-        < section className="relative w-full px-6 py-8 md:px-10 md:py-16 lg:py-40 overflow-hidden" >
-            <>
+        < section className="relative w-full px-6 py-8 md:px-10 md:py-16 lg:py-40 overflow-hidden " >
+            {/* <>
                 <div className="pointer-events-none absolute top-0 right-0 max-sm:-right-10 max-sm:-top-15 opacity-30 md:opacity-40 lg:opacity-60">
                     <Image
                         src="/images/decors/line.svg"
@@ -36,10 +36,9 @@ export default function ServicesPage() {
                         height={420}
                         className="w-[200px] md:w-[300px] lg:w-[420px]" />
                 </div>
-            </>
+            </> */}
 
             <div className="max-w-6xl mx-auto relative">
-
                 <div className="mb-12 max-w-2xl">
                     <BlurFade delay={0.25} inView>
                         <p className="text-sm text-primary font-semibold tracking-wide uppercase">
@@ -58,7 +57,7 @@ export default function ServicesPage() {
                     </BlurFade>
                 </div>
 
-                <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[1fr]">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {servicesData.map((service, index) => (
                         <BlurFade key={index} delay={0.25 * 4} inView>
                             <ServiceCard
