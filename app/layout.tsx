@@ -2,17 +2,22 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { APP_CONFIG } from "@/constants";
-import { Bricolage_Grotesque } from 'next/font/google';
 import { Toaster } from "@/components/ui/sonner"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import localFont from "next/font/local";
 
 const { COMPANY_NAME, COMPANY_DESCRIPTION, SITE_URL, SITE_KEYWORDS, AUTHOR } = APP_CONFIG;
 
-
-const geistSans = Bricolage_Grotesque({
-  variable: "--font-bricolage-grotesque",
-  subsets: ["latin"],
+const bricolage = localFont({
+  src: [
+    {
+      path: "../public/fonts/BricolageGrotesque-VariableFont.ttf",
+      weight: "200 800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-bricolage",
 });
 
 export const metadata: Metadata = {
@@ -83,9 +88,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} antialiased`}>
+      <body className={`${bricolage.variable} antialiased`}>
         <Header />
-        <main className="relative min-h-screen">
+        <main className="relative">
           {children}
         </main>
         <Toaster />
