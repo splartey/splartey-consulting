@@ -10,6 +10,7 @@ import {
 } from 'motion/react';
 import { createContext, useContext, useState, useId, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import useClickOutside from '@/hooks/useClickOutside';
 
 export type DisclosureContextType = {
   open: boolean;
@@ -86,9 +87,17 @@ export function Disclosure({
   transition,
   variants,
 }: DisclosureProps) {
+  const disclosureRef = React.useRef<HTMLDivElement>(null);
+
+  useClickOutside(disclosureRef, () => {
+    if (openProp && onOpenChange) {
+      onOpenChange(false);
+    }
+  });
+
   return (
     <MotionConfig transition={transition}>
-      <div className={className}>
+      <div className={className} ref={disclosureRef}>
         <DisclosureProvider
           open={openProp}
           onOpenChange={onOpenChange}
