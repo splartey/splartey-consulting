@@ -1,7 +1,7 @@
 import ServiceCard from "@/components/ServiceCard";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { servicesData } from "@/constants";
-// import Image from "next/image";
+import Image from "next/image";
 
 const servicePageDefaults = {
     heading: "Consulting Services",
@@ -16,8 +16,8 @@ export default function ServicesPage() {
 
     return (
         < section className="relative w-full px-6 py-8 md:px-10 md:py-16 lg:py-40 overflow-hidden " >
-            {/* <>
-                <div className="pointer-events-none absolute top-0 right-0 max-sm:-right-10 max-sm:-top-15 opacity-30 md:opacity-40 lg:opacity-60">
+            <>
+                <div className="pointer-events-none absolute -top-10 -right-10 max-sm:-right-20 max-sm:-top-15 opacity-30 md:opacity-40 lg:opacity-60">
                     <Image
                         src="/images/decors/line.svg"
                         alt="decorative shape"
@@ -36,28 +36,28 @@ export default function ServicesPage() {
                         height={420}
                         className="w-[200px] md:w-[300px] lg:w-[420px]" />
                 </div>
-            </> */}
+            </>
 
-            <div className="max-w-6xl mx-auto relative">
-                <div className="mb-12 max-w-2xl">
+            <div className="max-w-6xl mx-auto px-6 md:px-10 lg:px-8 space-y-12 flex flex-col items-center">
+                <header className="max-w-5xl space-y-4 text-center pb-4">
                     <BlurFade delay={0.25} inView>
                         <p className="text-sm text-primary font-semibold tracking-wide uppercase">
-                            {heading}
+                            {subHeading}
                         </p>
                     </BlurFade>
                     <BlurFade delay={0.25 * 2} inView>
-                        <h2 className="text-3xl md:text-5xl font-bold leading-tight mt-2">
-                            {subHeading}
-                        </h2>
+                        <h1 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight">
+                            {heading}
+                        </h1>
                     </BlurFade>
                     <BlurFade delay={0.25 * 3} inView>
-                        <p className="mt-4 text-gray-600 text-base md:text-lg">
+                        <p className="text-xl text-muted-foreground">
                             {description}
                         </p>
                     </BlurFade>
-                </div>
+                </header>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 pt-6">
                     {servicesData.map((service, index) => (
                         <BlurFade key={index} delay={0.25 * 4} inView>
                             <ServiceCard
@@ -67,8 +67,6 @@ export default function ServicesPage() {
                         </BlurFade>
                     ))}
                 </div>
-
-                <div className="mt-24 md:mt-32 lg:mt-40" />
             </div>
         </section >
     );

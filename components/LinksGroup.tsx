@@ -7,8 +7,8 @@ type LinksGroupProps = {
 
 export default function LinksGroup({ title, links }: LinksGroupProps) {
     return (
-        <div className="px-3">
-            <h3 className="mb-2 font-extrabold text-xs uppercase text-foreground">
+        <div>
+            <h3 className="mb-2 font-bold text-xs uppercase text-foreground">
                 {title}
             </h3>
 
@@ -17,7 +17,7 @@ export default function LinksGroup({ title, links }: LinksGroupProps) {
                     <li key={title}>
                         <Link
                             href={href}
-                            className="text-muted-foreground text-xs hover:text-foreground"
+                            className="text-muted-foreground text-sm hover:text-foreground"
                         >
                             {title}
                         </Link>

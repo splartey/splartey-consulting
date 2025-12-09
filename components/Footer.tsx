@@ -11,19 +11,19 @@ export default function Footer() {
             <StripeBgGuides columnCount={2} contained={true} />
             <div className="mx-auto max-w-5xl">
                 <div className="relative flex flex-col justify-between gap-8 py-6 md:py-8 px-6 lg:flex-row">
-                    <div className="w-full max-w-sm space-y-4 ml-3">
+                    <div className="w-full max-w-xs space-y-4 ml-3">
                         <Link
                             className="w-max text-2xl lg:mb-2 font-bold text-primary"
                             href="/"
                         >
                             {COMPANY_NAME}
                         </Link>
-                        <p className="max-w-[280px] mt-8 text-muted-foreground text-sm md:mt-0 wrap-break-word">
+                        <p className="mt-8 text-muted-foreground text-sm md:mt-0 wrap-break-word">
                             {COMPANY_DESCRIPTION}
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    <div className="grid grid-cols-2 md:grid-cols-3">
                         {footerLinks.map(({ title, links }) => (
                             <LinksGroup
                                 key={title}

@@ -11,7 +11,7 @@ export function CallToAction() {
 
     return (
         <section className="bg-white relative">
-            <StripeBgGuides columnCount={2} contained={true} />
+            <StripeBgGuides columnCount={3} contained={true} />
 
             <div className="py-28 bg-primary/2">
                 <div className="relative mx-auto flex w-full max-w-3xl flex-col justify-between gap-y-4 border-y py-8 max-sm:overflow-hidden">

@@ -1,5 +1,3 @@
-import { Eye, Goal, Gem } from "lucide-react";
-
 export const APP_CONFIG = {
     COMPANY_NAME: "SP Lartey Consulting",
     COMPANY_ABBR: "SP Lartey",
@@ -32,15 +30,13 @@ export const APP_CONFIG = {
     CONTACT_EMAIL: "admin@splarteyconsulting.com",
 }
 
-// Navigation links
 export const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Gallery", href: "/gallery" },
+    { name: "Gallery", href: "/action-gallery" },
 ];
 
-// Home page
 export const heroData = {
     heading: "Strategy, Performance, Leadership.",
     subHeading: `I deliver strategic, technical, and operational solutions that help organisations in international development achieve measurable results.`,
@@ -55,7 +51,7 @@ export const heroData = {
     },
 }
 
-// Skills marquee
+
 export const skills = [
     "Strategic programme leadership",
     "Grant-making and fund management",
@@ -65,14 +61,12 @@ export const skills = [
     "Capacity building and team development",
 ];
 
-// Impact section - below marquee 
 export const impactContent = {
     title: "Driving Results Through Experience, Insight, and Locally-Led Approaches",
     description1: "With over 20 years of experience across Africa, Asia, Latin America, and the Caribbean, I help organisations bridge the gap between strategic vision and operational reality. My approach is grounded in locally-led development, meaningful community participation, and practical solutions that strengthen systems and teams.",
     description2: "I draw on both field-based programme leadership and headquarters-level strategy to design interventions that are ambitious, achievable, and sustainable. Whether supporting programme design, governance, capacity strengthening, or adaptive management, my focus is on equity, ownership, and measurable impact that lasts beyond donor funding."
 };
 
-// Services card data
 export const servicesData = [
     {
         title: "Strategy Advisory",
@@ -157,7 +151,6 @@ export const servicesData = [
     }
 ];
 
-// About page
 export const aboutContent = {
     headLine: "Seth Lartey",
     description1: `Born in the UK and raised in Germany and Ghana, I have always viewed the world through multiple lenses. This multicultural perspective shapes how I work in international development: recognising that sustainable change must be locally owned, not externally imposed. I specialise in supporting organisations to transition from donor-dependent programmes to genuinely locally led models—not as an aspiration, but as an operational reality. I have done this at scale, most notably leading the successful transition of STAR-Ghana, a £22m governance programme, into an independent foundation that continues to thrive beyond donor support.`,
@@ -165,7 +158,6 @@ export const aboutContent = {
 };
 
 export const founderData = {
-    // title: "About Me",
     name: "Seth Lartey",
     image: "/images/founder.jpeg",
     alt: "A portrait image of Seth Lartey",
@@ -206,12 +198,11 @@ export const CTAData: CTADefault = {
         href: "/contact"
     },
     ctaSecondaryBtn: {
-        label: "Services I Offer",
+        label: "What I Offer",
         href: "/services"
     }
 }
 
-// Gallery page
 export const imageGallery = {
     imageUrl: [
         "/images/project/1.JPG",
@@ -228,7 +219,6 @@ export const contactPageData = {
     alt: "Team discussing project"
 }
 
-// Footer 
 export const footerLinks: FooterSection[] = [
     {
         title: "Quick Links",
@@ -236,7 +226,7 @@ export const footerLinks: FooterSection[] = [
             { label: "Home", href: "/" },
             { label: "About", href: "/about" },
             { label: "Services", href: "/services" },
-            { label: "Gallery", href: "/gallery" },
+            { label: "Gallery", href: "/action-gallery" },
             { label: "Contact", href: "/contact" },
         ],
     },
@@ -259,7 +249,24 @@ export const footerLinks: FooterSection[] = [
 
 export const PRIVACY_POLICY_DATA = {
     effectiveDate: "January 01, 2026",
-    // contactEmail: "admin@splarteyconsulting.com",
     contactLocation: "Based in UK and Ghana, working with organisations globally.",
-    // dataController: "Seth Lartey",
 };
+
+export const GALLERY_ITEMS = [
+    { id: "1", image: "/images/gallery/1.JPG", height: 600, },
+    { id: "2", image: "/images/gallery/2.JPG", height: 350, },
+    { id: "3", image: "/images/gallery/3.jpeg", height: 650, },
+    { id: "4", image: "/images/gallery/4.JPG", height: 450, },
+    { id: "5", image: "/images/gallery/5.JPG", height: 550, },
+    { id: "6", image: "/images/gallery/6.jpeg", height: 450, },
+    { id: "7", image: "/images/gallery/7.jpeg", height: 300, },
+    { id: "8", image: "/images/gallery/8.JPG", height: 250, },
+    { id: "9", image: "/images/gallery/1.JPG", height: 600, },
+    { id: "10", image: "/images/gallery/10.JPG", height: 350, },
+    { id: "11", image: "/images/gallery/11.jpeg", height: 650, },
+    { id: "12", image: "/images/gallery/12.jpeg", height: 450, },
+    { id: "13", image: "/images/gallery/13.jpeg", height: 550, },
+    { id: "14", image: "/images/gallery/14.jpg", height: 450, },
+    { id: "15", image: "/images/gallery/15.jpeg", height: 300, },
+    { id: "16", image: "/images/gallery/16.jpeg", height: 250, },
+];
