@@ -9,7 +9,6 @@ const servicePageDefaults = {
     description: "I provide tailored consulting services designed to strengthen leadership, strategy, and performance for international development organisations around the world.",
 };
 
-
 export default function ServicesPage() {
 
     const { heading, subHeading, description } = servicePageDefaults
@@ -38,7 +37,7 @@ export default function ServicesPage() {
                 </div>
             </>
 
-            <div className="max-w-6xl mx-auto px-6 md:px-10 lg:px-8 space-y-12 flex flex-col items-center">
+            <div className="max-w-6xl max-md:max-w-full mx-auto px-6  md:px-10 lg:px-8 space-y-12 flex flex-col items-center">
                 <header className="max-w-5xl space-y-4 text-center pb-4">
                     <BlurFade delay={0.25} inView>
                         <p className="text-sm text-primary font-semibold tracking-wide uppercase">

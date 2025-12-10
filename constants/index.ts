@@ -40,7 +40,7 @@ export const navLinks = [
 export const heroData = {
     heading: "Strategy, Performance, Leadership.",
     subHeading: `I deliver strategic, technical, and operational solutions that help organisations in international development achieve measurable results.`,
-    heroImageUrl: "/images/hero-image.JPG",
+    heroImageUrl: "/images/hero-image.avif",
     primaryCta: {
         label: "Learn more",
         href: "/about",
@@ -159,7 +159,7 @@ export const aboutContent = {
 
 export const founderData = {
     name: "Seth Lartey",
-    image: "/images/founder.jpeg",
+    image: "/images/founder.avif",
     alt: "A portrait image of Seth Lartey",
     content: [
         {
@@ -184,7 +184,7 @@ export const propositionContent = {
     details: [`I believe development must be locally owned and community-driven. Throughout my career, I have championed approaches that:  Put communities at the centre of programme design and decision-making, Build local capacity rather than creating dependency, Ensure genuine participation, not token consultation, Transfer power and resources to local actors, Create systems that continue after external funding ends, I also believe in mentoring emerging professionals and helping them translate their values into purposeful career choices. This commitment to developing others shapes how I approach consulting - sharing knowledge, building capacity, and creating sustainable solutions that empower people and organisations to lead their own development.
 `],
     image: {
-        src: "/images/Team-collaboration.JPG",
+        src: "/images/Team-collaboration.avif",
         alt: "Team collaboration - two people working on a project board",
     },
     ctaButton: " Get started"
@@ -203,19 +203,11 @@ export const CTAData: CTADefault = {
     }
 }
 
-export const imageGallery = {
-    imageUrl: [
-        "/images/project/1.JPG",
-        "/images/project/2.JPG",
-        "/images/project/3.jpeg",
-        "/images/project/4.jpeg",
-    ],
-}
 
 export const contactPageData = {
     title: "Reach Out",
     description: "Interested in working together? I'd be glad to discuss your needs and how I might support your work.",
-    imageUrl: "/images/contact.jpg",
+    imageUrl: "/images/contact.avif",
     alt: "Team discussing project"
 }
 
@@ -253,20 +245,12 @@ export const PRIVACY_POLICY_DATA = {
 };
 
 export const GALLERY_ITEMS = [
-    { id: "1", image: "/images/gallery/1.JPG", height: 600, },
-    { id: "2", image: "/images/gallery/2.JPG", height: 350, },
-    { id: "3", image: "/images/gallery/3.jpeg", height: 650, },
-    { id: "4", image: "/images/gallery/4.JPG", height: 450, },
-    { id: "5", image: "/images/gallery/5.JPG", height: 550, },
-    { id: "6", image: "/images/gallery/6.jpeg", height: 450, },
-    { id: "7", image: "/images/gallery/7.jpeg", height: 300, },
-    { id: "8", image: "/images/gallery/8.JPG", height: 250, },
-    { id: "9", image: "/images/gallery/1.JPG", height: 600, },
-    { id: "10", image: "/images/gallery/10.JPG", height: 350, },
-    { id: "11", image: "/images/gallery/11.jpeg", height: 650, },
-    { id: "12", image: "/images/gallery/12.jpeg", height: 450, },
-    { id: "13", image: "/images/gallery/13.jpeg", height: 550, },
-    { id: "14", image: "/images/gallery/14.jpg", height: 450, },
-    { id: "15", image: "/images/gallery/15.jpeg", height: 300, },
-    { id: "16", image: "/images/gallery/16.jpeg", height: 250, },
+    { id: "1", image: "/images/gallery/1.avif", height: 600, },
+    { id: "2", image: "/images/gallery/2.avif", height: 350, },
+    { id: "3", image: "/images/gallery/3.avif", height: 650, },
+    { id: "4", image: "/images/gallery/4.avif", height: 450, },
+    { id: "5", image: "/images/gallery/5.avif", height: 550, },
+    { id: "6", image: "/images/gallery/6.avif", height: 450, },
+    { id: "7", image: "/images/gallery/7.avif", height: 300, },
+    { id: "8", image: "/images/gallery/8.avif", height: 250, },
 ];

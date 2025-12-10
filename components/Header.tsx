@@ -46,7 +46,7 @@ export default function Header() {
                     <div className="relative">
                         <Button
                             asChild
-                            className="btn-primary"
+                            className="btn-primary rounded-full shadow-none"
                             size="default"
                         >
                             <Link href="/contact">Get in touch</Link>

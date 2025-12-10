@@ -31,20 +31,11 @@ export default function GalleryPage() {
                     </p>
                 </header>
 
-                <div className="py-6 w-full">
-                    <Masonry
-                        items={GALLERY_ITEMS}
-                        onItemClick={handleImageClick}
-                        ease="power3.out"
-                        duration={0.6}
-                        stagger={0.05}
-                        animateFrom="bottom"
-                        scaleOnHover={true}
-                        hoverScale={0.99}
-                        blurToFocus={true}
-                        colorShiftOnHover={false}
-                    />
-                </div>
+
+                <Masonry
+                    items={GALLERY_ITEMS}
+                    onItemClick={handleImageClick}
+                />
 
                 <GalleryModal
                     isOpen={isModalOpen}

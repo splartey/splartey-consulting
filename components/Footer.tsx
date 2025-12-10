@@ -3,7 +3,7 @@ import Link from "next/link";
 import LinksGroup from "@/components/LinksGroup";
 import { StripeBgGuides } from "@/components/ui/stripe-bg-guides";
 
-const { COMPANY_NAME, COMPANY_DESCRIPTION } = APP_CONFIG;
+const { COMPANY_NAME, COMPANY_SLOGAN } = APP_CONFIG;
 
 export default function Footer() {
     return (
@@ -11,15 +11,16 @@ export default function Footer() {
             <StripeBgGuides columnCount={2} contained={true} />
             <div className="mx-auto max-w-5xl">
                 <div className="relative flex flex-col justify-between gap-8 py-6 md:py-8 px-6 lg:flex-row">
-                    <div className="w-full max-w-xs space-y-4 ml-3">
+
+                    <div className="w-full max-w-xs space-y-4">
                         <Link
                             className="w-max text-2xl lg:mb-2 font-bold text-primary"
                             href="/"
                         >
-                            {COMPANY_NAME}
+                            {COMPANY_NAME}.
                         </Link>
-                        <p className="mt-8 text-muted-foreground text-sm md:mt-0 wrap-break-word">
-                            {COMPANY_DESCRIPTION}
+                        <p className="mt-8 max-sm:mt-4 text-muted-foreground text-lg md:mt-0 wrap-break-word tracking-tighter">
+                            {COMPANY_SLOGAN}
                         </p>
                     </div>
 
@@ -35,6 +36,7 @@ export default function Footer() {
                             />
                         ))}
                     </div>
+
                 </div>
             </div>
 
