@@ -1,4 +1,3 @@
-
 import "./globals.css";
 import type { Metadata } from "next";
 import { APP_CONFIG } from "@/constants";
@@ -6,6 +5,7 @@ import { Toaster } from "@/components/ui/sonner"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import localFont from "next/font/local";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const { COMPANY_NAME, COMPANY_DESCRIPTION, SITE_URL, SITE_KEYWORDS, AUTHOR } = APP_CONFIG;
 
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     siteName: COMPANY_NAME,
     images: [
       {
-        url: SITE_URL + "/og-image.png",
+        url: SITE_URL + "/images/og-image.avif",
         width: 1200,
         height: 630,
         alt: COMPANY_NAME,
@@ -83,6 +83,10 @@ export const metadata: Metadata = {
     locale: "en_GB",
     type: "website",
   },
+  alternates: {
+    canonical: SITE_URL,
+  },
+
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
@@ -95,6 +99,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         </main>
         <Toaster />
         <Footer />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID!} />
       </body>
     </html>
   );
