@@ -1,6 +1,6 @@
 "use client";
 
-import { sendEmail } from "@/app/actions/sendEmail";
+import { sendEmail } from "@/actions/sendEmail";
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -24,7 +24,6 @@ import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import { toast } from "sonner";
 import { Loader } from "lucide-react";
-
 
 
 type ContactFormType = z.infer<typeof contactFormSchema>;
@@ -114,17 +113,19 @@ export function ContactForm() {
                     control={form.control}
                     name="privacy"
                     render={({ field }) => (
-                        <FormItem className="flex items-center space-x-2">
-                            <FormControl>
-                                <Checkbox checked={field.value} onCheckedChange={field.onChange} />
-                            </FormControl>
+                        <FormItem>
+                            <span className="flex items-center space-x-2">
+                                <FormControl>
+                                    <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                                </FormControl>
 
-                            <Label htmlFor="privacy" className="text-sm text-gray-700">
-                                You agree to the{" "}
-                                <Link href="/privacy-policy" className="text-primary underline underline-offset-4">
-                                    Privacy Policy
-                                </Link>.
-                            </Label>
+                                <Label htmlFor="privacy" className="text-sm text-gray-700">
+                                    You agree to the{" "}
+                                    <Link href="/privacy-policy" className="text-primary underline underline-offset-4">
+                                        Privacy Policy
+                                    </Link>.
+                                </Label>
+                            </span>
 
                             <FormMessage />
                         </FormItem>

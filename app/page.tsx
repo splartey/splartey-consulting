@@ -1,7 +1,6 @@
 
 import Hero from "@/components/home/Hero";
 import HeroMarquee from "@/components/home/HeroMarquee";
-// import ImpactSection from "@/components/home/Impact";
 import { skills, impactContent, heroData } from "@/constants";
 
 import dynamic from 'next/dynamic';

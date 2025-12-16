@@ -47,9 +47,11 @@ Follow the steps below to get a local copy of the project running for developmen
    Create a `.env.local` file in the root directory and add:
 
    ```bash
-   NEXT_RESEND_API=re_xxxxxxxxxxxxxxxxx
-   RESEND_FROM_EMAIL=contact@mail.example.com
-   RESEND_OWNER_EMAIL=info@example.com
+   NEXT_RESEND_API=re_********************
+   RESEND_FROM_EMAIL=splarteyconsulting.com
+   RESEND_OWNER_EMAIL=admin@splarteyconsulting.com
+   NODE_ENV=production
+   NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=G-XXXXXXXX
    ```
 
    `RESEND_FROM_EMAIL`must use a domain that has been verified in Resend.

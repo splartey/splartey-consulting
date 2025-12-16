@@ -33,7 +33,7 @@ export const APP_CONFIG = {
 export const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
+    { name: "Services", href: "/what-i-offer" },
     { name: "Gallery", href: "/action-gallery" },
 ];
 
@@ -50,7 +50,6 @@ export const heroData = {
         href: "/contact",
     },
 }
-
 
 export const skills = [
     "Strategic programme leadership",
@@ -151,6 +150,12 @@ export const servicesData = [
     }
 ];
 
+export const servicePageDefaults = {
+    heading: "Consulting Services",
+    subHeading: "What I Offer",
+    description: "I provide tailored consulting services designed to strengthen leadership, strategy, and performance for international development organisations around the world.",
+};
+
 export const aboutContent = {
     headLine: "Seth Lartey",
     description1: `Born in the UK and raised in Germany and Ghana, I have always viewed the world through multiple lenses. This multicultural perspective shapes how I work in international development: recognising that sustainable change must be locally owned, not externally imposed. I specialise in supporting organisations to transition from donor-dependent programmes to genuinely locally led models—not as an aspiration, but as an operational reality. I have done this at scale, most notably leading the successful transition of STAR-Ghana, a £22m governance programme, into an independent foundation that continues to thrive beyond donor support.`,
@@ -203,7 +208,6 @@ export const CTAData: CTADefault = {
     }
 }
 
-
 export const contactPageData = {
     title: "Reach Out",
     description: "Interested in working together? I'd be glad to discuss your needs and how I might support your work.",
@@ -217,7 +221,7 @@ export const footerLinks: FooterSection[] = [
         links: [
             { label: "Home", href: "/" },
             { label: "About", href: "/about" },
-            { label: "Services", href: "/services" },
+            { label: "Services", href: "/what-i-offer" },
             { label: "Gallery", href: "/action-gallery" },
             { label: "Contact", href: "/contact" },
         ],
@@ -234,7 +238,6 @@ export const footerLinks: FooterSection[] = [
         links: [
             { label: "+(000) 000 000 0000", href: "tel:+000000000000" },
             { label: "admin@splarteyconsulting.com", href: "mailto:admin@splarteyconsulting.com" },
-            { label: "Based in UK and Ghana", href: "#" },
         ],
     }
 ];

@@ -11,7 +11,7 @@ import {
     Section,
     Tailwind,
     Text,
-} from '@react-email/components';
+} from "@react-email/components";
 
 const BRAND_COLOR = "#014d4e";
 const ACCENT_COLOR = "#0d9488";
@@ -21,11 +21,13 @@ interface ConfirmationEmailProps {
 }
 
 export const ConfirmationEmail = ({ firstName }: ConfirmationEmailProps) => {
-    const previewText = `Thanks for contacting SP Lartey Consulting!`;
+    const previewText = "Thank you for contacting SP Lartey Consulting";
 
     return (
         <Html>
             <Head />
+            <Preview>{previewText}</Preview>
+
             <Tailwind
                 config={{
                     presets: [pixelBasedPreset],
@@ -41,54 +43,49 @@ export const ConfirmationEmail = ({ firstName }: ConfirmationEmailProps) => {
                 }}
             >
                 <Body className="mx-auto my-auto bg-[#f6f6f6] px-2 font-sans">
-                    <Preview>{previewText}</Preview>
+                    <Container className="mx-auto my-10 max-w-[520px] bg-white border border-gray-200 shadow-sm">
 
-                    <Container className="mx-auto my-10 max-w-[500px] rounded-3xl border border-[#eaeaea] border-solid bg-white p-5 shadow-lg">
-
-                        <Section className="bg-brand py-4 px-6 rounded-2xl">
-                            <Heading className="text-white text-xl font-semibold text-center tracking-tight m-0">
-                                Submission Received - SP Lartey Consulting
-                                
+                        {/* Header */}
+                        <Section className="bg-brand px-6 py-4">
+                            <Heading className="m-0 text-center text-xl font-semibold tracking-tight text-white">
+                                Thank You for Getting in Touch
                             </Heading>
                         </Section>
 
-                        <Section className="px-6 py-5 space-y-4">
-                            <Text className="text-[16px] text-dark leading-6 font-semibold">
+                        {/* Content */}
+                        <Section className="px-6 py-6 space-y-4">
+                            <Text className="m-0 text-[16px] font-semibold text-dark">
                                 Hi {firstName},
                             </Text>
 
-                            <Text className="text-[15px] text-dark leading-6">
-                                Thank you for reaching out to SP Lartey Consulting. Your message has been successfully received!
+                            <Text className="m-0 text-[15px] leading-6 text-dark">
+                                Thank you for contacting SP Lartey Consulting. Your message has
+                                been received successfully.
                             </Text>
 
-                            <Text className="text-[15px] text-dark leading-6">
-                                **Seth will review your inquiry and get back to you with in 2 - 3 days from now.** We appreciate your patience and look forward to speaking with you.
+                            <Text className="m-0 text-[15px] leading-6 text-dark">
+                                Seth will review your inquiry and respond within
+                                <strong> 2–3 business days</strong>. We appreciate your patience
+                                and look forward to connecting with you.
                             </Text>
 
-                            <Text className="text-[15px] text-dark leading-6">
-                                Best regards,
+                            <Text className="m-0 text-[15px] leading-6 text-dark">
+                                Kind regards,
                                 <br />
-                                Seth Lartey.
+                                <strong>Seth Lartey</strong>
                             </Text>
-
                         </Section>
 
-                        <Hr className="mx-0 my-[26px] w-full border border-gray-200 border-solid" />
-
-                        <Section className="pt-0 px-0 text-center">
-                            <Img
-                                className="max-w-full mx-auto block"
-                                width={500}
-                                src="https://i.ibb.co/LdLDnsjW/email-footer.png"
-                                alt="Email footer decoration"
-                            />
-                        </Section>
+                        <Hr className="border-gray-200 my-0" />
 
                         <Section className="px-6 py-4">
-                            <Text className="text-[#666666] text-[12px] leading-5 text-center m-0">
-                                This is an automated confirmation email. Please do not reply to this message.
+                            <Text className="m-0 text-center text-[12px] leading-5 text-gray-500">
+                                This email confirms receipt of your inquiry via
+                                <br />
+                                <strong>splarteyconsulting.com</strong>.
                             </Text>
                         </Section>
+
                     </Container>
                 </Body>
             </Tailwind>
@@ -97,4 +94,3 @@ export const ConfirmationEmail = ({ firstName }: ConfirmationEmailProps) => {
 };
 
 export default ConfirmationEmail;
-

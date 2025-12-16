@@ -46,12 +46,12 @@ export const EmailTemplate = ({ firstName, lastName, email, message, }: EmailTem
                     },
                 }}
             >
-                <Body className="mx-auto my-auto bg-[#f6f6f6] px-2 font-sans">
+                <Body className="mx-auto my-auto bg-[#f6f6f6] font-sans">
                     <Preview>{previewText}</Preview>
 
-                    <Container className="mx-auto my-10 max-w-[500px] rounded-3xl border border-[#eaeaea] border-solid bg-white p-5 shadow-lg">
+                    <Container className="mx-auto my-10 max-w-[500px] border border-[#eaeaea] border-solid bg-white p-5 shadow-lg">
 
-                        <Section className="bg-brand py-4 px-6 rounded-2xl">
+                        <Section className="bg-brand py-4 px-6">
                             <Heading className="text-white text-xl font-semibold text-center tracking-tight m-0">
                                 SP Lartey Consulting Form Submission
                             </Heading>
@@ -87,22 +87,13 @@ export const EmailTemplate = ({ firstName, lastName, email, message, }: EmailTem
                                     Message:
                                 </Text>
 
-                                <Text className="text-[15px] text-gray-700 leading-6 whitespace-pre-wrap p-3 border border-solid border-gray-200 rounded-md bg-gray-50/50">
+                                <Text className="text-[16px] text-gray-700 leading-6 whitespace-pre-wrap p-3 border border-solid border-gray-200 rounded-none bg-gray-50/50">
                                     {message}
                                 </Text>
                             </Section>
                         </Section>
 
                         <Hr className="mx-0 my-[26px] w-full border border-gray-200 border-solid" />
-
-                        <Section className="pt-0 px-0 text-center">
-                            <Img
-                                className="max-w-full mx-auto block"
-                                width={500}
-                                src="https://i.ibb.co/LdLDnsjW/email-footer.png"
-                                alt="Email footer decoration"
-                            />
-                        </Section>
 
                         <Section className="px-6 py-4">
                             <Text className="text-[#666666] text-[12px] leading-5 text-center m-0">

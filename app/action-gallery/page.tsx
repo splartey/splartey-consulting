@@ -1,10 +1,9 @@
 'use client';
 
+import { useState } from "react";
 import Masonry from "@/components/Masonry";
 import { GalleryModal } from "@/components/GalleryModal";
 import { StripeBgGuides } from "@/components/ui/stripe-bg-guides";
-import { useState } from "react";
-
 import { GALLERY_ITEMS } from "@/constants"
 
 export default function GalleryPage() {
@@ -27,10 +26,9 @@ export default function GalleryPage() {
                         Activity Gallery
                     </h1>
                     <p className="text-xl text-muted-foreground md:max-w-4xl mx-auto">
-                        A visual snapshot of my work, including leadership training, strategic advisory sessions, public speaking, and capacity building workshops across the international development sector.
+                        A visual snapshot of my work, including leadership training, strategic advisory sessions and capacity building workshops across the international development sector.
                     </p>
                 </header>
-
 
                 <Masonry
                     items={GALLERY_ITEMS}

@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     siteName: COMPANY_NAME,
     images: [
       {
-        url: SITE_URL + "/images/og-image.avif",
+        url: `${SITE_URL}/images/og-image.avif`,
         width: 1200,
         height: 630,
         alt: COMPANY_NAME,

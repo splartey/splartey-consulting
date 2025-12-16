@@ -1,13 +1,7 @@
 import ServiceCard from "@/components/ServiceCard";
 import { BlurFade } from "@/components/ui/blur-fade";
-import { servicesData } from "@/constants";
+import { servicesData, servicePageDefaults } from "@/constants";
 import Image from "next/image";
-
-const servicePageDefaults = {
-    heading: "Consulting Services",
-    subHeading: "What I Offer",
-    description: "I provide tailored consulting services designed to strengthen leadership, strategy, and performance for international development organisations around the world.",
-};
 
 export default function ServicesPage() {
 
