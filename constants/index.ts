@@ -236,7 +236,7 @@ export const footerLinks: FooterSection[] = [
     {
         title: "Contacts",
         links: [
-            { label: "+(000) 000 000 0000", href: "tel:+000000000000" },
+            { label: "+(447) 356 050 968", href: "tel:+447356050968" },
             { label: "admin@splarteyconsulting.com", href: "mailto:admin@splarteyconsulting.com" },
         ],
     }

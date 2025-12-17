@@ -7,6 +7,7 @@ Official website for **SP Lartey Consulting**, an independent consultancy servin
 </p>
 
 ---
+
 ## Overview
 
 This project is built with **Next.js (App Router)** and provides a modern, responsive, and accessible website for SP Lartey Consulting.  
@@ -86,13 +87,13 @@ Emails are sent using Resend via secure Next.js Server Actions
 The project follows the Next.js App Router pattern with clear separation of concerns.
 
 ```bash
+├── actions
 ├── app
 │   ├── about
 │   ├── action-gallery
-│   ├── actions
 │   ├── contact
 │   ├── privacy-policy
-│   └── services
+│   └── what-i-offer
 ├── components
 │   ├── about
 │   ├── home
@@ -110,7 +111,9 @@ The project follows the Next.js App Router pattern with clear separation of conc
 │       └── icons
 └── types
 ```
+
 ## License
+
 This project is proprietary and confidential.
 All rights are reserved by SP Lartey Consulting.
 Unauthorized copying, modification, or distribution of this project is not permitted.
