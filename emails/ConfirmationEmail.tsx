@@ -45,14 +45,13 @@ export const ConfirmationEmail = ({ firstName }: ConfirmationEmailProps) => {
                 <Body className="mx-auto my-auto bg-[#f6f6f6] px-2 font-sans">
                     <Container className="mx-auto my-10 max-w-[520px] bg-white border border-gray-200 shadow-sm">
 
-                        {/* Header */}
+
                         <Section className="bg-brand px-6 py-4">
                             <Heading className="m-0 text-center text-xl font-semibold tracking-tight text-white">
                                 Thank You for Getting in Touch
                             </Heading>
                         </Section>
 
-                        {/* Content */}
                         <Section className="px-6 py-6 space-y-4">
                             <Text className="m-0 text-[16px] font-semibold text-dark">
                                 Hi {firstName},
@@ -65,7 +64,7 @@ export const ConfirmationEmail = ({ firstName }: ConfirmationEmailProps) => {
 
                             <Text className="m-0 text-[15px] leading-6 text-dark">
                                 Seth will review your inquiry and respond within
-                                <strong> 2–3 business days</strong>. We appreciate your patience
+                                <strong> 2-3 business days</strong>. We appreciate your patience
                                 and look forward to connecting with you.
                             </Text>
 
@@ -82,7 +81,7 @@ export const ConfirmationEmail = ({ firstName }: ConfirmationEmailProps) => {
                             <Text className="m-0 text-center text-[12px] leading-5 text-gray-500">
                                 This email confirms receipt of your inquiry via
                                 <br />
-                                <strong>splarteyconsulting.com</strong>.
+                                <strong>www.splarteyconsulting.com</strong>.
                             </Text>
                         </Section>
 
