@@ -204,7 +204,7 @@ export const CTAData: CTADefault = {
     },
     ctaSecondaryBtn: {
         label: "What I Offer",
-        href: "/services"
+        href: "/what-i-offer"
     }
 }
 
@@ -222,21 +222,22 @@ export const footerLinks: FooterSection[] = [
             { label: "Home", href: "/" },
             { label: "About", href: "/about" },
             { label: "Services", href: "/what-i-offer" },
-            { label: "Gallery", href: "/action-gallery" },
-            { label: "Contact", href: "/contact" },
+
         ],
     },
     {
-        title: "Socials",
+        title: "Quick Links",
         links: [
-            { label: "LinkedIn", href: "https://www.linkedin.com/in/seth-lartey" },
-            { label: "Devex", href: "https://www.devex.com/seth-lartey" },
+            { label: "Gallery", href: "/action-gallery" },
+            { label: "Contact", href: "/contact" },
+            { label: "Privacy Policy", href: "/privacy-policy" },
         ],
     },
     {
         title: "Contacts",
         links: [
-            { label: "+(447) 356 050 968", href: "tel:+447356050968" },
+            { label: "LinkedIn", href: "https://www.linkedin.com/in/seth-lartey" },
+            { label: "+(44) 356 050 968", href: "tel:+44356050968" },
             { label: "admin@splarteyconsulting.com", href: "mailto:admin@splarteyconsulting.com" },
         ],
     }

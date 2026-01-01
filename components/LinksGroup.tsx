@@ -17,13 +17,14 @@ export default function LinksGroup({ title, links }: LinksGroupProps) {
                     <li key={title}>
                         <Link
                             href={href}
-                            className="text-muted-foreground text-sm hover:text-foreground"
+                            className="text-muted-foreground text-sm hover:text-foreground transition-colors duration-200"
                         >
                             {title}
                         </Link>
                     </li>
                 ))}
             </ul>
+
         </div>
     );
 }

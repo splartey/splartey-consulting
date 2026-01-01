@@ -9,7 +9,7 @@ export default function Footer() {
     return (
         <footer className="relative border-t">
             <StripeBgGuides columnCount={2} contained={true} />
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-5xl md:pb-4">
                 <div className="relative flex flex-col justify-between gap-8 py-6 md:py-8 px-6 lg:flex-row">
 
                     <div className="w-full max-w-xs space-y-4">
@@ -25,9 +25,9 @@ export default function Footer() {
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-3">
-                        {footerLinks.map(({ title, links }) => (
+                        {footerLinks.map(({ title, links }, index) => (
                             <LinksGroup
-                                key={title}
+                                key={index}
                                 title={title}
                                 links={links.map((link) => ({
                                     title: link.label,
