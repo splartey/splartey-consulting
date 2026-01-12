@@ -16,10 +16,40 @@ interface SendEmailProps {
     email: string;
     message: string;
     privacy: boolean;
+    turnstileToken: string;
 }
 
-export async function sendEmail({ firstName, lastName, email, message, privacy }: SendEmailProps) {
+export async function sendEmail({
+    firstName,
+    lastName,
+    email,
+    message,
+    privacy,
+    turnstileToken
+}: SendEmailProps) {
     try {
+
+        if (!turnstileToken) {
+            return { success: false, error: "Missing bot verification token" };
+        }
+
+        const turnstileRes = await fetch(
+            "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+            {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams({
+                    secret: process.env.TURNSTILE_SECRET_KEY!,
+                    response: turnstileToken
+                })
+            }
+        );
+
+        const turnstileData = await turnstileRes.json();
+
+        if (!turnstileData.success) {
+            return { success: false, error: "Bot verification failed" };
+        }
 
         if (!privacy) {
             return { success: false, error: "Privacy consent required" };

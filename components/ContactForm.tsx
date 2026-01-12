@@ -25,6 +25,8 @@ import Link from "next/link";
 import { toast } from "sonner";
 import { Loader } from "lucide-react";
 
+import { Turnstile } from "@marsidev/react-turnstile";
+
 
 type ContactFormType = z.infer<typeof contactFormSchema>;
 
@@ -38,7 +40,8 @@ export function ContactForm() {
             lastName: "",
             email: "",
             message: "",
-            privacy: false
+            privacy: false,
+            turnstileToken: ""
         }
     });
 
@@ -58,6 +61,7 @@ export function ContactForm() {
             form.reset();
         } catch (error) {
             toast.error("Failed to send message");
+            console.error("Error sending contact form:", error);
         } finally {
             setIsLoading(false);
         }
@@ -132,9 +136,29 @@ export function ContactForm() {
                     )}
                 />
 
-                <Button type="submit" className="w-full btn-primary" disabled={isLoading}>
+                <FormField
+                    control={form.control}
+                    name="turnstileToken"
+                    render={({ field }) => (
+                        <FormItem>
+                            <Turnstile
+                                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+                                onSuccess={(token) => field.onChange(token)}
+                                onError={() => toast.error("Verification failed, try again")}
+                                options={{ theme: "light" }}
+                            />
+                            <FormMessage />
+                        </FormItem>
+                    )}
+                />
+
+                <Button
+                    type="submit"
+                    className="w-full btn-primary"
+                    disabled={isLoading}>
                     {isLoading ? (
-                        <span className="flex items-center gap-2" ><Loader className="w-4 h-4 animate-spin" />
+                        <span className="flex items-center gap-2" >
+                            <Loader className="w-4 h-4 animate-spin" />
                             Sending...
                         </span>)
                         : "Send message"}
