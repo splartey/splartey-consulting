@@ -48,22 +48,27 @@ Follow the steps below to get a local copy of the project running for developmen
    Create a `.env.local` file in the root directory and add:
 
    ```bash
-   NEXT_RESEND_API=re_********************
-   RESEND_FROM_EMAIL=splarteyconsulting.com
-   RESEND_OWNER_EMAIL=admin@splarteyconsulting.com
+   RESEND_API_KEY=re_********************
+   RESEND_FROM_EMAIL=bmaithya@splarteyconsulting.com
+   RESEND_OWNER_EMAIL=bmaithya@splarteyconsulting.com
+
+   PORT=3000
    NODE_ENV=production
    NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=G-XXXXXXXX
+
+   NEXT_PUBLIC_TURNSTILE_SITE_KEY=0x4******************
+   TURNSTILE_SECRET_KEY=0x4******************
    ```
 
    `RESEND_FROM_EMAIL`must use a domain that has been verified in Resend.
 
-4. **Run the development server**
+1. **Run the development server**
 
    ```bash
    npm run dev
    ```
 
-5. **Open the app in your browser**
+2. **Open the app in your browser**
 
    http://localhost:3000
 
