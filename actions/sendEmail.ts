@@ -4,9 +4,9 @@ import { Resend } from "resend";
 import EmailTemplate from '@/emails/EmailTemplate';
 import ConfirmationEmail from '@/emails/ConfirmationEmail';
 
-const resend = new Resend(process.env.NEXT_RESEND_API!);
+const resend = new Resend(process.env.RESEND_API_KEY!);
 
-if (!process.env.NEXT_RESEND_API) {
+if (!process.env.RESEND_API_KEY) {
     throw new Error("Resend API key not configured");
 }
 
