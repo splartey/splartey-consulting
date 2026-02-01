@@ -1,4 +1,7 @@
 import { MetadataRoute } from 'next';
+import { APP_CONFIG } from "@/constants"
+
+const { SITE_URL } = APP_CONFIG;
 
 export default function robots(): MetadataRoute.Robots {
     return {
@@ -12,6 +15,6 @@ export default function robots(): MetadataRoute.Robots {
                 ],
             },
         ],
-        sitemap: 'https://www.splarteyconsulting.com/sitemap.xml',
+        sitemap: `${SITE_URL}/sitemap.xml`,
     };
 }

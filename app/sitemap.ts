@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
+import { APP_CONFIG } from "@/constants"
 
-
-const SITE_URL = "https://www.splarteyconsulting.com";
+const { SITE_URL } = APP_CONFIG;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
@@ -21,7 +21,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.8,
         },
         {
-            url: `${SITE_URL}/services`,
+            url: `${SITE_URL}/what-i-offer`,
             lastModified: lastModifiedDate,
             changeFrequency: 'weekly',
             priority: 0.9,
