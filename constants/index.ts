@@ -16,7 +16,10 @@ export const APP_CONFIG = {
         "strategy",
         "performance",
         "leadership",
-        "sp lartey consulting"
+        "sp lartey consulting",
+        "seth lartey",
+        "seth lartey international development",
+        "seth lartey consultant"
     ],
     AUTHOR: "Seth Lartey",
     CONTACT_EMAIL: "seth@splarteyconsulting.com",
