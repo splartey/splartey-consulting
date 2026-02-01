@@ -46,17 +46,20 @@ export function ContactForm() {
     });
 
     const onSubmit = async (data: ContactFormType) => {
+        if (isLoading) return;
         setIsLoading(true);
         try {
-            console.log("Form data being sent:", data);
+
+            if (process.env.NODE_ENV === "development") {
+                console.debug("Contact form submitted");
+            }
 
             const response = await sendEmail(data);
 
-            if (!response.success) {
-                toast.error("Something went wrong. Please try again later.");
+            if (!response || response.success !== true) {
+                toast.error(response?.error ?? "Something went wrong. Please try again.");
                 return;
             }
-
             toast.success("Message sent successfully!");
             form.reset();
         } catch (error) {

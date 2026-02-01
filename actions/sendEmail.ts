@@ -33,6 +33,9 @@ export async function sendEmail({
             return { success: false, error: "Missing bot verification token" };
         }
 
+        const controller = new AbortController();
+        setTimeout(() => controller.abort(), 8000);
+
         const turnstileRes = await fetch(
             "https://challenges.cloudflare.com/turnstile/v0/siteverify",
             {
@@ -41,7 +44,8 @@ export async function sendEmail({
                 body: new URLSearchParams({
                     secret: process.env.TURNSTILE_SECRET_KEY!,
                     response: turnstileToken
-                })
+                }),
+                signal: controller.signal
             }
         );
 
@@ -55,7 +59,6 @@ export async function sendEmail({
             return { success: false, error: "Privacy consent required" };
         }
 
-        // Email to (owner)
         const { data: ownerData, error: ownerError } = await resend.emails.send({
             from: `SP Lartey Consulting <${process.env.RESEND_FROM_EMAIL}>`,
             to: process.env.RESEND_OWNER_EMAIL!,
@@ -74,7 +77,6 @@ export async function sendEmail({
             return { success: false, ownerError };
         }
 
-        // Confirmation Email to (client)
         const { data: clientData, error: clientError } = await resend.emails.send({
             from: `SP Lartey Consulting <${process.env.RESEND_FROM_EMAIL}>`,
             to: email,
