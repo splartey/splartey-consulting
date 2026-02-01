@@ -7,7 +7,15 @@ import Footer from "@/components/Footer";
 import localFont from "next/font/local";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-const { COMPANY_NAME, COMPANY_DESCRIPTION, SITE_URL, SITE_KEYWORDS, AUTHOR } = APP_CONFIG;
+const {
+  COMPANY_NAME,
+  COMPANY_DESCRIPTION,
+  SITE_URL,
+  SITE_KEYWORDS,
+  AUTHOR,
+  LINKEDIN_URL,
+  DEVEX_PROFILE_URL
+} = APP_CONFIG;
 
 const bricolage = localFont({
   src: [
@@ -27,11 +35,11 @@ export const metadata: Metadata = {
   authors: [
     {
       name: AUTHOR,
-      url: "https://www.linkedin.com/in/sethlartey",
+      url: LINKEDIN_URL,
     },
     {
       name: AUTHOR,
-      url: "https://www.devex.com/people/seth-lartey",
+      url: DEVEX_PROFILE_URL,
     },
   ],
   metadataBase: new URL(SITE_URL),
@@ -74,7 +82,7 @@ export const metadata: Metadata = {
     siteName: COMPANY_NAME,
     images: [
       {
-        url: `${SITE_URL}/images/og-image.avif`,
+        url: `${SITE_URL}/images/opengraph.png`,
         width: 1200,
         height: 630,
         alt: COMPANY_NAME,
@@ -83,10 +91,17 @@ export const metadata: Metadata = {
     locale: "en_GB",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: COMPANY_NAME,
+    description: COMPANY_DESCRIPTION,
+    images: [`${SITE_URL}/images/opengraph.png`],
+  },
   alternates: {
     canonical: SITE_URL,
   },
-
+  category: "Consulting",
+  applicationName: COMPANY_NAME,
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
@@ -105,7 +120,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
             gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID! || ""}
           />
         )}
-        
+
       </body>
     </html>
   );

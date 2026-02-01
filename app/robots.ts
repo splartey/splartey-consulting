@@ -14,6 +14,10 @@ export default function robots(): MetadataRoute.Robots {
                     '/actions/',
                 ],
             },
+            {
+                userAgent: ['Googlebot', 'Bingbot'],
+                allow: '/',
+            },
         ],
         sitemap: `${SITE_URL}/sitemap.xml`,
     };

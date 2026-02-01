@@ -3,7 +3,7 @@
 Official website for **SP Lartey Consulting**, an independent consultancy serving the international development sector.
 
 <p align="center">
-  <img src="./public/images/og-image.avif" alt="Screenshot of SP Lartey Consulting Website" width="800">
+  <img src="./public/images/opengraph.png" alt="SP Lartey Consulting Website" width="800">
 </p>
 
 ---
