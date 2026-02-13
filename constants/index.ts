@@ -249,7 +249,7 @@ export const footerLinks: FooterSection[] = [
             },
             {
                 label: "Email address",
-                href: "mailto:admin@splarteyconsulting.com",
+                href: "mailto:seth@splarteyconsulting.com",
                 icon: IconAt
             },
         ],

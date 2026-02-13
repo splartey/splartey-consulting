@@ -1,13 +1,12 @@
-import { PRIVACY_POLICY_DATA } from "@/constants";
-import { StripeBgGuides } from "@/components/ui/stripe-bg-guides";
 import Link from "next/link";
-import { APP_CONFIG } from "@/constants";
+import { APP_CONFIG, PRIVACY_POLICY_DATA } from "@/constants";
 
 export default function PrivacyPage() {
     const {
         COMPANY_NAME: companyName,
         AUTHOR: dataController,
         CONTACT_EMAIL: contactEmail,
+        SITE_URL
     } = APP_CONFIG;
 
     const {
@@ -17,11 +16,7 @@ export default function PrivacyPage() {
 
 
     return (
-        <section className="w-full bg-white py-24 md:py-32 relative">
-            <StripeBgGuides
-                columnCount={2}
-                contained={true}
-            />
+        <section className="w-full bg-linear-to-b bg-blue-50 via-white to-green-50 py-24 md:py-32 relative">
 
             <article className="max-w-5xl mx-auto px-6 md:px-10 lg:px-8 space-y-12">
                 <header className="space-y-4">
@@ -42,8 +37,8 @@ export default function PrivacyPage() {
                         <p>
                             <span className="font-bold pr-0.5">{companyName}</span>
                             (referred to as "we," "us," or "our") is committed to protecting the privacy of our website visitors and clients. This Privacy Policy describes how we collect, use, and disclose personal information when you use our website,
-                            <Link href="https://splarteyconsulting.com/" className="underline underline-offset-4 text-primary px-0.5 hover:text-primary/80">
-                                splarteyconsulting.com
+                            <Link href={SITE_URL} className="underline underline-offset-4 text-primary px-0.5 hover:text-primary/80">
+                                www.splarteyconsulting.com
                             </Link>,
                             and interact with our services.
                         </p>

@@ -18,14 +18,13 @@ export default function Hero({
     return (
         <section className="relative flex items-center justify-center py-8 md:py-10">
             <article className="max-w-5xl w-full mx-auto grid lg:grid-cols-2 gap-12 px-6 lg:py-0">
-
                 <div className="my-auto py-12 lg:py-0">
 
-                    <h1 className="max-sm:text-center max-md:tracking-tight font-semibold text-primary text-4xl md:text-5xl">
+                    <h1 className="text-5xl text-primary font-semibold tracking-wide">
                         {heading}
                     </h1>
 
-                    <p className="mt-6 max-sm:text-center text-lg text-foreground/80 max-md:tracking-tight max-md:text-balance">
+                    <p className="mt-6 text-xl text-gray-700">
                         {subHeading}
                     </p>
 
@@ -51,7 +50,6 @@ export default function Hero({
                         </Button>
                     </div>
                 </div>
-
 
                 <div className="relative w-full aspect-square lg:aspect-auto min-h-[400px] lg:h-[550px] rounded-3xl overflow-hidden bg-accent/50 outline-1 outline-offset-2 outline-border" style={{ minHeight: '400px' }}>
                     <Image

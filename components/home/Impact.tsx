@@ -35,7 +35,7 @@ export default function ImpactSection({ title,
                 </article>
 
                 <BlurFade delay={0.25 * 5} inView>
-                    <div className="relative items-center justify-center flex md:hidden lg:flex lg:col-span-1 bg-gray-100">
+                    <div className="relative items-center justify-center flex md:hidden lg:flex lg:col-span-1 bg-gray-100 rounded-2xl">
                         <div className="relative w-full max-w-sm aspect-square flex items-center justify-center">
                             <Globe className="w-full h-full" />
                         </div>
