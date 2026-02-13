@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
+import { SkillsMarqueeProps } from "@/types";
 
 export default function SkillsMarquee({ iconUrl, items, }: SkillsMarqueeProps) {
     const MarqueeItem = ({ text }: { text: string }) => (

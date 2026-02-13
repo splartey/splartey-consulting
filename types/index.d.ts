@@ -1,3 +1,5 @@
+import { type Icon } from "@tabler/icons-react";
+
 interface ServiceCardProps {
     title: string;
     description?: string;
@@ -21,6 +23,7 @@ type HeroSectionProps = {
     heading: string;
     subHeading: string;
     heroImageUrl: string;
+    heroImageAlt: string;
     primaryCta: CtaButton;
     secondaryCta: CtaButton;
 };
@@ -54,13 +57,13 @@ type CTADefault = {
     ctaSecondaryBtn: CtaButton;
 }
 
-
-type FooterLink = {
+export type FooterLink = {
     label: string;
     href: string;
+    icon?: Icon;
 }
 
-type FooterSection = {
+export type FooterSection = {
     title: string;
     links: FooterLink[];
 }

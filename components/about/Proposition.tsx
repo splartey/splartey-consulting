@@ -10,15 +10,15 @@ export default function Proposition() {
     const { tagline, heading, intro, subheading, details, image, ctaButton } = propositionContent;
 
     return (
-        <section className="relative bg-primary/5">
+        <section className="relative bg-linear-to-b bg-green-100 via-white to-green-50">
             <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-8 space-y-16 py-20 lg:py-24">
                 <StripeBgGuides columnCount={2} contained={true} />
                 <div className="flex flex-col justify-start items-start gap-8">
                     <div className="max-w-4xl">
                         <BlurFade delay={0.25 * 4} inView >
-                            <p className="text-primary font-semibold text-sm mb-3 tracking-wide uppercase">
+                            <span className="text-primary font-semibold text-sm mb-3 tracking-wide uppercase">
                                 {tagline}
-                            </p>
+                            </span>
                         </BlurFade>
                         <BlurFade delay={0.25 * 4} inView >
                             <h1 className="text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] font-bold text-gray-900 leading-tight">
@@ -32,7 +32,7 @@ export default function Proposition() {
 
                     <div className="flex flex-col justify-start">
                         <BlurFade delay={0.25 * 4} inView >
-                            <p className="text-gray-700 text-base md:text-xl leading-relaxed mb-10">
+                            <p className="text-gray-700 text-lg tracking-tight mb-10">
                                 {intro}
                             </p>
                         </BlurFade>
@@ -43,19 +43,19 @@ export default function Proposition() {
                                     {subheading}
                                 </h2>
                             </BlurFade>
-                            <div className="space-y-6 mb-12">
+                            <article className="space-y-6 mb-12">
                                 {details.map((paragraph, index) => (
                                     <BlurFade key={index} delay={0.25 * (index + 5)} inView >
-                                        <p className="text-gray-700 text-base md:text-xl leading-relaxed">
+                                        <p className="text-gray-700 text-lg tracking-tighter text-balance">
                                             {paragraph}
                                         </p>
                                     </BlurFade>
                                 ))}
-                            </div>
+                            </article>
 
                             <BlurFade delay={0.25 * (details.length + 6)} inView >
                                 <div className="hidden lg:block">
-                                    <Button asChild size="lg" className="btn-primary w-full">
+                                    <Button asChild size="lg" className="btn-primary text-lg w-full rounded-full">
                                         <Link href="/contact">
                                             {ctaButton}
                                         </Link>

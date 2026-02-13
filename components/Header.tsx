@@ -5,13 +5,14 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { NavSheet } from "@/components/NavSheet";
 import { navLinks } from "@/constants";
+import { cn } from "@/lib/utils";
 
 export default function Header() {
     const pathname = usePathname();
 
     return (
         <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/50">
-            <div className="mx-auto flex h-14 w-full max-w-5xl items-center justify-between px-4">
+            <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-4">
 
                 <div>
                     <Link
@@ -33,8 +34,12 @@ export default function Header() {
                             <Link
                                 key={name}
                                 href={href}
-                                className={`text-foreground/80 hover:text-primary transition-colors text-base font-medium tracking-wide
-                                    ${isActive && "text-primary underline underline-offset-8"}`}
+                                className={
+                                    cn(
+                                        "text-foreground/80 hover:text-primary font-semibold transition-colors tracking-wide",
+                                        isActive && "text-primary underline underline-offset-8"
+                                    )
+                                }
                             >
                                 {name}
                             </Link>
@@ -49,7 +54,7 @@ export default function Header() {
                             className="btn-primary rounded-full shadow-none"
                             size="default"
                         >
-                            <Link href="/contact">Get in touch</Link>
+                            <Link href="/contact">Contact me</Link>
                         </Button>
                     </div>
                 </div>

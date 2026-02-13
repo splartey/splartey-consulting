@@ -17,8 +17,15 @@ import {
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { ServiceCardProps } from "@/types";
 
-export default function ServiceCard({ title, serviceList, description, bgColor, borderColor, }: ServiceCardProps) {
+export default function ServiceCard({
+    title,
+    serviceList,
+    description,
+    bgColor,
+    borderColor,
+}: ServiceCardProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [thereIsDescription] = useState(!!description);
 

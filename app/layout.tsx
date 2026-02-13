@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import localFont from "next/font/local";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script"
 
 const {
   COMPANY_NAME,
@@ -29,7 +30,10 @@ const bricolage = localFont({
 });
 
 export const metadata: Metadata = {
-  title: COMPANY_NAME,
+  title: {
+    default: `${COMPANY_NAME} | Seth Lartey`,
+    template: `%s | Seth Lartey`,
+  },
   description: COMPANY_DESCRIPTION,
   keywords: SITE_KEYWORDS,
   authors: [
@@ -44,36 +48,7 @@ export const metadata: Metadata = {
   ],
   metadataBase: new URL(SITE_URL),
   icons: {
-    icon: [
-      { url: "/favicons/favicon.ico" },
-      { url: "/favicons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicons/favicon-57x57.png", sizes: "57x57", type: "image/png" },
-      { url: "/favicons/favicon-60x60.png", sizes: "60x60", type: "image/png" },
-      { url: "/favicons/favicon-70x70.png", sizes: "70x70", type: "image/png" },
-      { url: "/favicons/favicon-72x72.png", sizes: "72x72", type: "image/png" },
-      { url: "/favicons/favicon-76x76.png", sizes: "76x76", type: "image/png" },
-      { url: "/favicons/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-      { url: "/favicons/favicon-114x114.png", sizes: "114x114", type: "image/png" },
-      { url: "/favicons/favicon-120x120.png", sizes: "120x120", type: "image/png" },
-      { url: "/favicons/favicon-128x128.png", sizes: "128x128", type: "image/png" },
-      { url: "/favicons/favicon-144x144.png", sizes: "144x144", type: "image/png" },
-      { url: "/favicons/favicon-150x150.png", sizes: "150x150", type: "image/png" },
-      { url: "/favicons/favicon-152x152.png", sizes: "152x152", type: "image/png" },
-      { url: "/favicons/favicon-180x180.png", sizes: "180x180", type: "image/png" },
-      { url: "/favicons/favicon-192x192.png", sizes: "192x192", type: "image/png" },
-      { url: "/favicons/favicon-310x310.png", sizes: "310x310", type: "image/png" },
-      { url: "/favicons/favicon-384x384.png", sizes: "384x384", type: "image/png" },
-      { url: "/favicons/favicon-512x512.png", sizes: "512x512", type: "image/png" },
-    ],
-    apple: [{ url: "/favicons/favicon-180x180.png", sizes: "180x180" }],
-    shortcut: ["/favicons/favicon.ico"],
-    other: [
-      {
-        rel: "manifest",
-        url: "/favicons/manifest.json",
-      },
-    ],
+    icon: "/favicon.ico",
   },
   openGraph: {
     title: COMPANY_NAME,
@@ -114,6 +89,29 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         </main>
         <Toaster />
         <Footer />
+
+        <Script
+          id="personal-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: AUTHOR,
+              jobTitle: "International Development Consultant",
+              url: SITE_URL,
+              worksFor: {
+                "@type": "Organization",
+                name: COMPANY_NAME,
+                url: SITE_URL,
+              },
+              sameAs: [
+                LINKEDIN_URL,
+                DEVEX_PROFILE_URL,
+              ],
+            }),
+          }}
+        />
 
         {process.env.NODE_ENV === 'production' && (
           <GoogleAnalytics

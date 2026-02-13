@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { PlusIcon } from "lucide-react";
 import Link from "next/link";
-import { StripeBgGuides } from "@/components/ui/stripe-bg-guides";
 import { CTAData } from "@/constants";
 
 
@@ -10,8 +9,7 @@ export function CallToAction() {
     const { heading, description, ctaPrimaryBtn, ctaSecondaryBtn } = CTAData
 
     return (
-        <section className="bg-white relative">
-            <StripeBgGuides columnCount={3} contained={true} />
+        <section className="relative">
 
             <div className="py-28 bg-primary/2">
                 <div className="relative mx-auto flex w-full max-w-3xl flex-col justify-between gap-y-4 border-y py-8 max-sm:overflow-hidden space-y-2 ">

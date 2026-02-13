@@ -13,8 +13,10 @@ import {
 } from "@/components/ui/sheet";
 import { IconMenu } from "@tabler/icons-react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { navLinks, APP_CONFIG } from "@/constants";
+import { cn } from "@/lib/utils";
 
 const { COMPANY_NAME, COMPANY_DESCRIPTION } = APP_CONFIG;
 
@@ -24,18 +26,25 @@ export function NavSheet() {
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <button
+                <Button
                     aria-label="Open menu"
-                    className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition focus-visible:outline-none"
+                    className="flex items-center gap-2 cursor-pointer text-lg"
+                    variant="ghost"
                 >
-                    <IconMenu stroke={2} />
+                    <Image
+                        src="/images/icons/menu.svg"
+                        alt="Menu icon"
+                        width={24}
+                        height={24}
+                    />
                     <span className="font-medium">Menu</span>
-                </button>
+                    <span className="sr-only">Open navigation menu</span>
+                </Button>
             </SheetTrigger>
 
             <SheetContent
                 side="right"
-                className="px-7 py-8 flex flex-col justify-between border-l border-border w-[320px]"
+                className="px-7 py-8 flex flex-col justify-between border-l border-border w-[350px] overflow-y-auto"
             >
                 <SheetHeader className="space-y-2">
                     <SheetTitle className="text-2xl font-bold tracking-tight text-primary">
@@ -54,12 +63,13 @@ export function NavSheet() {
 
                             return (
                                 <SheetClose asChild key={link.name}>
-                                    <Link
-                                        href={link.href}
-                                        className={`group py-4 text-lg font-medium transition-all ${isActive
+                                    <Link href={link.href}
+                                        className={cn(
+                                            "group py-4 text-lg font-medium transition-all",
+                                            isActive
                                                 ? "text-primary"
                                                 : "text-muted-foreground hover:text-primary"
-                                            }`}
+                                        )}
                                     >
                                         <span className="inline-block font-semibold transition-transform group-hover:translate-x-1">
                                             {link.name}
@@ -70,14 +80,14 @@ export function NavSheet() {
                         })}
                     </nav>
                 </div>
-
-                <SheetFooter className="flex flex-col gap-4 mt-10">
+                <SheetFooter className="mt-10">
                     <SheetClose asChild>
                         <Button size="lg" className="w-full btn-primary" asChild>
                             <Link href="/contact">Get in Touch</Link>
                         </Button>
                     </SheetClose>
                 </SheetFooter>
+
             </SheetContent>
         </Sheet>
     );

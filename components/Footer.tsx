@@ -1,30 +1,34 @@
 import { APP_CONFIG, footerLinks } from "@/constants";
 import Link from "next/link";
 import LinksGroup from "@/components/LinksGroup";
-import { StripeBgGuides } from "@/components/ui/stripe-bg-guides";
 
 const { COMPANY_NAME, COMPANY_SLOGAN } = APP_CONFIG;
 
 export default function Footer() {
     return (
-        <footer className="relative border-t">
-            <StripeBgGuides columnCount={2} contained={true} />
-            <div className="mx-auto max-w-5xl md:pb-4">
-                <div className="relative flex flex-col justify-between gap-8 py-6 md:py-8 px-6 lg:flex-row">
+        <footer className="border-t bg-background">
+            <div className="mx-auto max-w-6xl px-6 py-12">
 
-                    <div className="w-full max-w-xs space-y-4">
+                <div className="grid gap-12 md:grid-cols-[minmax(220px,1fr)_2fr]">
+
+                    <div className="space-y-4">
                         <Link
-                            className="w-max text-2xl lg:mb-2 font-bold text-primary"
                             href="/"
+                            className="text-xl font-bold text-primary"
                         >
                             {COMPANY_NAME}.
                         </Link>
-                        <p className="mt-8 max-sm:mt-4 text-muted-foreground text-lg md:mt-0 wrap-break-word tracking-tighter">
+
+                        <p className="text-muted-foreground leading-relaxed max-w-sm">
                             {COMPANY_SLOGAN}
                         </p>
+
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-3">
+                    <nav
+                        aria-label="Footer navigation"
+                        className="grid grid-cols-2 sm:grid-cols-3 gap-8"
+                    >
                         {footerLinks.map(({ title, links }, index) => (
                             <LinksGroup
                                 key={index}
@@ -32,23 +36,24 @@ export default function Footer() {
                                 links={links.map((link) => ({
                                     title: link.label,
                                     href: link.href,
+                                    icon: link.icon,
                                 }))}
                             />
                         ))}
-                    </div>
+                    </nav>
 
                 </div>
             </div>
 
-            <div className="w-full bg-primary text-white py-4 px-3 relative">
-                <div className="max-w-5xl px-2.5 mx-auto flex flex-col sm:flex-row items-center sm:items-center justify-between gap-2">
-                    <p className="font-light text-xs text-center sm:text-left">
-                        &copy; {new Date().getFullYear()} {COMPANY_NAME}, All rights reserved
+            <div className="bg-primary text-white">
+                <div className="mx-auto max-w-6xl px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p className="text-sm text-center sm:text-left">
+                        © {new Date().getFullYear()} {COMPANY_NAME}. All rights reserved.
                     </p>
 
                     <Link
                         href="/privacy-policy"
-                        className="font-light text-xs text-center sm:text-right hover:underline underline-offset-4"
+                        className="text-sm hover:underline underline-offset-4"
                     >
                         Privacy Policy & Terms
                     </Link>

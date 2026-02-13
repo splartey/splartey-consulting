@@ -1,3 +1,6 @@
+import { FooterSection } from "@/types";
+import { IconBrandLinkedin, IconAt, IconPhoneCall } from "@tabler/icons-react";
+
 export const APP_CONFIG = {
     COMPANY_NAME: "SP Lartey Consulting",
     COMPANY_ABBR: "SP Lartey",
@@ -35,9 +38,10 @@ export const navLinks = [
 ];
 
 export const heroData = {
-    heading: "Strategy, Performance, Leadership.",
-    subHeading: `I deliver strategic, technical, and operational solutions that help organisations in international development achieve measurable results.`,
+    heading: "Seth Lartey - International Development Consultant",
+    subHeading: `I help governments, NGOs, and development partners design and deliver strategy, performance improvement, and leadership solutions that drive measurable impact across international development programmes.`,
     heroImageUrl: "/images/hero-image.avif",
+    heroImageAlt: "Seth Lartey - International Development Consultant",
     primaryCta: {
         label: "Learn more",
         href: "/about",
@@ -154,7 +158,7 @@ export const servicePageDefaults = {
 };
 
 export const aboutContent = {
-    headLine: "Seth Lartey",
+    headLine: "About Seth Lartey",
     description1: `Born in the UK and raised in Germany and Ghana, I have always viewed the world through multiple lenses. This multicultural perspective shapes how I work in international development: recognising that sustainable change must be locally owned, not externally imposed. I specialise in supporting organisations to transition from donor-dependent programmes to genuinely locally led models—not as an aspiration, but as an operational reality. I have done this at scale, most notably leading the successful transition of STAR-Ghana, a £22m governance programme, into an independent foundation that continues to thrive beyond donor support.`,
     description2: `My approach draws on more than 20 years of experience across 18 countries, at both field and headquarters levels. I understand what donors require, what communities prioritise, and how to design programmes that meet both—while meaningfully transferring power and resources to local actors. I have worked in countries across Africa, Asia, Latin America, and the Caribbean, including Ghana, Nigeria, Sierra Leone, Uganda, South Sudan, Burkina Faso, Ethiopia, Myanmar, Zimbabwe, Barbados, Grenada, Guyana, Jamaica, St Lucia, St Vincent and the Grenadines, and Trinidad and Tobago.`,
 };
@@ -192,7 +196,7 @@ export const propositionContent = {
     ctaButton: " Get started"
 };
 
-export const CTAData: CTADefault = {
+export const CTAData = {
     heading: "Let's Strengthen Your Impact Together",
     description: "Whether you are designing a new programme, leading organisational change, or transitioning toward locally-led development, I can support you with strategic, practical, and context-driven expertise. Let's explore how we can work together to achieve sustainable, measurable results.",
     ctaPrimaryBtn: {
@@ -233,9 +237,21 @@ export const footerLinks: FooterSection[] = [
     {
         title: "Contacts",
         links: [
-            { label: "LinkedIn", href: "https://www.linkedin.com/in/seth-lartey" },
-            { label: "+(44) 356 050 968", href: "tel:+44356050968" },
-            { label: "admin@splarteyconsulting.com", href: "mailto:admin@splarteyconsulting.com" },
+            {
+                label: "LinkedIn",
+                href: "https://www.linkedin.com/in/seth-lartey",
+                icon: IconBrandLinkedin,
+            },
+            {
+                label: "Direct call",
+                href: "tel:+44356050968",
+                icon: IconPhoneCall,
+            },
+            {
+                label: "Email address",
+                href: "mailto:admin@splarteyconsulting.com",
+                icon: IconAt
+            },
         ],
     }
 ];

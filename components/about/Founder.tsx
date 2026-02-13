@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { StripeBgGuides } from "../ui/stripe-bg-guides";
+import { FounderProps } from "@/types";
 
 
 export default function Founder({ image, alt, content }: FounderProps) {
@@ -12,7 +13,7 @@ export default function Founder({ image, alt, content }: FounderProps) {
                     columnCount={8}
                     animated={true}
                     animationDuration={8}
-                    glowColor="hsl(var(--foreground))"
+                    glowColor="primary"
                     randomize={true}
                     randomInterval={3000}
                     contained={true}
@@ -21,7 +22,7 @@ export default function Founder({ image, alt, content }: FounderProps) {
                     <div className="flex flex-col">
                         <div className="space-y-3">
                             {content.map(({ paragraph }, index) => (
-                                <article key={index} className="text-gray-700 text-base xl:text-lg leading-relaxed" >
+                                <article key={index} className="text-gray-700 text-lg lg:tracking-tighter leading-relaxed" >
                                     <BlurFade key={index} delay={0.25} inView >
                                         {paragraph}
                                     </BlurFade>
