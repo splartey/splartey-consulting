@@ -13,8 +13,8 @@ const {
 
 export const siteMetadata: Metadata = {
     title: {
-        default: `${COMPANY_NAME} | Seth Lartey | International Development Consultant`,
-        template: `%s | Seth Lartey`,
+        default: `${COMPANY_NAME} • Seth Lartey • International Development Consultant`,
+        template: `%s • Seth Lartey`,
     },
     description: COMPANY_DESCRIPTION,
     keywords: SITE_KEYWORDS,

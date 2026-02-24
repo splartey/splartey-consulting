@@ -62,7 +62,7 @@ export function NavSheet() {
                             const isActive = pathname === link.href;
 
                             return (
-                                <SheetClose asChild key={link.name}>
+                                <SheetClose asChild key={link.label}>
                                     <Link href={link.href}
                                         className={cn(
                                             "group py-4 text-lg font-medium transition-all",
@@ -72,7 +72,7 @@ export function NavSheet() {
                                         )}
                                     >
                                         <span className="inline-block font-semibold transition-transform group-hover:translate-x-1">
-                                            {link.name}
+                                            {link.label}
                                         </span>
                                     </Link>
                                 </SheetClose>
