@@ -6,23 +6,19 @@ export const APP_CONFIG = {
     COMPANY_ABBR: "SP Lartey",
     COMPANY_SLOGAN: "Strategy, Performance, Leadership.",
     SITE_URL: "https://www.splarteyconsulting.com",
-    COMPANY_DESCRIPTION: "International development and business consulting focused on strategy, performance, leadership, programme management, and capacity building.",
+    COMPANY_DESCRIPTION: "SP Lartey consulting is an International development consultant organization focused on strategy, performance, leadership, programme management, and capacity building.",
     SITE_KEYWORDS: [
-        "international development consulting",
-        "development strategy",
-        "programme management",
-        "monitoring and evaluation",
-        "capacity building",
-        "ngo consulting",
-        "non-profit consulting",
-        "business consulting",
-        "strategy",
-        "performance",
-        "leadership",
         "sp lartey consulting",
+        "splartey consulting",
+        "international development consultant",
         "seth lartey",
         "seth lartey international development",
-        "seth lartey consultant"
+        "seth lartey consultant",
+        "strategy, performance, leadership",
+        "Strategy Advisory",
+        "Project Management",
+        "Monitoring, Evaluation & Learning Support",
+        "Grant-Making Fund Management",
     ],
     AUTHOR: "Seth Lartey",
     CONTACT_EMAIL: "seth@splarteyconsulting.com",
@@ -31,15 +27,16 @@ export const APP_CONFIG = {
 }
 
 export const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/what-i-offer" },
-    { name: "Gallery", href: "/action-gallery" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/what-i-offer" },
+    { label: "Gallery", href: "/action-gallery" },
 ];
 
 export const heroData = {
     heading: "Seth Lartey - International Development Consultant",
-    subHeading: `I help governments, NGOs, and development partners design and deliver strategy, performance improvement, and leadership solutions that drive measurable impact across international development programmes.`,
+    // changed
+    subHeading: `Helping governments, NGOs, and development partners design and deliver strategy, performance improvement, and leadership solutions that drive measurable impact across international development programmes.`,
     heroImageUrl: "/images/hero-image.avif",
     heroImageAlt: "Seth Lartey - International Development Consultant",
     primaryCta: {
@@ -159,8 +156,8 @@ export const servicePageDefaults = {
 
 export const aboutContent = {
     headLine: "About Seth Lartey",
-    description1: `Born in the UK and raised in Germany and Ghana, I have always viewed the world through multiple lenses. This multicultural perspective shapes how I work in international development: recognising that sustainable change must be locally owned, not externally imposed. I specialise in supporting organisations to transition from donor-dependent programmes to genuinely locally led models—not as an aspiration, but as an operational reality. I have done this at scale, most notably leading the successful transition of STAR-Ghana, a £22m governance programme, into an independent foundation that continues to thrive beyond donor support.`,
-    description2: `My approach draws on more than 20 years of experience across 18 countries, at both field and headquarters levels. I understand what donors require, what communities prioritise, and how to design programmes that meet both—while meaningfully transferring power and resources to local actors. I have worked in countries across Africa, Asia, Latin America, and the Caribbean, including Ghana, Nigeria, Sierra Leone, Uganda, South Sudan, Burkina Faso, Ethiopia, Myanmar, Zimbabwe, Barbados, Grenada, Guyana, Jamaica, St Lucia, St Vincent and the Grenadines, and Trinidad and Tobago.`,
+    description1: "Born in the UK and raised in Germany and Ghana, I have always viewed the world through multiple lenses. This multicultural perspective shapes how I work in international development: recognising that sustainable change must be locally owned, not externally imposed. I specialise in supporting organisations to transition from donor-dependent programmes to genuinely locally led models—not as an aspiration, but as an operational reality. I have done this at scale, most notably leading the successful transition of STAR-Ghana, a £22m governance programme, into an independent foundation that continues to thrive beyond donor support.",
+    description2: "My approach draws on more than 20 years of experience across 18 countries, at both field and headquarters levels. I understand what donors require, what communities prioritise, and how to design programmes that meet both—while meaningfully transferring power and resources to local actors. I have worked in countries across Africa, Asia, Latin America, and the Caribbean, including Ghana, Nigeria, Sierra Leone, Uganda, South Sudan, Burkina Faso, Ethiopia, Myanmar, Zimbabwe, Barbados, Grenada, Guyana, Jamaica, St Lucia, St Vincent and the Grenadines, and Trinidad and Tobago.",
 };
 
 export const founderData = {
@@ -204,7 +201,7 @@ export const CTAData = {
         href: "/contact"
     },
     ctaSecondaryBtn: {
-        label: "What I Offer",
+        label: "My Services",
         href: "/what-i-offer"
     }
 }
@@ -243,12 +240,12 @@ export const footerLinks: FooterSection[] = [
                 icon: IconBrandLinkedin,
             },
             {
-                label: "Direct call",
+                label: "+44356050968",
                 href: "tel:+44356050968",
                 icon: IconPhoneCall,
             },
             {
-                label: "Email address",
+                label: "Email Address",
                 href: "mailto:seth@splarteyconsulting.com",
                 icon: IconAt
             },

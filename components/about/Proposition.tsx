@@ -81,11 +81,11 @@ export default function Proposition() {
                 </div>
 
                 <BlurFade delay={0.25 * 4} inView >
-                    <div className="lg:hidden flex justify-center pt-8">
+                    <div className="lg:hidden flex justify-center pt-2">
                         <Button
                             asChild
                             size="lg"
-                            className="btn-primary w-full sm:w-auto">
+                            className="btn-primary w-full sm:w-auto rounded-full">
                             <Link href="/contact">{ctaButton}</Link>
                         </Button>
                     </div>

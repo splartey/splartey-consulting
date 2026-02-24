@@ -7,7 +7,7 @@ import { FounderProps } from "@/types";
 export default function Founder({ image, alt, content }: FounderProps) {
 
     return (
-        <section className="relative py-20 lg:py-28 flex items-center  ">
+        <section className="relative py-20 lg:py-28 flex items-center bg-white ">
             <article className="max-w-5xl mx-auto px-6 md:px-10 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
                 <StripeBgGuides
                     columnCount={8}

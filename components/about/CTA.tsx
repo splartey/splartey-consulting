@@ -11,8 +11,8 @@ export function CallToAction() {
     return (
         <section className="relative">
 
-            <div className="py-28 bg-primary/2">
-                <div className="relative mx-auto flex w-full max-w-3xl flex-col justify-between gap-y-4 border-y py-8 max-sm:overflow-hidden space-y-2 ">
+            <div className="py-28 bg-linear-to-t from-green-50 to-green-100">
+                <div className="relative mx-auto flex w-full max-w-4xl flex-col justify-between gap-y-4 border-y py-8 max-sm:overflow-hidden space-y-2 ">
                     <>
                         <span className="max-sm:sr-only">
                             <PlusIcon
@@ -39,10 +39,10 @@ export function CallToAction() {
                         <div className="-z-10 absolute top-0 left-1/2 h-full border-l border-dashed" />
                     </>
                     <article className="max-sm:p-3">
-                        <h2 className="text-center font-semibold text-xl md:text-3xl mb-3">
+                        <h2 className="text-center font-semibold text-3xl mb-3">
                             {heading}
                         </h2>
-                        <p className="text-balance text-center font-medium text-muted-foreground text-sm md:text-base">
+                        <p className="text-balance tracking-wide text-center font-medium text-muted-foreground ">
                             {description}
                         </p>
                     </article>

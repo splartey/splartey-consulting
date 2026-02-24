@@ -31,7 +31,7 @@ export default function Hero({
                     <div className="mt-12 flex gap-4 w-full flex-col sm:flex-row sm:gap-4">
                         <Button
                             size="lg"
-                            className="btn-primary text-lg w-full sm:w-auto shadow-none rounded-full"
+                            className="btn-primary w-full sm:w-auto shadow-none rounded-full"
                             asChild>
                             <Link href={primaryCta.href} aria-label="About Seth Lartey">
                                 {primaryCta.label}
@@ -41,7 +41,7 @@ export default function Hero({
                         <Button
                             size="lg"
                             variant="outline"
-                            className="btn-outline text-lg w-full sm:w-auto shadow-none rounded-full"
+                            className="btn-outline w-full sm:w-auto shadow-none rounded-full"
                             asChild
                         >
                             <Link href={secondaryCta.href} aria-label="Reach out to Seth Lartey">

@@ -164,6 +164,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer utilities {
   .btn-primary {
     @apply bg-primary hover:bg-teal-900 text-white border-2 border-neutral-950/20 shadow-md;
@@ -191,5 +195,15 @@
   }
   .text-base {
     @apply text-[14px]!;
+  }
+}
+
+@layer components {
+  .nav-header {
+    @apply sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/50;
+  }
+
+  .footer-link {
+    @apply text-gray-600 transition-colors duration-200 hover:text-gray-900 cursor-pointer;
   }
 }

@@ -23,8 +23,8 @@ export default function LinksGroup({ title, links }: LinksGroupProps) {
 
 
     return (
-        <span >
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-foreground">
+        <div className="space-y-4">
+            <h3 className="text-lg font-semibold">
                 {title}
             </h3>
 
@@ -38,12 +38,12 @@ export default function LinksGroup({ title, links }: LinksGroupProps) {
                                 href={link.href}
                                 target={isExternal ? "_blank" : undefined}
                                 rel={isExternal ? "noopener noreferrer" : undefined}
-                                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 flex items-center gap-2 group"
+                                className="footer-link flex items-center gap-2 group"
                             >
                                 {link.icon && (
                                     <link.icon
                                         size={16}
-                                        className="opacity-70 group-hover:opacity-100 transition-opacity"
+                                        className="group-hover:opacity-100 transition-opacity shrink-0"
                                     />
                                 )}
                                 {link.title}
@@ -52,6 +52,6 @@ export default function LinksGroup({ title, links }: LinksGroupProps) {
                     );
                 })}
             </ul>
-        </span>
+        </div>
     );
 }

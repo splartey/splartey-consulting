@@ -8,7 +8,7 @@ export default function AboutHero({
   description2,
 }: AboutHeroProps) {
   return (
-    <section className="relative top-0 w-full bg-linear-to-t from-green-50 to-green-100  overflow-hidden py-12 md:py-16 text-primary">
+    <section className="relative w-full bg-linear-to-t from-green-50 to-green-100  overflow-hidden py-12 md:py-16 text-primary">
 
       <div className="absolute inset-0 z-0 opacity-40">
         <Particles
@@ -40,9 +40,7 @@ export default function AboutHero({
             </p>
           </BlurFade>
         </article>
-
       </article>
-
     </section>
   );
 }

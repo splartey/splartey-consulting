@@ -14,14 +14,14 @@ export default function SkillsMarquee({ iconUrl, items, }: SkillsMarqueeProps) {
                 alt="skill separator"
                 className="object-contain"
             />
-            <span className="whitespace-nowrap text-white text-base">
+            <span className="whitespace-nowrap text-white text-lg font-medium">
                 {text}
             </span>
         </div>
     );
 
     return (
-        <div className="w-full bg-primary overflow-hidden">
+        <div className="w-full py-2 bg-primary overflow-hidden">
             <Marquee
                 pauseOnHover
                 className="[--duration:50s]">
