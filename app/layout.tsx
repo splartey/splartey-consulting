@@ -9,6 +9,7 @@ import Script from "next/script"
 
 import { siteMetadata } from "./metadata";
 import { personSchema } from "./schema";
+import { navigationSchema } from "./schema";
 
 const { COMPANY_NAME, COMPANY_ABBR, COMPANY_SLOGAN } = APP_CONFIG;
 
@@ -50,6 +51,14 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(personSchema),
+          }}
+        />
+
+        <Script
+          id="navigation-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(navigationSchema),
           }}
         />
 

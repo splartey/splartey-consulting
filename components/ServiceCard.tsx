@@ -41,7 +41,7 @@ export default function ServiceCard({
 
     return (
         <Card className={cn(
-            "relative overflow-hidden rounded-3xl border transition-all p-6 flex flex-col h-full shadow-sm outline outline-border outline-offset-3",
+            "relative overflow-hidden rounded-3xl border transition-all p-6 flex flex-col h-full shadow-sm outline outline-border outline-offset-3xl",
             borderColor,
             bgColor,
         )}>

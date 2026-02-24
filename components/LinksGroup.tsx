@@ -13,14 +13,8 @@ type LinksGroupProps = {
 export default function LinksGroup({ title, links }: LinksGroupProps) {
 
     const isExternalLink = (href: string) => {
-        return (
-            href.startsWith("http://") ||
-            href.startsWith("https://") ||
-            href.startsWith("mailto:") ||
-            href.startsWith("tel:")
-        );
+        return (href.startsWith("https://"));
     };
-
 
     return (
         <div className="space-y-4">
@@ -38,14 +32,13 @@ export default function LinksGroup({ title, links }: LinksGroupProps) {
                                 href={link.href}
                                 target={isExternal ? "_blank" : undefined}
                                 rel={isExternal ? "noopener noreferrer" : undefined}
-                                className="footer-link flex items-center gap-2 group"
+                                className="footer-links flex items-center gap-2 group shrink-0"
                             >
-                                {link.icon && (
-                                    <link.icon
-                                        size={16}
-                                        className="group-hover:opacity-100 transition-opacity shrink-0"
-                                    />
-                                )}
+                                {link.icon
+                                    && (
+                                        <link.icon className="group-hover:opacity-100 transition-opacity shrink-0 w-4.5 h-4.5 opacity-80" />
+                                    )
+                                }
                                 {link.title}
                             </Link>
                         </li>

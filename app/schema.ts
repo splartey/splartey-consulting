@@ -21,3 +21,16 @@ export const personSchema = {
     },
     sameAs: [LINKEDIN_URL, DEVEX_PROFILE_URL],
 };
+
+export const navigationSchema = {
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    name: ["Home", "About", "Services", "Gallery", "Contact"],
+    url: [
+        "https://www.splarteyconsulting.com/",
+        "https://www.splarteyconsulting.com/about",
+        "https://www.splarteyconsulting.com/what-i-offer",
+        "https://www.splarteyconsulting.com/action-gallery",
+        "https://www.splarteyconsulting.com/contact",
+    ],
+};

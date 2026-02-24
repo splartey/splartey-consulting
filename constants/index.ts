@@ -1,5 +1,5 @@
 import { FooterSection } from "@/types";
-import { IconBrandLinkedin, IconAt, IconPhoneCall } from "@tabler/icons-react";
+import { IconBrandLinkedin, IconMail, IconPhoneCall } from "@tabler/icons-react";
 
 export const APP_CONFIG = {
     COMPANY_NAME: "SP Lartey Consulting",
@@ -34,11 +34,10 @@ export const navLinks = [
 ];
 
 export const heroData = {
-    heading: "Seth Lartey - International Development Consultant",
-    // changed
+    heading: "Seth Lartey · International Development Consultant",
     subHeading: `Helping governments, NGOs, and development partners design and deliver strategy, performance improvement, and leadership solutions that drive measurable impact across international development programmes.`,
     heroImageUrl: "/images/hero-image.avif",
-    heroImageAlt: "Seth Lartey - International Development Consultant",
+    heroImageAlt: "Seth Lartey · International Development Consultant",
     primaryCta: {
         label: "Learn more",
         href: "/about",
@@ -215,7 +214,7 @@ export const contactPageData = {
 
 export const footerLinks: FooterSection[] = [
     {
-        title: "Quick Links",
+        title: "Company",
         links: [
             { label: "Home", href: "/" },
             { label: "About", href: "/about" },
@@ -224,7 +223,7 @@ export const footerLinks: FooterSection[] = [
         ],
     },
     {
-        title: "Quick Links",
+        title: "Explore",
         links: [
             { label: "Gallery", href: "/action-gallery" },
             { label: "Contact", href: "/contact" },
@@ -245,9 +244,9 @@ export const footerLinks: FooterSection[] = [
                 icon: IconPhoneCall,
             },
             {
-                label: "Email Address",
+                label: "seth@splarteyconsulting.com",
                 href: "mailto:seth@splarteyconsulting.com",
-                icon: IconAt
+                icon: IconMail
             },
         ],
     }

@@ -16,10 +16,9 @@ export default function Hero({
     const imageSizes = `(max-width: 1024px) 100vw, (min-width: 1025px) 640px`;
 
     return (
-        <section className="relative flex items-center justify-center py-8 md:py-10">
-            <article className="max-w-5xl w-full mx-auto grid lg:grid-cols-2 gap-12 px-6 lg:py-0">
+        <section className="hero-section">
+            <article className="hero-container">
                 <div className="my-auto py-12 lg:py-0">
-
                     <h1 className="text-5xl text-primary font-semibold tracking-wide">
                         {heading}
                     </h1>
@@ -41,7 +40,7 @@ export default function Hero({
                         <Button
                             size="lg"
                             variant="outline"
-                            className="btn-outline w-full sm:w-auto shadow-none rounded-full"
+                            className="w-full sm:w-auto shadow-none rounded-full"
                             asChild
                         >
                             <Link href={secondaryCta.href} aria-label="Reach out to Seth Lartey">
@@ -62,7 +61,6 @@ export default function Hero({
                     />
                 </div>
             </article>
-
             <LightRays />
         </section>
     );

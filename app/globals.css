@@ -203,7 +203,19 @@ html {
     @apply sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/50;
   }
 
-  .footer-link {
+  .header-container {
+    @apply mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4;
+  }
+
+  .footer-links {
     @apply text-gray-600 transition-colors duration-200 hover:text-gray-900 cursor-pointer;
+  }
+
+  .hero-section {
+    @apply relative flex items-center justify-center py-8 md:py-10 lg:min-h-screen;
+  }
+
+  .hero-container {
+    @apply max-w-5xl w-full mx-auto grid lg:grid-cols-2 gap-12 px-6 lg:py-0;
   }
 }

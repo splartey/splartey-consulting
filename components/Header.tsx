@@ -20,18 +20,15 @@ export default function Header({ companyName, companyAbbr, navLinks }: HeaderPro
 
     return (
         <header className="nav-header">
-            <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-4">
+            <div className="header-container">
                 <div>
-                    <Link
-                        href="/"
-                        className="text-2xl font-bold text-primary"
-                    >
+                    <Link href="/" className="text-2xl font-bold text-primary">
                         <span className="hidden md:inline">{companyName}</span>
                         <span className="md:hidden">{companyAbbr}</span>
                     </Link>
                 </div>
 
-                <nav className="hidden lg:flex flex-1 justify-center items-center gap-8">
+                <nav aria-label="Primary navigation" className="hidden lg:flex flex-1 justify-center items-center gap-8">
                     {navLinks.map((navlink) => {
 
                         const isActive = pathname === navlink.href;

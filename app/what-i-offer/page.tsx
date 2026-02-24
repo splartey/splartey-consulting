@@ -31,8 +31,8 @@ export default function ServicesPage() {
                 </div>
             </>
 
-            <div className="max-w-6xl max-md:max-w-full mx-auto px-6  md:px-10 lg:px-8 space-y-12 flex flex-col items-center">
-                <header className="max-w-5xl space-y-4 text-center pb-4">
+            <div className="max-w-6xl max-md:max-w-full mx-auto px-6 md:px-10 lg:px-8 space-y-12 flex flex-col items-center">
+                <header className="text-center max-w-3xl space-y-4">
                     <BlurFade delay={0.25} inView>
                         <p className="text-sm text-primary font-semibold tracking-wide uppercase">
                             {subHeading}
@@ -53,10 +53,7 @@ export default function ServicesPage() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 pt-6">
                     {servicesData.map((service, index) => (
                         <BlurFade key={index} delay={0.25 * 4} inView>
-                            <ServiceCard
-                                key={index}
-                                {...service}
-                            />
+                            <ServiceCard key={index} {...service} />
                         </BlurFade>
                     ))}
                 </div>
