@@ -200,7 +200,7 @@ export const CTAData = {
         href: "/contact"
     },
     ctaSecondaryBtn: {
-        label: "My Services",
+        label: "Explore Services",
         href: "/what-i-offer"
     }
 }
@@ -239,7 +239,7 @@ export const footerLinks: FooterSection[] = [
                 icon: IconBrandLinkedin,
             },
             {
-                label: "+44356050968",
+                label: "(+44) 356 050 968",
                 href: "tel:+44356050968",
                 icon: IconPhoneCall,
             },
