@@ -10,6 +10,11 @@ if (!process.env.RESEND_API_KEY) {
     throw new Error("Resend API key not configured");
 }
 
+console.log("Resend API key loaded successfully");
+
+console.log("Sending email:", process.env.RESEND_FROM_EMAIL);
+console.log("Owner email:", process.env.RESEND_OWNER_EMAIL);
+
 interface SendEmailProps {
     firstName: string;
     lastName: string;
@@ -78,7 +83,7 @@ export async function sendEmail({
         }
 
         const { data: clientData, error: clientError } = await resend.emails.send({
-            from: `SP Lartey Consulting <${process.env.RESEND_FROM_EMAIL}>`,
+            from: `Thank you for choosing SP Lartey Consulting <${process.env.RESEND_FROM_EMAIL}>`,
             to: email,
             subject: "We've received your inquiry",
             replyTo: process.env.RESEND_OWNER_EMAIL!,
